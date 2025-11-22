@@ -47,35 +47,128 @@
 
     <!-- This is the table-of-content component use to define all of the link directly to each section -->
     <div class="table-of-content">
-      <h2>Table of Contents</h2>
-  
-      <sl-tree>
-        <sl-tree-item expanded>
-          <a href="#section-header-1">1. Introduction</a>
-          <sl-tree-item>
-            <a href="#sub-section-1-header-1">1.1. Sub-section Header 1</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-1-header-2">1.2. Sub-section Header 2</a>
-          </sl-tree-item>
-        </sl-tree-item>
 
-        <sl-tree-item expanded>
-          <a href="#section-header-2">2. Section Header 1</a>
-          <sl-tree-item>
-            <a href="#sub-section-2-header-1">2.1. Sub-section Header 1</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-2-header-2">2.2. Sub-section Header 2</a>
-          </sl-tree-item>
+  
+
+  <h2>Table of Contents</h2>
+
+  <sl-tree>
+
+    <!-- 1. Introduction -->
+    <sl-tree-item expanded>
+      <a href="#section-1">1. Introduction</a>
+
+      <sl-tree-item>
+        <a href="#section-1-1">1.1. Context of Problem</a>
+      </sl-tree-item>
+
+      <sl-tree-item>
+        <a href="#section-1-2">1.2. Objective and Scope</a>
+      </sl-tree-item>
+
+      <sl-tree-item>
+        <a href="#section-1-3">1.3. Value Proposition</a>
+      </sl-tree-item>
+    </sl-tree-item>
+
+    <!-- 2. Concept Development -->
+    <sl-tree-item expanded>
+      <a href="#section-2">2. Concept Development</a>
+
+      <sl-tree-item>
+        <a href="#section-2-1">2.1. Cycle 1: Lettuce Harvesting Workflow</a>
+
+        <sl-tree-item>
+          <a href="#section-2-1-1">2.1.1. Research: Characterisation of Existing Harvesting Processes</a>
         </sl-tree-item>
 
         <sl-tree-item>
-          <a href="#references">References</a>
+          <a href="#section-2-1-2">2.1.2. Experiential Interaction: Harvesting at ArianeTech</a>
         </sl-tree-item>
-      </sl-tree>
-    </div>
-    <sl-divider></sl-divider>
+
+        <sl-tree-item>
+          <a href="#section-2-1-3">2.1.3. Insights: Workflow Constraints and Failure Modes</a>
+        </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#section-2-1-4">2.1.4. Design Refinement</a>
+        </sl-tree-item>
+      </sl-tree-item>
+
+      <sl-tree-item>
+        <a href="#section-2-2">2.2. Cycle 2: Biomechanical Characteristics of Lettuce</a>
+
+        <sl-tree-item>
+          <a href="#section-2-2-1">2.2.1. Research</a>
+        </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#section-2-2-2">2.2.2. Experiential Interaction</a>
+        </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#section-2-2-3">2.2.3. Insights</a>
+        </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#section-2-2-4">2.2.4. Design Requirement</a>
+        </sl-tree-item>
+      </sl-tree-item>
+
+      <sl-tree-item>
+        <a href="#section-2-3">2.3. Design Matrix</a>
+      </sl-tree-item>
+
+      <sl-tree-item>
+        <a href="#section-2-4">2.4. Concept Scoring (Holding & Lifting)</a>
+      </sl-tree-item>
+
+      <sl-tree-item>
+        <a href="#section-2-5">2.5. Concept Scoring (Extracting)</a>
+      </sl-tree-item>
+
+      <sl-tree-item>
+        <a href="#section-2-6">2.6. Final Concept</a>
+      </sl-tree-item>
+
+      <sl-tree-item>
+        <a href="#section-2-7">2.7. Novelty of Final Design</a>
+      </sl-tree-item>
+    </sl-tree-item>
+
+    <!-- 4. Shortcomings -->
+    <sl-tree-item>
+      <a href="#section-4">3. Shortcomings</a>
+    </sl-tree-item>
+
+    <!-- 5. Project Plan -->
+    <sl-tree-item>
+      <a href="#section-5">4. Project Plan</a>
+    </sl-tree-item>
+
+    <!-- 6. Bibliography -->
+    <sl-tree-item>
+      <a href="#section-6">5. Bibliography</a>
+    </sl-tree-item>
+
+    <!-- 7. Appendices -->
+    <sl-tree-item>
+      <a href="#section-7">6. Appendices</a>
+
+      <sl-tree-item>
+        <a href="#section-7-1">6.1. Appendix A</a>
+      </sl-tree-item>
+
+      <sl-tree-item>
+        <a href="#section-7-2">6.2. Appendix B</a>
+      </sl-tree-item>
+      <sl-tree-item>
+        <a href="#section-7-3">6.3. Appendix C</a>
+      </sl-tree-item>
+    </sl-tree-item>
+
+  </sl-tree>
+</div>
 
     <div>
       <h2>1. Introduction</h2>
@@ -108,6 +201,14 @@
       
       
       <div><p> Specifically, the Crystal lettuce offers practical advantages for iterative prototyping. Its short (35-day) growth cycle enables multiple design–test–refine iterations within the project timeline, and its availability through industry partner, ArianeTech, coupled with its delicate structure, provides a stringent benchmark for evaluating harvesting delicate crops.</p></div>
+      
+      <image-component 
+    tag="Crystal Lettuce Infographic" 
+    source="assets/crystal_lettuce.png"
+    subtitle="Figure 2: Crystal Lettuce Infographic. Source: ArianeTech."
+      ></image-component>
+      
+      
       <div><p> Within this context, the project is scoped to indoor hydroponic production. Hydroponic production reduces water usage dramatically—20 ± 3.8 L/kg compared to 250 ± 25 L/kg for field-grown lettuce—representing ~92% savings (Barbosa et al., 2015). Controlled Environment Agriculture (CEA) also offers precise control over temperature, humidity, lighting, and nutrient delivery, ensuring consistent year-round production independent of climate variability. Hydroponic systems additionally improve sustainability metrics: transport of fruits and vegetables accounts for roughly 36% of global food-miles emissions (Li et al., 2022), so relocating production to dense urban centres substantially reduces logistical emissions. </p></div>
       <div><p> Mr. Edwin (ArianeTech) further informed the scope by emphasising on an industry-driven requirement: farms prefer a non-integrated, modular solution for harvesting that operates on removable trays, avoiding modifications to vertical rack infrastructure. After completing a MoSCoW analysis (Clegg & Barker, 1994, <i>Refer to Appendix B</i>), the essential design requirements were established.  </p></div>
       
@@ -121,7 +222,7 @@
       <image-component 
     tag="image" 
     source="assets/vp.png"
-    subtitle="Figure 2: Value Proposition"
+    subtitle="Figure 3: Value Proposition"
       ></image-component>
       
       <div><p> Major players such as Spread, FingerVision × PLANTX, and Pure Green Farms achieve high-throughput automation, but their capital-intensive, fully integrated systems suit large-scale farms—not Singapore’s compact indoor setups. Local firms like iFarm emphasise resource-efficient cultivation but lack mechanisation to cut manual handling time. Research prototypes show high precision yet remain too complex, energy-dense, or insufficiently gentle for hydroponic lettuce.</p></div>
@@ -133,7 +234,7 @@
       <image-component 
     tag="image" 
     source="assets/cdc.png"
-    subtitle="Figure 3: Concept Development Cycle"
+    subtitle="Figure 4: Concept Development Cycle"
       ></image-component>
       
       <div><p>Each cycle has allowed for immediate validation of theoretical assumptions through ad-hoc testing or prototyping. Such practical observations have provided insightful feedback for the following cycles of research and design refinement. </p></div>
@@ -143,9 +244,22 @@
 
 
       <h3> Cycle 1: Lettuce Harvesting Workflow</h3>
-      <h4> 3.1.1. Research: Characterisation of Existing Harvesting Processes </h4>
+      <h4> 2.1.1. Research: Characterisation of Existing Harvesting Processes </h4>
       <div> <p> A structured understanding of existing harvesting workflows was necessary before proposing any mechanism, because the constraints of the task are defined by the process itself. It is the logical first step to decompose the existing agricultural workflows into discrete motion phases. </p></div>
-      <h4> 3.1.2. Experiential Interaction: Harvesting at ArianeTech</h4>
+      
+      <image-component 
+    tag="Tray of Lettuce" 
+    source="assets/tray_of_lettuce.png"
+    subtitle="Figure 5: Tray of Lettuce"
+      ></image-component>
+      
+     <image-component 
+    tag="Sap" 
+    source="assets/sap.png"
+    subtitle="Figure 6 : Sap making fingers sticky during harvesting"
+      ></image-component>
+
+      <h4> 2.1.2. Experiential Interaction: Harvesting at ArianeTech</h4>
       <div><p> A valuable opportunity emerged in the form of a harvesting session at ArianeTech’s hydroponics facility in Pasir Panjang, where I harvested approximately 50 lettuce heads (<i>Komatsuna</i> and <i>Crystal</i> cultivars) manually. Observations included weight measurements that revealed substantial variability, along with lettuce specific observations that could not be derived from literature.</p></div>
       <div> <p> Understanding that harvesting is a multi-step process, I decomposed it into four key steps (in order): Approach, Hold, Lift, and Extract.</p></div>
       
@@ -174,27 +288,29 @@
 </video-component>
 
 <div><p> Through repeated trials, the following observations emerged:</p></div>
+
+
 <div><p> <li> The sap released at the detachment point is adhesive and readily transfers to tool surfaces, highlighting the need for a harvesting mechanism that maintains clean, hygienic contact throughout extraction.</li> <li> The upper foliage forms a canopy that protects the stem but obstructs vertical access. Side-entry approaches consistently allowed the cleanest grasp, whereas top-down attempts caused leaf damage in 4 out of 5 cases due to interlocking leaves and limited visibility of the crown.</li></p></div>
 <div> <p> Interviews with farm technicians added further insight: harvesting one tray (~25 heads) required 15–20 minutes and performing this operation across 7–8 trays per shift leads to lower-back fatigue. This reinforced the importance of reducing manual handling time per unit yield. </p></div>
 
 
-    <h4> 3.1.3. Insights: Workflow Constraints and Failure Modes</h3>
+    <h4> 2.1.3. Insights: Workflow Constraints and Failure Modes</h3>
     <div><p> From these observations, several key design constraints emerged:</p></div>
     <div><p> <li> <p>High geometric variability demands a system tolerant to size deviations. </p></li> <li> <p>Upper foliage is fragile, while the basal crown and stem are more mechanically robust.</p> </li> <li> <p>Leaf contact should be minimised, as any squeezing or friction generates tearing. </p> </li> <li>Side-entry approach is mechanically simpler compared to top-down.</li> <li> <p>Sap behaviour necessitates highly cleanable and minimally contaminating extraction methods. </p> </li>     </p></div>
-    <h4> 3.1.4. Design Refinement</h3>
+    <h4> 2.1.4. Design Refinement</h3>
     <div><p> These insights sharpened the project’s initial requirements:</p></div>
     <div> <p> <li> <p> All interactions are preferred to occur at or below the crown level.</p></li>
 <li> <p>Lifting must avoid compressive or abrasive contact.</p></li> 
 <li> <p>Extraction should isolate the cutting interface from foliage.</p></li> 
 </li></p></div>
 
-<h3>3.2. Cycle 2: Biomechanical Characteristics of Lettuce</h3>
+<h3>2.2. Cycle 2: Biomechanical Characteristics of Lettuce</h3>
 <div><p> Two key interactions were studied: the mechanical behaviour of lettuce under controlled crushing, and human handling patterns that reveal natural stability cues.</p></div>
-<h4> 3.2.1. Research </h4>
+<h4> 2.2.1. Research </h4>
 <div><p> Literature on plant biomechanics identifies lettuce as a highly deformable, low-stiffness system: its leaves act as thin, non-linear elastic membranes with minimal puncture and shear resistance, while the stem—reinforced by vascular bundles—shows markedly higher rigidity. Mechanical behaviour is strongly anisotropic, shaped by vein orientation, hydration gradients, and cellular turgor, leading to region-dependent fracture thresholds.</p></div>
 <div><p>Yet publicly available data on the mechanical properties of the Crystal lettuce cultivar remains limited. With few actionable parameters for hydroponic varieties, theoretical insight alone was inadequate, motivating direct hands-on evaluation of harvested lettuces to fill this gap. In parallel, the Cutkosky Grasp Taxonomy (Cutkosky, 1989) was examined and applied to lettuce handling to understand how humans naturally stabilise fragile biological objects; mapping precision, prismatic, and circular grasps offered a basis for translating human dexterity into mechanical analogues.</p></div>
 
-<h4> 3.2.2. Experiential Interaction</h4>
+<h4> 2.2.2. Experiential Interaction</h4>
 <div><p> To validate theoretical expectations, a fragility mapping exercise was conducted using harvested crops. The procedure was as follows:</p></div>
 <div><p> <li> <p>Controlled pinching at the apex, mid-leaf, and crown.</p></li>
 <li> <p></p>Lateral bending tests across leaf lamina.</p></li>
@@ -204,20 +320,20 @@
 <image-component 
     tag="Cutkosky Grasp Taxonomy (Template)" 
     source="assets/cgt_1.png"
-    subtitle="Figure 4: Cutkosky Grasp Taxonomy (Template)"
+    subtitle="Figure 7: Cutkosky Grasp Taxonomy (Template)"
       ></image-component>
       <p> </p>
 <image-component 
     tag="Cutkosky Grasp Taxonomy (Filled)" 
     source="assets/cgt_2.png"
-    subtitle="Figure 5: Cutkosky Grasp Taxonomy (Filled)"
+    subtitle="Figure 8: Cutkosky Grasp Taxonomy (Filled)"
       ></image-component>
   
 
 
 <div><p>Grasp-interaction trials assessed how common hand configurations behave on lettuce, testing tripod and circular precision grasps across different lifting orientations, grip points, and support angles.</p></div>
 
-<h4> 3.2.3. Insights </h4>
+<h4> 2.2.3. Insights </h4>
   <div><p> From the fragility mapping exercise: </p></div>
   <div><p><li> <p> Upper foliage is fragile, while the basal crown and stem are more mechanically robust. </p></li>  <li><p> Vein orientation dominates bending stiffness (bending perpendicular to veins increases fracture risk sharply).</p></li></p></div>
 
@@ -227,22 +343,22 @@
 <li><p></p>A mechanical “grasp” is not necessary; stability can be attained through forks, trays, or scoops.</p></li>
 </p></li></div>
 
-  <h4> 3.2.4. Design Requirement</h4>
+  <h4> 2.2.4. Design Requirement</h4>
 <div><p> Directing forces through the stem rather than the leaves is essential, and handling should minimise lateral loads by supporting the crop from below. This shifted the design from grasp-based concepts toward forks, trays, and guided support geometries, with the tray itself serving as part of the structural support. This approach improves lifting reliability, reduces damage risk, and remains compatible with retrofit-friendly modules. The holding mechanism must also account for stem slipperiness, using textured contact surfaces or geometry-driven stability.</p></div>
 
 
-<h3> 3.3. Design Matrix</h3>
-<div> <p>The earlier activities were not isolated experiments but deliberate experiential cycles that directly shaped the concept evaluation framework. Their insights served two roles. First, they informed the functional decomposition of the harvesting workflow: the “Function” column in the design matrix stems from the four mechanical steps defined in Section 3.1.2. Second, the empirical findings guided the selection criteria and weightings in the scoring tables. Factors such as gentleness, simplicity, modularity, cleanliness, and energy awareness reflected patterns consistently observed across the cycles, ensuring the framework prioritises what matters under real biological and operational conditions. These cycles thus provide a clear, traceable foundation for the design matrix.</p></div>
+<h3> 2.3. Design Matrix</h3>
+<div> <p>The earlier activities were not isolated experiments but deliberate experiential cycles that directly shaped the concept evaluation framework. Their insights served two roles. First, they informed the functional decomposition of the harvesting workflow: the “Function” column in the design matrix stems from the four mechanical steps defined in Section 2.1.2. Second, the empirical findings guided the selection criteria and weightings in the scoring tables. Factors such as gentleness, simplicity, modularity, cleanliness, and energy awareness reflected patterns consistently observed across the cycles, ensuring the framework prioritises what matters under real biological and operational conditions. These cycles thus provide a clear, traceable foundation for the design matrix.</p></div>
 
 <image-component 
     tag="Design Matrix" 
     source="assets/design_matrix.png"
-    subtitle="Figure 6: Design Matrix"
+    subtitle="Table 2: Design Matrix"
       ></image-component>
 
 <div><p> For the approach step, earlier insights established side-entry as the path with the least foliage interference, making it the baseline assumption for all subsequent concepts. Because holding and lifting are mechanically interdependent, they were treated as a single functional unit and evaluated through a combined concept scoring table. Extraction, however, involves a distinct mechanical interaction and therefore warranted its own dedicated scoring table.</p></div>
 
-<h3> 3.4. Concept Scoring (Holding & Lifting)</h3>
+<h3> 2.4. Concept Scoring (Holding & Lifting)</h3>
 <div><p> The four holding-and-lifting concepts evaluated are:</p></div>
 <div><p> <li><p> A. Fixed Fork Tray Support: A tray is inserted beneath the row while fixed fork tines remain between plants; removing the tray leaves the forks supporting each lettuce from below, allowing the whole row to be lifted together.</p></li>
 <li><p>B. Under-Plate Scissor Lift: A flat plate slides under the row and raises the lettuces using a simple scissor mechanism that pushes upward from below. </p></li>
@@ -254,20 +370,20 @@
 <image-component 
     tag="Fixed Fork Tray Support" 
     source="assets/rake.png"
-    subtitle="Figure 7: Fixed Fork Tray Support"
+    subtitle="Figure 9: Fixed Fork Tray Support"
       ></image-component>
   
 
 <image-component 
     tag="Under-Plate Scissor Lift" 
     source="assets/scooper.png"
-    subtitle="Figure 8: Under-Plate Scissor Lift"
+    subtitle="Figure 10: Under-Plate Scissor Lift"
       ></image-component>
       
 <image-component 
     tag="Side-Entry Sliding Forks" 
     source="assets/grid.png"
-    subtitle="Figure 9: Side-Entry Sliding Forks"
+    subtitle="Figure 11: Side-Entry Sliding Forks"
       ></image-component>
 
 <video-component 
@@ -279,7 +395,7 @@
 <image-component 
     tag="Holding & Lifting Concept Scoring Matrix" 
     source="assets/hlcs.png"
-    subtitle="Figure 9: Holding & Lifting Concept Scoring Matrix"
+    subtitle="Table 3: Holding & Lifting Concept Scoring Matrix"
       ></image-component>
 
 
@@ -289,7 +405,7 @@
 <div> <p>Option C, though similar, introduces dual sliding arms that increase mechanical and control complexity. </p></div>
 <div> <p> Option D’s compliant behaviour is appealing, but relying on an external robotic arm, valves, and a compressor makes it the most infrastructure-heavy, energy-demanding, and least retrofit-friendly option. Although it was the original approach, it proved misaligned with the constraints of this application. </p></div>
 
-<h3> 3.5. Concept Scoring (Extracting)</h3>
+<h3> 2.5. Concept Scoring (Extracting)</h3>
 <div><p> The four main concepts for extracting being evaluated are:</p></div>
 <div><p> <li><p> A. D. High-Pressure Waterjet Cutter: A concentrated high-pressure water jet slices through the stem without physical contact, producing a clean separation. </p></li>
 <li><p> B.	Circular Shutter Cutter: Petal-like blades close inward in a circular motion around the stem, shearing it cleanly from below.</p></li>
@@ -301,7 +417,7 @@
 <video-component 
   tag="Video 7: High-Pressure Waterjet Cutter" 
   source="https://www.youtube.com/embed/5YoYGvWSen8"
-  subtitle="Video 10: High-Pressure Waterjet Cutter">
+  subtitle="Video 7: High-Pressure Waterjet Cutter">
 </video-component>
 
 <video-component 
@@ -316,13 +432,13 @@
 <video-component 
   tag="Video 10: Vertical Drop Blade" 
   source="https://www.youtube.com/embed/nEHmrRQ2Jao"
-  subtitle="Video 7: Vertical Drop Blade">
+  subtitle="Video 10: Vertical Drop Blade">
 </video-component>
 
 <image-component 
     tag="Extracting Concept Scoring Matrix" 
     source="assets/ecs.png"
-    subtitle="Figure 9: Extracting Concept Scoring Matrix"
+    subtitle="Table 4: Extracting Concept Scoring Matrix"
       ></image-component>
 
 <div> <p> Option A is compelling because a water-based cutter eliminates sap contamination, a major hygiene risk in lettuce harvesting. The jet cuts and flushes the crown simultaneously, keeping the interface clean without chambers, wipes, or post-cut steps. Lettuce biomechanics show that a low-pressure, short-burst stream is sufficient, giving the waterjet far lower energy demand than steel-cutting systems. Its viability and scalability are further supported by Performatec Australia’s prior demonstrations on similar leafy greens.</p></div>
@@ -331,7 +447,7 @@
 <div> <p> Option D relies on impact-based cutting and this motion compromises cut consistency and risks damage to nearby leaves. Orientation of the tray to the vertical presents itself as a major challenge as well.</p></div>
 
 
-<h3> 3.6. Final Concept </h3>
+<h3> 2.6. Final Concept </h3>
 <div><p> From the concept scoring tables, the converged concept presented is: </p></div>
 <div> <p>  
   <li><p> External harvesting station (aligns with industry preference for modularity).</p></li>
@@ -346,11 +462,11 @@
 <image-component 
     tag="Final Design Prototype" 
     source="assets/fdp.png"
-    subtitle="Figure 10: Final Design Prototype"
+    subtitle="Figure 12: Final Design cardboard Prototype "
       ></image-component>
 
 
-  <h3> 3.7. Novelty of Final Design </h3>
+  <h3> 2.7. Novelty of Final Design </h3>
 
   <div> <p> The novelty of the selected concept lies in its prioritisation of simplicity over integration. Unlike large-scale fully automated farms, this system:</p></div>
   <div><p> 
@@ -358,19 +474,19 @@
 <li> <p> eliminates grasping entirely.  </p></li>
 <li> <p> relies on geometry for stability rather than complex sensors.  </p></li>
 <li> <p> reduces energy demand.   </p></li>
-<li> <p> •	embraces tray-modularity (fitting Singapore’s small-scale hydroponic layouts).  </p></li>
+<li> <p> embraces tray-modularity (fitting Singapore’s small-scale hydroponic layouts).  </p></li>
   </p></div>
 
   <div><p> This infrastructure-agnostic, crop-sensitive approach is absent from competing solutions.</p></div>
 
 
-  <h2>4. Shortcomings </h2>
+  <h2>3. Shortcomings </h2>
 
   <div> <p> Although the proposed solution improves labour productivity, it remains operator-assisted rather than fully autonomous. Positioning and activation still require a worker. This does not diminish its impact—manual handling time is substantially reduced—but it highlights a natural direction for refinement. Integrating low-energy linear guidance would maintain the system’s low-power profile while further decreasing manpower dependence </p></div>
   <div> <p> The shift from a soft-robotic gripper to a predominantly mechanical solution was driven by the need to minimise energy usage. While effective, this also limits the extent of automated motion. Future iterations will explore passive actuation strategies that preserve energy efficiency while improving operational smoothness.</p></div>
   <div> <p> The prototype is dimensioned for a single tray geometry and tuned to crystal lettuce morphology, limiting cross-farm and cross-crop compatibility. A parametric redesign—with adjustable fork spacing and adaptable stem-zone geometries—would enable re-dimensioning for other tray standards and extension to a broader set of leafy greens, enhancing commercial applicability. </p></div>
 
-  <h2>5. Project Plan</h2>
+  <h2>4. Project Plan</h2>
 
   <div> <p>The next development cycle focuses on maturing the waterjet system through design refinement, prototyping, and validation. Early tasks include completing module geometry, defining minimum fork thicknesses, and finalising pressure calculations. A staged pressure-escalation protocol will begin with non-destructive test materials before evaluating lettuce. CAD refinement will integrate the detachable cutting module, address manufacturability constraints, and prepare for fabrication, followed by assembly calibration. </p></div>
   <div> <p> Mechanical validation will involve static load and stress testing to confirm the structure can support the equivalent of 25 lettuces without unacceptable deformation. Verification tests will evaluate cut quality and leaf integrity to ensure consistent, damage-free performance at controlled pressures.</p></div>
@@ -381,7 +497,7 @@
 <image-component 
     tag="Gantt Chart" 
     source="assets/gc.png"
-    subtitle="Figure 11: Gantt Chart"
+    subtitle="Figure 13: Gantt Chart"
       ></image-component>
 
 
@@ -389,136 +505,116 @@
 
 
 
-
-      
-      <!-- This is an example of what a section might look like -->
-      <div id="section-header-1">
-        <h2> 1. Section Header 1 </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna
-          aliqua. Tincidunt ornare massa eget egestas. At tellus at urna condimentum mattis pellentesque id nibh tortor.
-          Elementum sagittis vitae et leo duis ut diam. Morbi tristique senectus et netus et malesuada fames.
-          Suspendisse
-          ultrices gravida dictum fusce ut placerat orci. Risus nullam eget felis eget nunc lobortis mattis aliquam
-          faucibus
-          (Brody, 2007). Eget sit amet tellus cras adipiscing enim eu turpis egestas. Aliquet nibh praesent tristique
-          magna
-          sit amet purus. Adipiscing bibendum est ultricies integer quis auctor elit sed. Fermentum et sollicitudin ac
-          orci
-          phasellus egestas tellus rutrum. At in tellus integer feugiat scelerisque varius morbi enim nunc. Volutpat
-          blandit
-          aliquam etiam erat velit scelerisque in. Id diam maecenas ultricies mi eget mauris pharetra et. Nec dui nunc
-          mattis
-          enim ut tellus elementum sagittis vitae.
-        </p>
-      </div>
-
-      <div id="sub-section-1-header-1">
-        <h3>1.1 Sub-section Header 1</h3>
-        <p>
-          Ultrices dui sapien eget mi. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Dolor purus non enim
-          praesent elementum facilisis. Lacus vestibulum sed arcu non odio euismod lacinia at. Metus aliquam eleifend mi
-          in nulla. Lacus sed viverra tellus in hac habitasse platea. Varius quam quisque id diam vel quam elementum
-          pulvinar. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Diam ut venenatis tellus in metus
-          vulputate. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Venenatis lectus magna
-          fringilla
-          urna. In nisl nisi scelerisque eu ultrices. Velit egestas dui id ornare arcu odio ut sem nulla. Quam id leo in
-          vitae. Egestas congue quisque egestas diam in arcu cursus euismod quis. Porttitor leo a diam sollicitudin
-          tempor
-          id eu nisl.
-        </p>
-      </div>
-
-      <div id="sub-section-1-header-2">
-        <h3>1.2 Sub-section Header 2</h3>
-        <p>
-          Fermentum dui faucibus in ornare quam viverra orci. Donec ultrices tincidunt arcu non sodales. A diam maecenas
-          sed enim ut sem viverra. Semper viverra nam libero justo laoreet sit. Mi sit amet mauris commodo quis. Auctor
-          augue mauris augue neque gravida in fermentum et. Auctor elit sed vulputate mi sit amet. Maecenas pharetra
-          convallis posuere morbi leo urna. Sem nulla pharetra diam sit amet nisl. Id nibh tortor id aliquet lectus.
-          Nibh
-          nisl condimentum id venenatis a condimentum vitae sapien. Convallis posuere morbi leo urna molestie at
-          elementum.
-        </p>
-
-        <!-- This is an example of how you might use the image component -->
-        <image-component tag="image" source="assets/requirement.png"
-          subtitle="Image 1: iDP suggested pathway"></image-component>
-      </div>
-    </div>
-
-
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-      <div id="section-header-2">
-        <h2>2. Section Header 2</h2>
-        <p>
-          Ornare arcu dui vivamus arcu felis bibendum ut tristique et. Mi proin sed libero enim sed faucibus turpis in
-          eu. Odio ut sem nulla pharetra diam sit. Nibh cras pulvinar mattis nunc sed blandit libero. Lacus sed viverra
-          tellus in hac habitasse platea dictumst vestibulum. At augue eget arcu dictum varius duis. Mauris ultrices
-          eros in cursus turpis massa (Lindberg, 1967). Libero nunc consequat interdum varius sit amet mattis. Ut ornare
-          lectus sit amet est placerat in egestas erat. Elementum curabitur vitae nunc sed. Proin nibh nisl condimentum
-          id venenatis a condimentum vitae sapien (Chamberlin et al., 2008). Vitae tempus quam pellentesque nec nam
-          aliquam sem.
-        </p>
-      </div>
-
-      <div id="sub-section-2-header-1">
-        <h3>2.1. Sub-section Header 1</h3>
-        <p>
-          Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
-          Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
-          etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
-          vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
-          Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
-          fames ac. <a href="#image">Link to the image above</a>
-        </p>
-
-        <!-- This is an example of how you might use the video component -->
-        <video-component tag="rick" source="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          subtitle="Video: Never gonna give you up?"></video-component>
-      </div>
-
-      <div id="sub-section-2-header-2">
-        <h3>2.2. Sub-section Header 2</h3>
-        <p>
-          Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Dignissim convallis aenean et tortor at
-          risus viverra adipiscing. Facilisi nullam vehicula ipsum a arcu cursus. Adipiscing elit pellentesque
-          habitant
-          morbi tristique senectus et netus. Turpis massa tincidunt dui ut ornare lectus. Suspendisse sed nisi lacus
-          sed. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Ut ornare lectus sit amet est
-          placerat in egestas. Magna fringilla urna porttitor rhoncus. Imperdiet dui accumsan sit amet.
-        </p>
-
-        <!-- This is an example of how you might use the table component -->
-        <table-component subtitle="Table: Demo table">
-          <div id="table-1"></div>
-        </table-component>
-      </div>
-    </div>
-
-    <!-- This is an example of how you can use the references component to create references -->
-    <div id="references" class="references">
-      <sl-divider></sl-divider>
-      <h2>References</h2>
+  <h2> 5. Bibliography</h2>
       <ul>
+
         <li>
-          Brody, J. E. (2007, December 11). Mental reserves keep brain agile. The New York Times. Retrieved from
-          http://www.dowjones.com/factiva/
+          Barbosa, G. L., Gadelha, F. A., Kublik, N., Proctor, A., Reichelm, L., Weissinger, E., Wohlleb, G., & Halden, R. (2015).
+Comparison of land, water, and energy requirements of lettuce grown using hydroponic vs. conventional agricultural methods.
+International Journal of Environmental Research and Public Health, 12(6), 6879–6891.
+https://doi.org/10.3390/ijerph120606879
         </li>
-        <li>
-          Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008, May). Enhancing worker well-being: Occupational
-          health psychologists convene to share their research on work, stress, and health. Monitor on Psychology,
-          39(5), 26-29.
-        </li>
-        <li>
-          Jones, T. J., & Fields, N. (2003). Emotional quotient and personality. E-Journal of Applied Psychology, 2(2),
-          38-45. Retrieved from http://ejournalappliedpsyc/index.php/ejap
-        </li>
+
+        <li>Begum, R. (2025).
+Singapore revises food-production target to 20% by 2035.
+The Straits Times.
+https://www.straitstimes.com/singapore/environment/singapores-30-by-30-farming-goal-pushed-back-to-2035-with-revised-targets-for-fibre-and-protein
+ </li>
+        <li>Channel News Asia. (2024).
+High-tech, low returns: Why urban farms in Singapore continue to struggle despite innovation and government support.
+CNA Digital.
+https://www.channelnewsasia.com/today/big-read/high-tech-low-returns-farming-4684566
+ </li>
+ <li> Channel News Asia (2025)
+Farmers not surprised by Singapore’s new food sustainability goal, but analysts say '30 by 30' was no failure
+https://www.channelnewsasia.com/singapore/farms-food-sustainability-goal-analysts-say-no-failure-5452981
+</li>
+        <li> Chen, Z., Chen, J., Jung, S., Kim, H., Lo Preti, M., Laschi, C., Ren, Z., Full, R. J., & Yang, G.-Z. (2021).
+Bioinspired and biohybrid soft robots: Principles and emerging technologies.
+Matter, 4(12), 4029–4065.
+https://doi.org/10.1016/j.matt.2025.102045
+ </li>
+        <li> Clegg, D., & Barker, R. (1994).
+Case method fast-track: A RAD approach.
+Addison-Wesley.
+ </li>
+        <li> Cutkosky, M. R. (1989).
+On grasp choice, grasp models, and the design of hands for manufacturing tasks.
+IEEE Transactions on Robotics and Automation, 5(3), 269–279.
+https://doi.org/10.1109/70.34763
+ </li>
+        <li> Energy Market Authority. (2023).
+Singapore energy statistics 2023.
+https://www.ema.gov.sg/singapore-energy-statistics
+  </li>
+        <li> International Labour Organization. (2023).
+Musculoskeletal disorders in agriculture: Global evidence and implications.
+https://www.ilo.org/global/topics/safety-and-health-at-work
+ </li>
+        <li>  Li, M., Wiedmann, T., & Hadjikakou, M. (2022).
+The role of food transport in global food-miles emissions.
+Nature Food, 3(6), 445–453.
+https://doi.org/10.1038/s43016-022-00531-w
+</li>
+        <li> Ministry of Manpower. (2021).
+Labour Force in Singapore 2021.
+https://stats.mom.gov.sg/Pages/Labour-Force-In-Singapore-2021.aspx
+ </li>
+        <li> Ritchie, H., & Roser, M. (2023).
+Crop yields – Lettuce.
+Our World in Data.
+https://ourworldindata.org/crop-yields
+ </li>
+        <li> Singapore Department of Statistics. (2022).
+Land use 2022.
+https://www.singstat.gov.sg/find-data/search-by-theme/economy/land-use-and-population/
+</li>
+        <li> Singapore Food Agency. (2019).
+Singapore’s “30 by 30” vision.
+https://www.sfa.gov.sg/food-farming/30-by-30
+ </li>
+        <li>  Singapore Food Agency. (2023).
+Singapore food statistics 2023.
+https://www.sfa.gov.sg/publications/singapore-food-statistics
+</li>
+        <li> Singapore Food Agency. (2024).
+Singapore food statistics 2024.
+https://www.sfa.gov.sg/publications/singapore-food-statistics
+</li>
+        <li> The Straits Times. (2024).
+Local production of vegetables and seafood fell again in 2024: Report.
+https://www.straitstimes.com/singapore/environment/local-production-of-vegetables-and-seafood-fell-again-in-2024-report
+ </li>
+        <li> World Bank Group. (2022).
+Agricultural land (% of land area) – Singapore.
+https://data.worldbank.org/indicator/AG.LND.AGRI.ZS?locations=SG
+ </li>
       </ul>
+
+
+
+  <h2>6. Appendices </h2>
+
+  <h3>6.1. Appendix A: Objective % Calculations </h3>
+  <div> <p> Justification for Assuming 10% Labour Reduction & 15% Energy-Efficiency Improvement</p></div>
+  <div> <p> A 10% labour-hour reduction is defensible given that labour accounts for 40–60% of operating costs in indoor leafy-green farms, and basic automation tools in comparable systems consistently achieve 10–30% labour savings. A 10% target therefore represents a conservative, lower-bound improvement appropriate for a proof-of-concept.
+Indoor hydroponic farms typically consume 20–40 kWh/kg (greenhouse-style) to 250–350 kWh/kg (vertical farms). Documented optimisation measures—such as reduced idle cycles, efficient motors, and workflow streamlining—commonly deliver 10–20% energy reductions without major infrastructure changes. A 15% efficiency improvement therefore falls well within established global benchmarks and is realistic for Singapore’s energy-intensive indoor farming conditions.</p></div>
+  <h3> 6.2. Appendix B: MoSCoW Analysis</h3>
+  <image-component 
+    tag="MM" 
+    source="assets/moscowa.png"
+    subtitle="Figure 14: Remaining MoSCoW Analysis"
+      ></image-component>
+
+  <h3>6.3. Appendix C: Morphological Matrix </h3>
+
+  <image-component 
+    tag="MM" 
+    source="assets/mm.png"
+    subtitle="Table 5: Morphological Matrix"
+      ></image-component>
+
+
     </div>
   </div>
 
