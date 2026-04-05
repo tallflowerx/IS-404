@@ -186,7 +186,70 @@
         <div> <p> The system is developed within the operational framework of ArianeTech’s indoor vertical farming setup, where crops are cultivated hydroponically and transported via tray-based conveyor systems. In the current workflow, trays containing mature crops are delivered to a harvesting station, where processing is carried out manually. The proposed system is designed to interface directly with this existing infrastructure, accepting trays without requiring modifications. Accordingly, the scope of this project is limited to the harvesting stage—from crop engagement to separation—while upstream processes (growth and transport) and downstream processes (packaging and distribution) are treated as external to the system boundary. This scoped approach ensures feasibility within the constraints of an individual final year project, while maintaining focus on a high-impact stage of the production pipeline. </p> </div> 
         <h3> 2.3. Design Estimates </h3>
         <div> <p> The design estimates outlined above translate operational constraints into measurable engineering specifications, ensuring that the proposed system remains both technically feasible and industrially relevant:</p> </div>
+
+        <h3> 2.4. Existing Solutions</h3>
+        <div> <p> Existing solutions have focused on optimisation of other steps in leafy green production but there is limited work on compact, modular harvesting systems tailored specifically for hydroponic indoor farms.</p> </div>
         
+          <h4> 2.4.1. Traditional Waterjet Applications in Agriculture </h4>
+          <div> <p> The use of waterjets for cutting plant stems has been explored in early agricultural engineering literature. Schield and Harriott (1973) demonstrated the feasibility of using high-pressure waterjets to cut lettuce stems, highlighting their ability to achieve clean cuts with minimal mechanical damage. Subsequent implementations, such as the Ramsay Highlander system, have applied similar principles in large-scale agricultural settings. However, these systems are designed for open-field environments, where space constraints and system integration are less critical. Limitation: Not suitable for compact, modular deployment in indoor vertical farming systems.</p> </div>
+          <h4> 2.4.2. Industrial Waterjet Cutting Systems </h4>
+          <div> <p> Waterjet technology is widely used in industrial food processing. Companies such as PerformaTec and FAM utilise waterjets for cutting leafy greens in high-throughput processing lines. These systems are optimised for post-harvest cutting, delivering consistent cut quality at scale. However, they operate after harvesting and assume pre-separated produce, making them incompatible with hydroponic, tray-based cultivation systems. Limitation: Not designed for in-situ harvesting, and incompatible with hydroponic vertical farming workflows. </p> </div>
+          <h4> 2.4.3. Fully Automated Vertical Farming Systems</h4>
+          <div> <p> Fully automated vertical farming systems, such as those developed by Green Automation, Spread (Japan), and Plenty (USA), aim to automate multiple stages of production, including harvesting. These systems typically rely on robotic or fully integrated architectures. While effective, they are characterised by high system complexity and tight integration, limiting flexibility and retrofitting into existing facilities. Limitation: Complex, non-modular, and not easily adaptable to existing vertical farming systems. </p> </div>
+       
+        <div> <p>In contrast, the proposed system occupies a distinct position: </p> </div>
+        <ul>
+          <li> •	Focuses specifically on harvesting within indoor vertical farms. </li>
+          <li> •	Designed to be compact and modular (unlike large integrated systems). </li>
+          <li> •	Enables batch-based processing (unlike manual sequential harvesting). </li>
+          <li> •	Tailored for hydroponic leafy greens (crystal lettuce). </li>
+          <li> •	Compatible with existing conveyor-based workflows.</li>
+        </ul>
+        
+        <div> <p> Thus, the value of this project lies in introduction of an automated, modular harvesting solution for hydroponic leafy greens within Singapore’s indoor vertical farming systems at a stage of the vertical farming pipeline that remains largely underdeveloped within Singapore’s current agri-food ecosystem.</p></div>
+        
+      <h2>3. Design Development </h2>
+        <h3> 3.1. Functional Decomposition </h3>
+        <div> <p> Having established the problem context, system constraints, and design objectives, the development of the solution proceeds through a functional decomposition of the harvesting process. This approach enables the translation of high-level system requirements into distinct, manageable sub-functions, each of which can be addressed through targeted mechanical design. Based on experiential harvesting done in Semester 1, the manual harvesting process was decomposed into four steps, namely approach, hold, lift/lower and extraction. In semester 2, the solution system’s harvesting process is broken down into modules, namely lettuce tray separation, tray clamping, tray lowering and lettuce-root detachment. By structuring the problem in this manner, the overall system architecture emerges as an integration of simpler, well-defined subsystems.</p> </div>
+        <h3> 3.2. Lettuce-Tray Separation </h3>
+          <div> <p> Building on the conceptual direction established in Semester 1, this iteration retains the fork-based approach while refining it for tighter integration with the clamping and four-bar lowering system, ensuring that earlier design intuition is translated into a more robust, system-level solution. Option A (Fixed Fork Support) was selected as it best satisfies the updated system requirements of passive tray intake, stable support during clamping, and unobstructed vertical extraction.</p>
+          <h4> 3.2.1. Concept Selection </h4>
+            <div> <p> The selection of the fork geometry was established during Semester 1 through iterative cardboard prototyping and preliminary evaluation. (Refer to Appendix B for complete concept selection.) </p></div>
+            <div><p>The fork geometry supports the tray entirely from below, eliminating any need to grip or compress the plant canopy and thereby minimising the risk of leaf damage. Unlike alternatives, it aligns directly with the tray’s existing slot geometry, allowing seamless integration without requiring modifications to the upstream vertical farming system or obstructing the tray entry face—an important constraint for this design. Mechanically, the concept is deliberately minimal. </p></div>
+          <h4> 3.2.2. Prototyping </h4>
+            <h5> 3.2.2.1. Cardboard</h5>
+              <ol>
+                <li>1. Insertion feasibility check: Confirmed that the tray can physically engage with fork features without requiring excessive precision or force. </li>
+                <li>2. Clearance validation: Helped identify minimum spacing needed between forks.</li>
+                <li>3. Entry path constraint: Reinforced that front-face access must remain unobstructed for smooth operation.</li>
+                <li>4. Scalability insight: Highlighted that fixed fork spacing limits compatibility and motivated adjustable or modular fork design for future work.</li>
+              </ol>
+            <h5> 3.2.2.2 CAD </h5>
+              <div> <p> The initial CAD model represents the early-stage implementation of the fork-based tray handling concept within a simplified enclosure. The design consists of a top-mounted fork array aligned with the tray slots, enabling passive engagement as the tray is inserted from the front. The forks are cantilevered from the supporting structure, allowing unobstructed entry while maintaining support beneath the tray.</p>
+              <div> <p> This model was primarily used to validate spatial arrangement and interaction between the tray and fork elements, ensuring that the tray could be guided into position without interference. It also helped establish key design parameters such as fork spacing, insertion depth, and overall system footprint.</p>
+              <div> <p> The refined CAD model introduces a full structural frame using extrusion members, with the fork elements now represented as slender beams spanning between supports. This model was developed to better reflect the actual load-bearing configuration of the system.</p>
+              <div> <p> At this stage, beam deflection emerged as a key concern, as the forks operate as cantilevered or partially supported members subjected to the weight of the loaded tray. The distributed loading across multiple forks highlighted the potential for uneven deformation, which could affect alignment and stability during operation. This model enabled clearer visualisation of load paths, support conditions, and boundary constraints, forming the basis for subsequent structural analysis using Finite Element Analysis (FEA).</p>
+          <h4> Structural Testing (Finite Element Analysis)</h4>
+              <div> <p> The primary objective of this test was to:</p> <div>
+                <ul>
+                  <li> •	quantify the magnitude and distribution of deflection in the fork members, </li>
+                  <li> •	assess whether deformation would remain within acceptable limits for maintaining tray alignment, and </li>
+                  <li> •	validate the structural feasibility of the cantilever-based fork design prior to fabrication. </li>
+                </ul>
+
+              <div> <p> A static structural simulation was performed in SimScale using the CAD model. The following conditions were applied:</p> <div>
+                <ul>
+                  <li> 	Material model: Aluminium (linear elastic, isotropic), with Young’s modulus E≈6.89×10^10 Pa</li>
+                  <li>  Loading condition: A distributed load representing the tray and produce (~3.85 kg ≈ 38 N) applied across the fork members</li>
+                  <li>  Boundary conditions: Fixed supports applied at the frame to simulate rigid mounting </li>
+                  <li>  Analysis type: Linear static FEA, suitable for small elastic deformations </li>
+                </ul>
+
+
+
+
+
+              
       <div><p> Considering this landscape, the objective of this project is to design and evaluate a simple, energy-efficient, and delicate proof-of-concept harvesting system for indoor hydroponic lettuce farms in Singapore that targets reduction in labour hours per unit yield by 10% and improvement in energy efficiency by 15% while maintaining high marketable output. <i> (Refer to Appendix A) </i>The system is conceived for Singapore’s high-cost, land-scarce agricultural context, where labour constitutes a disproportionate share of operating expenditure and electricity prices remain elevated.</p></div>
       <div><p> The scope of this project is intentionally framed to ensure feasibility for a solo engineering build, which motivates the emphasis on simplicityThe system focuses exclusively on the harvesting stage of the hydroponic crop cycle—one of the most labour-intensive phases—as defined by industry requirements clarified to me by Mr Edwin. This requirement for delicate handling of lettuce arises from its biomechanical properties: highly deformable, low stiffness crop whose leaves tear easily under concentrated loads.</p></div>
       <video-component 
