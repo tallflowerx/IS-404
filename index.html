@@ -252,12 +252,18 @@
     </sl-tree-item>
 
     <sl-tree-item>
-      <a href="#section-8-7">8.7 Appendix G: Comparative Analysis for Extraction Concept Selection</a>
+      <a href="#section-8-7">8.7 Appendix G: Motor Requirements</a>
     </sl-tree-item>
 
     <sl-tree-item>
-      <a href="#section-8-8">8.8 Appendix H: Pressure Calculations for Waterjet</a>
+      <a href="#section-8-8">8.8 Appendix H: Comparative Analysis for Extraction Concept Selection</a>
     </sl-tree-item>
+
+    <sl-tree-item>
+      <a href="#section-8-9">8.9 Appendix I: Pressure Calculations for Waterjet</a>
+    </sl-tree-item>
+
+    
 
   </sl-tree-item>
 
@@ -606,7 +612,7 @@
                       subtitle="Table 2: Concept Selection Matrix for Tray Lowering."
                     ></image-component>
 
-                  <div> <p> The concept selection matrix shows that the reverse four-bar mechanism offers the best balance of trajectory control, flexibility, and integration. The scissor lift provides comparable stability but is limited by reduced motion flexibility and bulkier packaging. The vertical linear lift enables precise motion but requires a taller, more restrictive structure, reducing feasibility. The rotary/incline concept ranked lowest, as its changing tray orientation is incompatible with stable presentation to the waterjet subsystem.</p> </div>
+                  <div> <p> The concept selection matrix shows that the reverse four-bar mechanism offers the best balance of trajectory control, flexibility, and integration. The scissor lift provides comparable stability but is limited by reduced motion flexibility and bulkier packaging. The vertical linear lift enables precise motion but requires a taller, more restrictive structure, reducing feasibility. The rotaryincline concept ranked lowest, as its changing tray orientation is incompatible with stable presentation to the waterjet subsystem.</p> </div>
                 
                   <h4 id="section-3-4-2">3.4.2 Kinematic Validation</h4>
                   <div> <p> This preliminary sketch was developed to evaluate feasible tray trajectories from the entry position to the cutting plane under spatial constraints. Among the paths considered, the pink trajectory was preferred for its smooth, continuous motion with minimal directional change, while the brown trajectory offered a more compact alternative with acceptable vertical alignment.</p></div>
@@ -651,7 +657,7 @@
                     subtitle="Figure 12: CAD model of reverse four-bar linkage for tray lowering."
                   ></image-component>
 
-                  <div> <p> (Refer to Appendix D for Concept Selection) Following kinematic validation of the selected linkage, the four-bar mechanism was translated into a detailed CAD model to evaluate its behaviour under realistic spatial and integration constraints. While the kinematic model established the feasibility of the desired motion trajectory, the CAD model enabled assessment of link geometry, joint placement, and physical clearances within the system.</p> </div>
+                  <div> <p> (Refer to Appendix F for Concept Selection) Following kinematic validation of the selected linkage, the four-bar mechanism was translated into a detailed CAD model to evaluate its behaviour under realistic spatial and integration constraints. While the kinematic model established the feasibility of the desired motion trajectory, the CAD model enabled assessment of link geometry, joint placement, and physical clearances within the system.</p> </div>
                   <div> <p> Through this process, several key considerations emerged. Firstly, the CAD model highlighted the importance of link thickness and joint spacing, as idealised kinematic links do not account for physical interference between members during motion. Adjustments were therefore made to ensure sufficient clearance between links across the full range of motion.</p></div>
                   <div> <p> Secondly, the model allowed for evaluation of packaging constraints within the frame, ensuring that the mechanism could operate without interfering with the tray, fork assembly, or surrounding structure. This was particularly critical given the requirement to maintain an unobstructed tray entry path. </p></div>
                 
@@ -688,7 +694,9 @@
 
                   <div> <p> Only the top region of the system permits the addition of structural support for beam deflection prevention; hence, two overhead reinforcement strategies were explored. The first utilises vertical extrusion members with tensioned cables to reduce fork deflection without obstructing tray entry, while the second employs an inverted V-frame to concentrate support above the fork array, improving stiffness while maintaining a clear loading path. In both approaches, cables should be thin, low-stretch, and water-resistant to ensure effective reinforcement without introducing interference or compromising system cleanliness.</p></div>
 
-                <h4 id="section-3-4-6">3.4.6 Motor Testing</h4>
+                <h4 id="section-3-4-6">3.4.6 Motor Requirements</h4>
+                <div> <p> Based on preliminary torque estimation (Appendix G), the tray lowering mechanism requires a motor capable of delivering approximately 4–8 Nm to reliably overcome gravitational loading, friction, and linkage inefficiencies.
+A low-speed, high-torque geared motor is therefore recommended to ensure controlled and repeatable motion. The motor should be placed at the input crank of the four-bar linkage, where torque requirements are minimised and motion can be directly regulated. </p></div>
 
             <h3 id="section-3-5">3.5 Lettuce-Root Detachment</h3>
 
@@ -707,7 +715,7 @@
                     source="assets/lettuce_quality.jpg"
                     subtitle="Figure 15: Comparison of lettuce discoloration over time for blade cutting and waterjet cutting, showing reduced browning and improved quality retention with waterjet processing (adapted from Cantwell et al., 2006; Béguin et al., 2004)"
                   ></image-component>
-                  <div> <p>Waterjet cutting preserves lettuce quality and extends shelf life due to its non-contact, low-damage cutting mechanism. Unlike mechanical blades, which introduce compressive forces and tissue tearing, waterjets minimise cellular disruption at the cut interface. This reduces the release of intracellular fluids that accelerate enzymatic browning and microbial growth. Additionally, the waterjet process can help remove damaged cells and surface contaminants during cutting, resulting in lower initial microbial loads. As a result, waterjet-cut lettuce exhibits reduced discoloration and slower degradation, contributing to improved freshness and extended shelf life compared to conventional cutting methods (Hashish), 2025). (Refer to Appendix E for comparative analysis) </p> </div>
+                  <div> <p>Waterjet cutting preserves lettuce quality and extends shelf life due to its non-contact, low-damage cutting mechanism. Unlike mechanical blades, which introduce compressive forces and tissue tearing, waterjets minimise cellular disruption at the cut interface. This reduces the release of intracellular fluids that accelerate enzymatic browning and microbial growth. Additionally, the waterjet process can help remove damaged cells and surface contaminants during cutting, resulting in lower initial microbial loads. As a result, waterjet-cut lettuce exhibits reduced discoloration and slower degradation, contributing to improved freshness and extended shelf life compared to conventional cutting methods (Hashish), 2025). (Refer to Appendix H for comparative analysis) </p> </div>
                   <div> <p>This consideration is further reinforced by stakeholder feedback, which highlighted that while the concept is promising, there is a risk of inadvertently damaging adjacent crops during operation. This underscores the need for precise targeting and carefully controlled cutting parameters, particularly within the constraints of a densely packed tray configuration.</p> </div>
 
 
@@ -719,7 +727,7 @@
                 <div> <p> This risk is mitigated through the use of a localized, high-precision waterjet, where the jet diameter and pressure are tuned to act only at the stem interface. </p></div>
                 
                 
-                <div> <p>A first-pass theoretical sizing calculation was performed to identify a low-pressure waterjet regime capable of separating hydroponically grown lettuce stems. The jet was modelled using Bernoulli-based nozzle flow and momentum transfer relations, and the resulting jet force was converted into an equivalent stress acting on the stem cross-section. By requiring the jet-induced stress to exceed the estimated stem failure stress with a modest safety factor, the minimum pressure requirement was expressed as a function of nozzle diameter, stem diameter, and discharge coefficient. For a representative stem diameter of 10 mm, a nozzle diameter of 0.5 mm, a discharge coefficient of 0.9, and an assumed tissue failure stress of 0.20 MPa, the required pressure was estimated to be approximately 74 MPa. (Refer to Appendix F for calculations) </p> </div>
+                <div> <p>A first-pass theoretical sizing calculation was performed to identify a low-pressure waterjet regime capable of separating hydroponically grown lettuce stems. The jet was modelled using Bernoulli-based nozzle flow and momentum transfer relations, and the resulting jet force was converted into an equivalent stress acting on the stem cross-section. By requiring the jet-induced stress to exceed the estimated stem failure stress with a modest safety factor, the minimum pressure requirement was expressed as a function of nozzle diameter, stem diameter, and discharge coefficient. For a representative stem diameter of 10 mm, a nozzle diameter of 0.5 mm, a discharge coefficient of 0.9, and an assumed tissue failure stress of 0.20 MPa, the required pressure was estimated to be approximately 74 MPa. (Refer to Appendix I for calculations) </p> </div>
                 <div> <p>This places the system within a low-pressure regime relative to conventional industrial waterjet applications, while remaining theoretically sufficient for soft biological material. The calculation is intended as an initial sizing estimate and would require refinement through material testing and controlled validation. </p> </div>
                 <h4 id="section-3-5-3">3.5.3 FedJet Testing</h4>
                 <div> <p>To validate the feasibility of the selected concept, industry consultation was conducted with FedJet, a company specialising in waterjet technologies. Through this engagement, preliminary testing was performed on lettuce stems using a waterjet system, demonstrating that clean and effective separation is achievable under controlled conditions. These findings provide practical confirmation that waterjet-based cutting is a viable approach for harvesting lettuce, supporting its selection for further development in this project. </p> </div>
@@ -1020,14 +1028,72 @@
     <div> <p> The 4-bar linkage, which was ultimately selected, offers the best overall balance of performance and adaptability. While slight orientation deviations may occur depending on geometry, it excels in compatibility with the front-fed system and provides fully tunable motion through link length optimisation. This allows precise control over the trajectory while maintaining high repeatability. Its key advantage lies in its design flexibility, enabling adaptation to constraints such as waterjet integration and frame limitations. Although it introduces moderate complexity in terms of kinematic synthesis and requires tighter alignment during fabrication, it remains feasible to build. Overall, the 4-bar linkage stands out because it achieves trajectory tunability without compromising repeatability, making it particularly well-suited to the system’s functional requirements.</p></div>
     <div> <p> In contrast, the rotary or incline mechanism was deemed unsuitable due to its fundamental mismatch with system needs. Its tendency to introduce tray tilt makes it incompatible with the requirement for stable, horizontal cutting. Additionally, it offers poor control over vertical motion, lower repeatability, and potential interference with tray entry depending on its configuration. While relatively simple to construct, these limitations outweigh its benefits, leading to its elimination from consideration.</p></div>
 
-    <h3 id="section-8-7">8.7 Appendix G: Comparative Analysis for Extraction Concept</h3>
+    <h3 id="section-8-7">8.7 Appendix G: Motor Requirements</h3>
+
+<p>
+The motor requirements for the tray lowering mechanism were estimated based on the total load and the kinematics of the selected four-bar linkage. The system is required to lower a fully loaded tray consisting of approximately 25 lettuce heads (≈3.75 kg) and tray mass (≈0.10 kg), giving a total load of ≈3.85 kg (≈38 N).
+</p>
+
+<p>
+Assuming a worst-case configuration where the input link must overcome gravitational loading at a near-horizontal position, the required torque was approximated using:
+</p>
+
+<p style="text-align: center;">
+  τ = F · r
+</p>
+
+<p>
+where <i>F</i> ≈ 38 N and an effective moment arm of <i>r</i> ≈ 0.05–0.10 m was considered based on linkage geometry.
+</p>
+
+<p>
+This yields a required torque in the range of:
+</p>
+
+<p style="text-align: center;">
+  τ ≈ 1.9–3.8 Nm
+</p>
+
+<p>
+Applying a safety factor of 2 to account for friction, misalignment, and dynamic effects, the recommended motor torque is:
+</p>
+
+<p style="text-align: center;">
+  τ<sub>motor</sub> ≈ 4–8 Nm
+</p>
+
+<p>
+Accordingly, a low-speed, high-torque geared DC motor or stepper motor with a gearbox is suitable for this application. The motor should be positioned at the input crank of the four-bar linkage to minimise torque requirements and enable controlled, repeatable motion.
+</p>
+
+<image-component
+      tag="image" 
+        source="assets/motor_1.jpeg"
+        subtitle="Figure 25: Motor Specifications"
+    ></image-component><div> <p> </p></div>
+
+    <image-component
+      tag="image" 
+        source="assets/motor_2.jpeg"
+        subtitle="Figure 26: Motor dimensions."
+    ></image-component><div> <p> </p></div>
+
+    <image-component
+      tag="image" 
+        source="assets/motor_3.jpeg"
+        subtitle="Figure 27: Motor Parameters"
+    ></image-component>
+    
+    <div> <p> This motor was inherited from a previous project and provided as part of the existing system hardware. </p></div>
+        
+    <h3 id="section-8-8">8.8 Appendix H: Comparative Analysis for Extraction Concept</h3>
     <div><p> Laser cutting offers a non-contact approach and precise energy delivery; however, it introduces thermal effects that are unsuitable for fresh produce. The high moisture content of lettuce leads to localised heating, causing tissue degradation, dehydration, and potential browning at the cut interface. Additionally, laser systems require optical alignment, enclosure, and safety considerations, reducing feasibility within a compact, wet farming environment.</p></div>
     <div><p> Mechanical blades are simple, compact, and widely used in agricultural applications. However, as a contact-based method, they introduce compressive forces prior to cutting, which can result in bruising and inconsistent separation. Blade wear and dulling over repeated cycles further reduce cut quality and require frequent maintenance. While feasible and easy to implement, performance variability and potential impact on product quality limit its suitability. Lettuce bleeding is also noted from experiential harvesting exercise. Sap gets secreted which affects blade longevity and questions hygiene standards. </p></div>
     
     <image-component
       tag="image" 
         source="assets/sap.png"
-        subtitle="Figure 25: Sap secretion observed during harvesting exercise."
+        subtitle="Figure 28: Sap secretion observed during harvesting exercise."
     ></image-component><div> <p> </p></div>
     
     
@@ -1035,7 +1101,7 @@
     <div><p> Waterjet cutting provides a non-contact cutting mechanism that minimises mechanical stress on the crop. This reduces tissue compression and enables cleaner separation compared to blade-based methods. Its compatibility with wet, hydroponic environments further supports integration within indoor vertical farming systems. Additionally, the absence of blade wear improves consistency and reduces maintenance requirements. While the system introduces complexity in terms of pressurisation and fluid management, it offers the best balance between cut quality, repeatability, and system compatibility.</p></div>
     <div><p>  Rope based cutting offers a mechanically simple approach; however, it relies on frictional contact and tension, which can result in tearing rather than clean cutting. The method also presents a risk of material degradation and particulate contamination (microplastics), particularly if polymer filaments are used. Furthermore, maintaining consistent tension and alignment across multiple cuts is challenging, reducing reliability in batch processing scenarios.</p></div>
 
-  <h3 id="section-8-8">8.8 Appendix H: Pressure Calculations for Waterjet</h3>
+  <h3 id="section-8-9">8.9 Appendix I: Pressure Calculations for Waterjet</h3>
 
 <p>
 A first-pass analytical estimate was carried out to determine the order of magnitude of water pressure required for the proposed waterjet cutting system. The objective of this calculation is not to define a final operating pressure, but to establish a theoretical baseline for assessing the feasibility of using a small nozzle to sever lettuce stems under controlled conditions.
@@ -1254,17 +1320,17 @@ This result provides a theoretical benchmark for early-stage design evaluation. 
     <tbody>
       <tr>
         <td>Main Content (Chapters 1–6)</td>
-        <td>4,420</td>
+        <td>5,130</td>
         <td>Excludes figures, captions and equations</td>
       </tr>
       <tr>
         <td>Appendices</td>
-        <td>1,520</td>
-        <td>Includes all appendix text and calculations</td>
+        <td>2,002 </td>
+        <td>Includes all appendices </td>
       </tr>
       <tr class="total">
         <td>Total</td>
-        <td>5,940</td>
+        <td> 7,132 </td>
         <td>For reference only (not counted towards main limit)</td>
       </tr>
     </tbody>
