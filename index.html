@@ -244,15 +244,19 @@
     </sl-tree-item>
 
     <sl-tree-item>
-      <a href="#section-8-5">8.5 Appendix E: Concept Selection for Tray Lowering Concept Selection</a>
+      <a href="#section-8-5">8.5 Appendix E: Clamping Force Calculation </a>
     </sl-tree-item>
 
     <sl-tree-item>
-      <a href="#section-8-6">8.6 Appendix F: Comparative Analysis for Extraction Concept Selection</a>
+      <a href="#section-8-6">8.6 Appendix F: Concept Selection for Tray Lowering Concept Selection</a>
     </sl-tree-item>
 
     <sl-tree-item>
-      <a href="#section-8-7">8.7 Appendix G: Pressure Calculations for Waterjet</a>
+      <a href="#section-8-7">8.7 Appendix G: Comparative Analysis for Extraction Concept Selection</a>
+    </sl-tree-item>
+
+    <sl-tree-item>
+      <a href="#section-8-8">8.8 Appendix H: Pressure Calculations for Waterjet</a>
     </sl-tree-item>
 
   </sl-tree-item>
@@ -283,7 +287,7 @@
       <h2 id="section-2">2. Objective and Scope</h2>
 
         <h3 id="section-2-1">2.1 Objective</h3>
-        <div> <p> Building on the identified inefficiencies within indoor vertical farming systems, this project focuses on a targeted intervention at the harvesting stage. While upstream processes have been largely optimised through automation, harvesting remains labour-intensive and sequential, limiting overall system throughput. The primary objective is to design a compact, modular harvesting mechanism for hydroponically grown crystal lettuce that improves harvesting throughput, preserves product quality, and enhances effective output per unit area through reduced processing time per batch. To achieve this, the project documented here builds on Semester 1 work and explores the use of a waterjet-based cutting mechanism as the core harvesting approach within a batch-processing system. This objective is grounded in both national priorities for scaling local food production and operational constraints identified through collaboration with ArianeTech (Singapore). </p> </div>
+        <div> <p> Building on the identified inefficiencies within indoor vertical farming systems, this project focuses on a targeted intervention at the harvesting stage. The primary objective is to design a compact, modular harvesting mechanism for hydroponically grown crystal lettuce that improves harvesting throughput, preserves product quality, and enhances effective output per unit area through reduced processing time per batch. To achieve this, the project documented here builds on Semester 1 work and explores the use of a waterjet-based cutting mechanism as the core harvesting approach within a batch-processing system. This objective is grounded in both national priorities for scaling local food production and operational constraints identified through collaboration with ArianeTech (Singapore). </p> </div>
         
         <h3 id="section-2-2">2.2 System Context and Project Scope</h3>
         <div> <p> The system is developed within the operational framework of ArianeTech’s indoor vertical farming setup, where crops are cultivated hydroponically and transported via tray-based conveyor systems. In the current workflow, trays containing mature crops are delivered to a harvesting station, where processing is carried out manually. The proposed system is designed to interface directly with this existing infrastructure, accepting trays without requiring modifications. Accordingly, the scope of this project is limited to the harvesting stage—from crop engagement to separation—while upstream processes (growth and transport) and downstream processes (packaging and distribution) are treated as external to the system boundary. This scoped approach ensures feasibility within the constraints of an individual final year project, while maintaining focus on a high-impact stage of the production pipeline. </p> </div> 
@@ -350,9 +354,7 @@
       <h2 id="section-3">3. Design Development</h2>
         
       <h3 id="section-3-1">3.1 Functional Decomposition</h3>
-        <div> <p> Having established the problem context, system constraints, and design objectives, the development of the solution proceeds through a functional decomposition of the harvesting process. This approach enables the translation of high-level system requirements into distinct, manageable sub-functions, each of which can be addressed through targeted mechanical design. Based on experiential harvesting done in Semester 1, the manual harvesting process was decomposed into four steps, namely approach, hold, lift/lower and extraction. </p> </div>
-        
-            
+        <div> <p> Functional decomposition enables the translation of high-level system requirements into distinct, manageable sub-functions, each of which can be addressed through targeted mechanical design. Based on experiential harvesting done in Semester 1, the manual harvesting process was decomposed into four steps, namely approach, hold, lift/lower and extraction. </p> </div>
 
             <div> <p> In semester 2, the solution system’s harvesting process is broken down into modules, namely lettuce tray separation, tray clamping, tray lowering and lettuce-root detachment. By structuring the problem in this manner, the overall system architecture emerges as an integration of simpler, well-defined subsystems. </p></div>
             
@@ -529,8 +531,8 @@
                   <div> <p> Additionally, it was observed that the single-point attachment between the clamping mechanism and the four-bar linkage resulted in localised stress concentration and reduced structural stability. The load path through a single fastener introduced undesirable rotational compliance, which could compromise alignment during the lowering process. This highlighted the need for improved load distribution through multi-point fastening or rigid joint interfaces in subsequent design iterations. For future implementations, more permanent joining methods such as welding or reinforced mounting plates are recommended to enhance structural integrity. </p> </div>
                 
                   <h4> 3.3.4. Clamping Force Calculations</h4>
-                  <div> <p> As identified through physical prototyping, the clamping mechanism required an internal preload to maintain consistent engagement and prevent unintended disengagement, necessitating a quantitative estimation of the preload force required for reliable operation. </p> </div>
-                  <div> <p> The clamping mechanism is a passive over-centre toggle and does not rely on a dedicated actuator. The required holding capacity was therefore estimated from friction rather than actuator thrust. The loaded tray mass was taken as 3.85 kg, corresponding to a static weight of 37.8 N. To account for startup effects, guide friction, and root drag during downward extraction, the pull load was conservatively taken as 1.5–2.0 times the tray weight, i.e. 56.7–75.5 N. Assuming a friction coefficient of 0.4–0.5 between the tray and clamp pads, the required total normal clamping force is approximately 113–189 N. A design value of 180–200 N total clamping force was therefore adopted. Since the clamp operates as an over-centre toggle, the internal linkage force needed to maintain lock is much smaller than the normal clamping force. For a lock angle of approximately 5–10° from dead centre, an internal preload of about 15–30 N is sufficient to generate the required clamping force.</p> </div>
+                  <div> <p> As identified through physical prototyping, the clamping mechanism required an internal preload to maintain consistent engagement and prevent unintended disengagement. The over-centre toggle clamp was designed to provide a total clamping force of approximately 180–200 N, ensuring stable tray fixation during lowering and extraction. This corresponds to an internal preload requirement of 15–30 N to maintain the locking condition. (Refer to Appendix XYZ) </p> </div>
+                  
 
                   <h3 id="section-3-4">3.4 Tray Lowering</h3>
 
@@ -1008,8 +1010,10 @@
     ></image-component>
     <div> <p> </p></div>
 
+<h3 id="section-8-5">8.5 Appendix E: Clamping Force Calculation </h3>
+  <div> <p> The clamping mechanism is a passive over-centre toggle and does not rely on a dedicated actuator. The required holding capacity was therefore estimated from friction rather than actuator thrust. The loaded tray mass was taken as 3.85 kg, corresponding to a static weight of 37.8 N. To account for startup effects, guide friction, and root drag during downward extraction, the pull load was conservatively taken as 1.5–2.0 times the tray weight, i.e. 56.7–75.5 N. Assuming a friction coefficient of 0.4–0.5 between the tray and clamp pads, the required total normal clamping force is approximately 113–189 N. A design value of 180–200 N total clamping force was therefore adopted. Since the clamp operates as an over-centre toggle, the internal linkage force needed to maintain lock is much smaller than the normal clamping force. For a lock angle of approximately 5–10° from dead centre, an internal preload of about 15–30 N is sufficient to generate the required clamping force.</p></div>
 
-  <h3 id="section-8-5">8.5 Appendix E: Concept Selection for Tray Lowering Concept Selection</h3>
+  <h3 id="section-8-6">8.6 Appendix F: Concept Selection for Tray Lowering Concept Selection</h3>
     <div> <p> The selection criteria for the tray lowering mechanism were defined based on their direct relevance to system performance, integration, and feasibility within the project scope. Tray stability, particularly maintaining a horizontal orientation during operation, is critical to ensure consistent interaction between the waterjet and the lettuce roots. Any unintended tilt could result in uneven cutting and increase the risk of crop damage. Compatibility with a conveyor-fed input is also a key requirement, as the mechanism must integrate seamlessly with a front-fed tray system without obstructing entry, making this a strict architectural constraint.</p></div>
     <div> <p> Control over the motion trajectory is equally important, as the lowering action must be smooth and predictable. This ensures that the lettuce placement is not disturbed, a consistent cutting height is maintained, and dynamic loads on the system are minimised. In addition, suitability for batch processing is essential, since the system is expected to operate repeatedly with minimal recalibration. High repeatability directly impacts throughput and overall system efficiency. </p></div>
     <div> <p> Design flexibility was also considered, given the evolving nature of constraints such as waterjet integration, frame dimensions, and potential variations in tray design. The mechanism should therefore allow for adjustments in link lengths, motion paths, and facilitate rapid iteration during CAD modelling and prototyping. Complexity, in terms of design difficulty, captures the challenges associated with kinematic synthesis, analysis, optimisation, and control requirements. Finally, buildability evaluates the practical feasibility of manufacturing the mechanism, including ease of fabrication using methods such as laser cutting, 3D printing, and off-the-shelf components, as well as sensitivity to assembly tolerances and alignment requirements.</p></div>
@@ -1017,7 +1021,7 @@
     <div> <p> The 4-bar linkage, which was ultimately selected, offers the best overall balance of performance and adaptability. While slight orientation deviations may occur depending on geometry, it excels in compatibility with the front-fed system and provides fully tunable motion through link length optimisation. This allows precise control over the trajectory while maintaining high repeatability. Its key advantage lies in its design flexibility, enabling adaptation to constraints such as waterjet integration and frame limitations. Although it introduces moderate complexity in terms of kinematic synthesis and requires tighter alignment during fabrication, it remains feasible to build. Overall, the 4-bar linkage stands out because it achieves trajectory tunability without compromising repeatability, making it particularly well-suited to the system’s functional requirements.</p></div>
     <div> <p> In contrast, the rotary or incline mechanism was deemed unsuitable due to its fundamental mismatch with system needs. Its tendency to introduce tray tilt makes it incompatible with the requirement for stable, horizontal cutting. Additionally, it offers poor control over vertical motion, lower repeatability, and potential interference with tray entry depending on its configuration. While relatively simple to construct, these limitations outweigh its benefits, leading to its elimination from consideration.</p></div>
 
-    <h3 id="section-8-6">8.6 Appendix F: Comparative Analysis for Extraction Concept</h3>
+    <h3 id="section-8-7">8.7 Appendix G: Comparative Analysis for Extraction Concept</h3>
     <div><p> Laser cutting offers a non-contact approach and precise energy delivery; however, it introduces thermal effects that are unsuitable for fresh produce. The high moisture content of lettuce leads to localised heating, causing tissue degradation, dehydration, and potential browning at the cut interface. Additionally, laser systems require optical alignment, enclosure, and safety considerations, reducing feasibility within a compact, wet farming environment.</p></div>
     <div><p> Mechanical blades are simple, compact, and widely used in agricultural applications. However, as a contact-based method, they introduce compressive forces prior to cutting, which can result in bruising and inconsistent separation. Blade wear and dulling over repeated cycles further reduce cut quality and require frequent maintenance. While feasible and easy to implement, performance variability and potential impact on product quality limit its suitability. Lettuce bleeding is also noted from experiential harvesting exercise. Sap gets secreted which affects blade longevity and questions hygiene standards. </p></div>
     
@@ -1032,7 +1036,7 @@
     <div><p> Waterjet cutting provides a non-contact cutting mechanism that minimises mechanical stress on the crop. This reduces tissue compression and enables cleaner separation compared to blade-based methods. Its compatibility with wet, hydroponic environments further supports integration within indoor vertical farming systems. Additionally, the absence of blade wear improves consistency and reduces maintenance requirements. While the system introduces complexity in terms of pressurisation and fluid management, it offers the best balance between cut quality, repeatability, and system compatibility.</p></div>
     <div><p>  Rope based cutting offers a mechanically simple approach; however, it relies on frictional contact and tension, which can result in tearing rather than clean cutting. The method also presents a risk of material degradation and particulate contamination (microplastics), particularly if polymer filaments are used. Furthermore, maintaining consistent tension and alignment across multiple cuts is challenging, reducing reliability in batch processing scenarios.</p></div>
 
-  <h3 id="section-8-7">8.7 Appendix G: Pressure Calculations for Waterjet</h3>
+  <h3 id="section-8-8">8.8 Appendix H: Pressure Calculations for Waterjet</h3>
 
 <p>
 A first-pass analytical estimate was carried out to determine the order of magnitude of water pressure required for the proposed waterjet cutting system. The objective of this calculation is not to define a final operating pressure, but to establish a theoretical baseline for assessing the feasibility of using a small nozzle to sever lettuce stems under controlled conditions.
