@@ -951,11 +951,219 @@
 </section>
 
 
-  <h3 id="section-8-3">8.3 Appendix C</h3>
-    <div> <p> </p></div>
+  <h3 id="section-8-3">8.3 Appendix C: Lettuce-Tray Separation Concept Selection </h3>
 
-  <h3 id="section-8-4">8.4 Appendix D</h3>
-    <div> <p> </p></div>
+    <image-component
+      tag="image" 
+        source="assets/fork_selection.png"
+        subtitle="Figure : Singapore’s performance in the Sustainability and Adaptation pillar of the Global Food Security Index."
+    ></image-component><div> <p> </p></div>
+
+    <div> <p> Option A outperforms the alternatives under the selection criteria. It protects the plant by supporting it entirely from below, avoiding hold-induced leaf damage, and it leverages the existing tray geometry without requiring modifications to the vertical-farm workspace. Its static forks and simple lift motion keep the mechanism mechanically minimal, with few moving parts, low failure probability, and essentially zero energy demand for this function. </p></div>
+    <div> <p> Option B is unsuitable because its sliding blades require precise stem alignment, create sap-collecting crevices that demand frequent cleaning, and present upward edges that can snag or cut lower leaves, making hygiene and leaf safety difficult to maintain. </p></div>
+    <div> <p> Option C, though similar, introduces dual sliding arms that increase mechanical and control complexity. </p></div>
+    <div> <p> Option D’s compliant behaviour is appealing, but relying on an external robotic arm, valves, and a compressor makes it the most infrastructure-heavy, energy-demanding, and least retrofit-friendly option. Although it was the original approach, it proved misaligned with the constraints of this application.</p></div>
+
+  <h3 id="section-8-4">8.4 Appendix D: Criterion Justification for Tray Lowering Concept Selection</h3>
+    <div> <p> The selection criteria for the tray lowering mechanism were defined based on their direct relevance to system performance, integration, and feasibility within the project scope. Tray stability, particularly maintaining a horizontal orientation during operation, is critical to ensure consistent interaction between the waterjet and the lettuce roots. Any unintended tilt could result in uneven cutting and increase the risk of crop damage. Compatibility with a conveyor-fed input is also a key requirement, as the mechanism must integrate seamlessly with a front-fed tray system without obstructing entry, making this a strict architectural constraint.</p></div>
+    <div> <p> Control over the motion trajectory is equally important, as the lowering action must be smooth and predictable. This ensures that the lettuce placement is not disturbed, a consistent cutting height is maintained, and dynamic loads on the system are minimised. In addition, suitability for batch processing is essential, since the system is expected to operate repeatedly with minimal recalibration. High repeatability directly impacts throughput and overall system efficiency. </p></div>
+    <div> <p> Design flexibility was also considered, given the evolving nature of constraints such as waterjet integration, frame dimensions, and potential variations in tray design. The mechanism should therefore allow for adjustments in link lengths, motion paths, and facilitate rapid iteration during CAD modelling and prototyping. Complexity, in terms of design difficulty, captures the challenges associated with kinematic synthesis, analysis, optimisation, and control requirements. Finally, buildability evaluates the practical feasibility of manufacturing the mechanism, including ease of fabrication using methods such as laser cutting, 3D printing, and off-the-shelf components, as well as sensitivity to assembly tolerances and alignment requirements.</p></div>
+    <div> <p> The scissor lift demonstrates strong performance due to its inherently stable vertical motion, which maintains tray orientation effectively and ensures high repeatability. It integrates well beneath the tray without obstructing entry and is simple to design and fabricate using basic linkages. However, its primary limitation lies in its lack of design flexibility, as the motion trajectory is largely fixed and cannot be easily tuned beyond simple scaling.</p></div>
+    <div> <p> The 4-bar linkage, which was ultimately selected, offers the best overall balance of performance and adaptability. While slight orientation deviations may occur depending on geometry, it excels in compatibility with the front-fed system and provides fully tunable motion through link length optimisation. This allows precise control over the trajectory while maintaining high repeatability. Its key advantage lies in its design flexibility, enabling adaptation to constraints such as waterjet integration and frame limitations. Although it introduces moderate complexity in terms of kinematic synthesis and requires tighter alignment during fabrication, it remains feasible to build. Overall, the 4-bar linkage stands out because it achieves trajectory tunability without compromising repeatability, making it particularly well-suited to the system’s functional requirements.</p></div>
+    <div> <p> In contrast, the rotary or incline mechanism was deemed unsuitable due to its fundamental mismatch with system needs. Its tendency to introduce tray tilt makes it incompatible with the requirement for stable, horizontal cutting. Additionally, it offers poor control over vertical motion, lower repeatability, and potential interference with tray entry depending on its configuration. While relatively simple to construct, these limitations outweigh its benefits, leading to its elimination from consideration.</p></div>
+
+    <h3 id="section-8-4">8.4 Appendix E: Criterion Justification for Extraction Concept</h3>
+    <div><p> Laser cutting offers a non-contact approach and precise energy delivery; however, it introduces thermal effects that are unsuitable for fresh produce. The high moisture content of lettuce leads to localised heating, causing tissue degradation, dehydration, and potential browning at the cut interface. Additionally, laser systems require optical alignment, enclosure, and safety considerations, reducing feasibility within a compact, wet farming environment.</p></div>
+    <div><p> Mechanical blades are simple, compact, and widely used in agricultural applications. However, as a contact-based method, they introduce compressive forces prior to cutting, which can result in bruising and inconsistent separation. Blade wear and dulling over repeated cycles further reduce cut quality and require frequent maintenance. While feasible and easy to implement, performance variability and potential impact on product quality limit its suitability. Lettuce bleeding is also noted from experiential harvesting exercise. Sap gets secreted which affects blade longevity and questions hygiene standards. </p></div>
+    
+    <image-component
+      tag="image" 
+        source="assets/sap.png"
+        subtitle="Figure : Sap secretion observed during harvesting exercise."
+    ></image-component><div> <p> </p></div>
+    
+    
+    
+    <div><p> Waterjet cutting provides a non-contact cutting mechanism that minimises mechanical stress on the crop. This reduces tissue compression and enables cleaner separation compared to blade-based methods. Its compatibility with wet, hydroponic environments further supports integration within indoor vertical farming systems. Additionally, the absence of blade wear improves consistency and reduces maintenance requirements. While the system introduces complexity in terms of pressurisation and fluid management, it offers the best balance between cut quality, repeatability, and system compatibility.</p></div>
+    <div><p>  Rope based cutting offers a mechanically simple approach; however, it relies on frictional contact and tension, which can result in tearing rather than clean cutting. The method also presents a risk of material degradation and particulate contamination (microplastics), particularly if polymer filaments are used. Furthermore, maintaining consistent tension and alignment across multiple cuts is challenging, reducing reliability in batch processing scenarios.</p></div>
+
+  <h3 id="section-8-4">8.4 Appendix D: Appendix D: Pressure Calculations for Waterjet</h3>
+  <h3 id="section-8-4">8.4 Appendix D: Pressure Calculations for Waterjet</h3>
+
+<p>
+A first-pass analytical estimate was carried out to determine the order of magnitude of water pressure required for the proposed waterjet cutting system. The objective of this calculation is not to define a final operating pressure, but to establish a theoretical baseline for assessing the feasibility of using a small nozzle to sever lettuce stems under controlled conditions.
+</p>
+
+<h4>(a) Jet Exit Velocity</h4>
+<p>
+The jet exit velocity may be approximated using the orifice flow relation:
+</p>
+
+<p>
+  <code>v = C<sub>d</sub> &radic;(2&Delta;P / &rho;)</code>
+</p>
+
+<p>Where:</p>
+<ul>
+  <li><code>v</code> = jet velocity</li>
+  <li><code>C<sub>d</sub></code> = discharge coefficient</li>
+  <li><code>&Delta;P</code> = pressure drop across the nozzle</li>
+  <li><code>&rho;</code> = water density</li>
+</ul>
+
+<h4>(b) Volumetric Flow Rate</h4>
+<p>
+The volumetric flow rate through the nozzle is:
+</p>
+
+<p>
+  <code>Q = A<sub>n</sub>v = (&pi;d<sub>n</sub><sup>2</sup>/4)v</code>
+</p>
+
+<p>Where:</p>
+<ul>
+  <li><code>Q</code> = flow rate</li>
+  <li><code>A<sub>n</sub></code> = nozzle area</li>
+  <li><code>d<sub>n</sub></code> = nozzle diameter</li>
+</ul>
+
+<h4>(c) Jet Impact Force</h4>
+<p>
+A simple upper-bound estimate of the jet impact force is obtained from momentum flow:
+</p>
+
+<p>
+  <code>F<sub>j</sub> = ṁv = &rho;Qv</code>
+</p>
+
+<p>
+Substituting <code>Q = A<sub>n</sub>v</code>:
+</p>
+
+<p>
+  <code>F<sub>j</sub> = &rho;A<sub>n</sub>v<sup>2</sup></code>
+</p>
+
+<p>
+Using <code>v<sup>2</sup> = C<sub>d</sub><sup>2</sup>(2&Delta;P/&rho;)</code>:
+</p>
+
+<p>
+  <code>F<sub>j</sub> = 2C<sub>d</sub><sup>2</sup>A<sub>n</sub>&Delta;P</code>
+</p>
+
+<h4>Equivalent Cutting Stress on Stem</h4>
+<p>
+To compare the jet action against the lettuce stem, the jet force may be converted into an equivalent stress:
+</p>
+
+<p>
+  <code>&sigma;<sub>j</sub> = F<sub>j</sub> / A<sub>s</sub></code>
+</p>
+
+<p>Where:</p>
+<ul>
+  <li><code>&sigma;<sub>j</sub></code> = equivalent jet-induced stress on the stem</li>
+  <li><code>A<sub>s</sub></code> = stem cross-sectional area</li>
+</ul>
+
+<p>
+Approximating the stem as circular:
+</p>
+
+<p>
+  <code>A<sub>s</sub> = (&pi;d<sub>s</sub><sup>2</sup>)/4</code>
+</p>
+
+<p>
+where <code>d<sub>s</sub></code> is the stem diameter.
+</p>
+
+<p>
+The design criterion is therefore:
+</p>
+
+<p>
+  <code>&sigma;<sub>j</sub> &ge; SF &middot; &sigma;<sub>fail</sub></code>
+</p>
+
+<p>Where:</p>
+<ul>
+  <li><code>SF</code> = safety factor</li>
+  <li><code>&sigma;<sub>fail</sub></code> = failure stress of lettuce stem tissue</li>
+</ul>
+
+<h4>Required Pressure Equation</h4>
+<p>
+Substituting the force expression into the design criterion gives:
+</p>
+
+<p>
+  <code>(2C<sub>d</sub><sup>2</sup>A<sub>n</sub>&Delta;P) / A<sub>s</sub> &ge; SF &middot; &sigma;<sub>fail</sub></code>
+</p>
+
+<p>
+Rearranging for the required pressure:
+</p>
+
+<p>
+  <code>&Delta;P &ge; (SF &middot; &sigma;<sub>fail</sub> &middot; A<sub>s</sub>) / (2C<sub>d</sub><sup>2</sup>A<sub>n</sub>)</code>
+</p>
+
+<h4>Example Theoretical Sizing</h4>
+<p>
+A preliminary sizing calculation was performed using the following assumptions:
+</p>
+
+<ul>
+  <li>Stem diameter: <code>d<sub>s</sub> = 10 mm = 0.010 m</code></li>
+  <li>Nozzle diameter: <code>d<sub>n</sub> = 0.50 mm = 5.0 &times; 10<sup>-4</sup> m</code></li>
+  <li>Discharge coefficient: <code>C<sub>d</sub> = 0.90</code></li>
+  <li>Tissue failure stress estimate: <code>&sigma;<sub>fail</sub> = 0.20 MPa</code></li>
+  <li>Safety factor: <code>SF = 1.5</code></li>
+</ul>
+
+<p>
+The stem area is:
+</p>
+
+<p>
+  <code>A<sub>s</sub> = (&pi;(0.010)<sup>2</sup>)/4 = 7.85 &times; 10<sup>-5</sup> m<sup>2</sup></code>
+</p>
+
+<p>
+The nozzle area is:
+</p>
+
+<p>
+  <code>A<sub>n</sub> = (&pi;(5.0 &times; 10<sup>-4</sup>)<sup>2</sup>)/4 = 1.96 &times; 10<sup>-7</sup> m<sup>2</sup></code>
+</p>
+
+<p>
+Substituting into the pressure equation:
+</p>
+
+<p>
+  <code>&Delta;P &ge; (1.5(0.20 &times; 10<sup>6</sup>)(7.85 &times; 10<sup>-5</sup>)) / (2(0.9)<sup>2</sup>(1.96 &times; 10<sup>-7</sup>))</code>
+</p>
+
+<p>
+  <code>&Delta;P &ge; 7.4 &times; 10<sup>7</sup> Pa</code>
+</p>
+
+<p>
+  <code>&Delta;P &ge; 74 MPa</code>
+</p>
+
+<p>
+This first-pass estimate therefore suggests that the required pressure is on the order of <strong>70&ndash;80 MPa</strong> for a <strong>0.5 mm nozzle</strong> under the stated assumptions.
+</p>
+
+<p>
+This result provides a theoretical benchmark for early-stage design evaluation. In practice, the actual required pressure will depend on factors such as nozzle stand-off distance, jet coherence, stem geometry, tissue variability, and the dynamic interaction between the waterjet and the crop during cutting.
+</p>
+
+
 
   <h2 id="section-9">9. Word Count</h2>
   <section id="word-count">
