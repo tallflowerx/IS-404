@@ -387,8 +387,7 @@
                  ></image-component>
               
                   <div> <p> The refined CAD model introduces a full structural frame using extrusion members, with the fork elements now represented as slender beams spanning between supports. This model was developed to better reflect the actual load-bearing configuration of the system.</p>
-              `   <div> <p> At this stage, beam deflection emerged as a key concern, as the forks operate as cantilevered or partially supported members subjected to the weight of the loaded tray. The distributed loading across multiple forks highlighted the potential for uneven deformation, which could affect alignment and stability during operation. This model enabled clearer visualisation of load paths, support conditions, and boundary constraints, forming the basis for subsequent structural analysis using Finite Element Analysis (FEA).</p>
-          
+              `   <div> <p> At this stage, beam deflection emerged as a key concern, as the forks operate as cantilevered or partially supported members subjected to the weight of the loaded tray. The distributed loading across multiple forks highlighted the potential for uneven deformation, which could affect alignment and stability during operation. This model enabled clearer visualisation of load paths, support conditions, and boundary constraints, forming the basis for subsequent structural analysis using Finite Element Analysis (FEA).</p> </div>
                 <h4> 3.2.3. Structural Testing (Finite Element Analysis)</h4>
              
                 <div> <p> The primary objective of this test was to:</p> <div>
@@ -450,21 +449,42 @@
                 <div> <p> While prior Finite Element Analysis (FEA) predicted negligible deflection of the fork members, physical testing of the printed prototype revealed observable deformation under relatively low loads. This discrepancy arises from modelling assumptions including idealised isotropic material behaviour, simplified boundary conditions, and uniform load distribution, which do not fully capture the anisotropic and layer-dependent properties of additively manufactured PLA. Additionally, the reduced stiffness associated with 20% infill, combined with geometric tolerances and minor assembly misalignments, contributed to increased compliance in the system.</p></div>
                 <div> <p> This comparison highlights that, although the FEA provided a valid theoretical baseline, it was not fully representative of the as-built prototype</p></div>
           <h4> 3.2.5 Alternate ways to reduce deflection </h4>
+
          <h3> 3.3. Tray Clamping </h3>
+
                 <h4> 3.3.1. Concept Selection</h4>
                   <div> <p> The tray clamping mechanism employs an over-centre toggle linkage, selected for its ability to deliver a stable and repeatable clamping force that directly supports the project’s objective of improving harvesting throughput while preserving crop quality. By achieving self-locking beyond the dead-centre position, the mechanism maintains secure tray fixation without continuous actuation, enabling energy-efficient and reliable operation during batch processing and tray lowering. Compared to the alternative latch-based hook mechanism considered, the toggle configuration provides superior force consistency and positional rigidity, which is critical for ensuring precise alignment during lettuce extraction. Furthermore, its compact, planar linkage design satisfies the system’s spatial and modularity constraints, allowing seamless integration without obstructing tray intake, thereby aligning with the overall goal of a scalable, plug-and-play harvesting solution.</p> </div>
-                <h4> 3.3.2. CAD </h4>
+                
+                  <h4> 3.3.2. CAD </h4>
+                <image-component 
+                  tag="image" 
+                  source="assets/tray_clamping_CAD.jpg"
+                  subtitle="Image X: Tray Clamping CAD"
+                ></image-component>
+
                 <h4> 3.3.3. 3D Printed Prototype</h4>
+
+                <image-component 
+                  tag="image" 
+                  source="assets/tray_clamping_prototype.jpg"
+                  subtitle="Image X: Tray Clamping"
+                ></image-component>
+
                   <div> <p> A hybrid prototype of the tray clamping and lowering interface was fabricated to evaluate mechanical behaviour, assembly feasibility, and load transfer characteristics under representative operating conditions. Structural components were produced using laser-cut acrylic sheets, while linkage elements utilised commercial off-the-shelf (COTS) rods for joints and pivots. Select components requiring geometric complexity were 3D printed in PLA.</p> </div>
                   <div> <p> Testing of the assembled prototype revealed that the clamping mechanism required the introduction of a preloading element to maintain consistent engagement. In the absence of preload, the clamp exhibited a tendency to disengage under minor disturbances, indicating insufficient internal force to sustain the over-centre locking condition. This observation directly informed the inclusion of a preload requirement in the clamping force design, ensuring reliable and repeatable operation during tray handling.</p> </div>
                   <div> <p> Additionally, it was observed that the single-point attachment between the clamping mechanism and the four-bar linkage resulted in localised stress concentration and reduced structural stability. The load path through a single fastener introduced undesirable rotational compliance, which could compromise alignment during the lowering process. This highlighted the need for improved load distribution through multi-point fastening or rigid joint interfaces in subsequent design iterations. For future implementations, more permanent joining methods such as welding or reinforced mounting plates are recommended to enhance structural integrity. </p> </div>
-                <h4> 3.3.4. Clamping Force Calculations</h4>
+                
+                  <h4> 3.3.4. Clamping Force Calculations</h4>
                   <div> <p> As identified through physical prototyping, the clamping mechanism required an internal preload to maintain consistent engagement and prevent unintended disengagement, necessitating a quantitative estimation of the preload force required for reliable operation. </p> </div>
                   <div> <p> The clamping mechanism is a passive over-centre toggle and does not rely on a dedicated actuator. The required holding capacity was therefore estimated from friction rather than actuator thrust. The loaded tray mass was taken as 3.85 kg, corresponding to a static weight of 37.8 N. To account for startup effects, guide friction, and root drag during downward extraction, the pull load was conservatively taken as 1.5–2.0 times the tray weight, i.e. 56.7–75.5 N. Assuming a friction coefficient of 0.4–0.5 between the tray and clamp pads, the required total normal clamping force is approximately 113–189 N. A design value of 180–200 N total clamping force was therefore adopted. Since the clamp operates as an over-centre toggle, the internal linkage force needed to maintain lock is much smaller than the normal clamping force. For a lock angle of approximately 5–10° from dead centre, an internal preload of about 15–30 N is sufficient to generate the required clamping force.</p> </div>
-         <h3> 3.4. Tray Lowering </h3>
+         
+         
+                  <h3> 3.4. Tray Lowering </h3>
+
                 <h4> 3.4.1. Concept Selection</h4>
                   <div> <p> The refined concept selection matrix indicates that the reverse four-bar mechanism provides the most suitable balance of compactness, tray stability, conveyor compatibility, and implementation feasibility. Although the vertical linear lift offers the most direct vertical motion, it requires a taller and more constrained supporting architecture. The scissor lift remains a viable option and performs reasonably well in terms of vertical motion and tray support but is less favourable due to its bulkier packaging and greater mechanical complexity. The rotational-incline concept scored lowest because its changing tray orientation is not well aligned with the requirement for stable and repeatable presentation to the downstream waterjet cutting subsystem.</p> </div>
-                <h4> 3.4.2. Kinematic Validation of the Four Bar Mechanism </h4>
+                
+                  <h4> 3.4.2. Kinematic Validation of the Four Bar Mechanism </h4>
                   <div> <p>  Geometric synthesis was carried out to explore the motion capabilities of the reverse four-bar linkage, with the primary objective of achieving a controlled tray-lowering trajectory compatible with the spatial and functional constraints of the harvesting system. Rather than prescribing a fixed vertical motion, the linkage was selected for its ability to generate a range of trajectories through variation of link lengths, pivot locations, and coupler point placement, enabling the motion to be tailored to system-level requirements.</p> </div>
                   <div> <p> This flexibility was particularly important given the constraints of the design: the tray must enter from a fixed position, remain largely within a confined frame envelope (750 mm × 690 mm), and be lowered smoothly to a position suitable for root detachment, while avoiding excessive lateral drift or abrupt changes in orientation. As such, the objective was not to achieve purely vertical motion, but to synthesise a trajectory that balances smoothness, compactness, and positional control. Three candidate linkage configurations were developed and evaluated through kinematic simulation on MotioGen.io: </p> </div>
                   <div> <p> Iteration 1 produced a trajectory with significant looping and reversal behaviour, indicating poor alignment with the desired motion. The presence of cusps and non-monotonic displacement suggested that the coupler point, and link proportions were not suitably configured, leading to unstable motion and impractical real-world behaviour. </p> </div>
@@ -473,17 +493,29 @@
                   <div> <p> The comparative evaluation of these configurations highlights the sensitivity of the four-bar linkage to geometric parameters, particularly coupler point placement and pivot positioning. Small changes in these variables resulted in significant differences in trajectory shape, reinforcing the importance of iterative synthesis and validation. </p> </div>
                   <div> <p> While Iteration 2 provided the most desirable motion characteristics from a kinematic perspective, Iteration 3 was selected for prototyping to validate structural behaviour and manufacturability under a more constrained configuration. This reflects a design approach that considers not only ideal motion performance but also practical implementation, fabrication feasibility, and system integration. </p> </div>
                   <div> <p> Overall, the reverse four-bar linkage was retained as the preferred mechanism due to its ability to accommodate iterative refinement and generate a spectrum of feasible trajectories without requiring fundamental changes to the system architecture. This makes it well-suited to the evolving requirements of the project, particularly as additional subsystems such as clamping and waterjet integration are incorporated.  </p> </div>
-                <h4> 3.4.3. CAD </h4>
+                
+                  <h4> 3.4.3. CAD </h4>
+
+                  <image-component 
+                    tag="image" 
+                    source="assets/Link_CAD.png"
+                    subtitle="Image X: CAD of Linkage System"
+                  ></image-component>
+
                   <div> <p> Following kinematic validation of the selected linkage, the four-bar mechanism was translated into a detailed CAD model to evaluate its behaviour under realistic spatial and integration constraints. While the kinematic model established the feasibility of the desired motion trajectory, the CAD model enabled assessment of link geometry, joint placement, and physical clearances within the system.</p> </div>
                   <div> <p> Through this process, several key considerations emerged. Firstly, the CAD model highlighted the importance of link thickness and joint spacing, as idealised kinematic links do not account for physical interference between members during motion. Adjustments were therefore made to ensure sufficient clearance between links across the full range of motion.</p></div>
                   <div> <p> Secondly, the model allowed for evaluation of packaging constraints within the frame, ensuring that the mechanism could operate without interfering with the tray, fork assembly, or surrounding structure. This was particularly critical given the requirement to maintain an unobstructed tray entry path. </p></div>
-                <h4> 3.4.4. Prototyping </h4>
+                
+                  <h4> 3.4.4. Prototyping </h4>
                   <div> <p>To validate the kinematic behaviour of the selected four-bar mechanism beyond simulation, a scaled physical prototype was fabricated using laser-cut linkages. This prototype was assembled to replicate the motion predicted through MotionGen and CAD, allowing direct observation of the mechanism’s behaviour under real-world conditions. </p> </div>
                   <div> <p>The primary purpose of this prototype was to assess whether the intended trajectory of the tray (approximated by the coupler point) could be reliably achieved, and to evaluate the smoothness and feasibility of the motion across the full range of operation. Unlike purely digital models, the physical prototype enabled identification of subtle effects such as joint play, friction, and sensitivity to dimensional inaccuracies. </p> </div>
                   <div> <p>Through testing, it was observed that while the overall motion trend aligned with the predicted trajectory, small deviations in link lengths and pivot placement resulted in noticeable changes in the path, reinforcing the sensitivity of the mechanism to dimensional precision. This highlighted the importance of maintaining tight tolerances and careful alignment during fabrication.</p> </div>
                   <div> <p> Additionally, the prototype provided insight into motion smoothness and potential binding, particularly near extreme positions of the linkage. This informed subsequent refinement of link proportions and pivot locations to avoid configurations close to singularity. The exercise also demonstrated the practicality of the mechanism from an assembly perspective, allowing evaluation of joint accessibility, fastener placement, and overall constructability, which are not fully captured in simulation. </p> </div>
                   <div> <p> The prototyping process highlighted the broader need to prioritise design for manufacturability and assembly (DFMA). Clearances became paramount with the number of moving components in the prototype. Features that were geometrically valid in CAD required modification to improve ease of assembly, alignment, and repeatability. This included refining hole tolerances, improving access for fastening, and simplifying part interfaces to reduce assembly complexity.  </p> </div>
-          <h3>3.5 Lettuce Cutting </h3>
+          
+          
+            <h3>3.5 Lettuce Cutting </h3>
+                
                 <h4> 3.5.1. Concept Selection Matrix</h4>
                   <div> <p>To identify a suitable stem separation method, four concepts were compared against the functional requirements of the system. The evaluation criteria were derived from the project objectives, with emphasis placed on cut quality, preservation of product quality, hydroponic compatibility, suitability for batch processing, maintainability, and feasibility within the project’s scope.  </p> </div>
                   <div> <p>Among the concepts considered, waterjet cutting achieved the highest weighted score. This was primarily due to its non-contact cutting action, reduced risk of tissue compression, compatibility with wet hydroponic environments, and strong potential for repeatable batch operation. By contrast, laser cutting was disadvantaged by thermal damage risk, mechanical blades by wear and contact-induced bruising, and rope-based cutting by inconsistent separation and contamination concerns. </p> </div>
@@ -495,12 +527,27 @@
                 <h4> 3.5.3. FedJet Testing </h4>
                 <div> <p>To validate the feasibility of the selected concept, industry consultation was conducted with FedJet, a company specialising in waterjet technologies. Through this engagement, preliminary testing was performed on lettuce stems using a waterjet system, demonstrating that clean and effective separation is achievable under controlled conditions. These findings provide practical confirmation that waterjet-based cutting is a viable approach for harvesting lettuce, supporting its selection for further development in this project. </p> </div>
                 
+
+
+            <h3>3.6 Complete CAD </h3>
+                
+              <image-component 
+                    tag="image" 
+                    source="assets/complete_cad.jpg"
+                    subtitle="Image X: CAD of Full System"
+                  ></image-component>
+
+
+
+
     <h2> 4. Shortcomings </h2>
+    
                 <div>Several limitations were identified during the development and prototyping stages, highlighting areas requiring further refinement. <p> </p> </div>
                 <div> <p>Firstly, the current tray-support structure relies on single-point fastening, which is insufficient for maintaining stability under load. This introduces the risk of localised rotation and uneven load distribution, indicating the need for multi-point constraint or improved joint design to ensure structural rigidity. </p> </div>
                 <div> <p>Secondly, the alternative designs to prevent beam deflection of the fork members have been proposed but are yet to be designed and tested. While initial simulations suggested acceptable deformation levels, physical prototyping demonstrated noticeable deflection, particularly under realistic loading conditions.  </p> </div>
                 <div> <p>From a systems perspective, the absence of sensing and feedback components limits the ability of the system to detect tray presence, alignment, and successful engagement. This reduces robustness and introduces potential failure modes during operation. </p> </div>
                 <div> <p> Finally, environmental considerations such as water exposure from the waterjet process have not been fully addressed. The current design lacks protective features, such as rubber sealing or splash guards, which are necessary to prevent damage to structural and mechanical components.</p> </div>
+
     <h2> 5. Future Work </h2>
                 <div> <p> Future development of the system will focus on improving geometric adaptability, structural performance, and integration into a fully automated harvesting workflow.</p> </div>
                 <div> <p> Firstly, the current design is based on a fixed tray geometry. Future iterations should incorporate adjustable or modular fork configurations to accommodate variations in tray dimensions and crop types. This would improve compatibility across different vertical farming systems and reduce reliance on a single standardised tray design. </p> </div>
@@ -513,324 +560,8 @@
                 <div> <p> This work validates the feasibility of a modular, mechanically driven harvesting system for hydroponic lettuce through systematic design, kinematic synthesis, and physical prototyping. The study highlights critical interactions between structural behaviour, motion control, and system integration, demonstrating the importance of iterative validation in translating theoretical models into functional designs. Collectively, the outcomes provide a robust engineering foundation for scalable harvesting automation in indoor vertical farming systems. </p></div>
                 
 
-              
-      <div><p> Considering this landscape, the objective of this project is to design and evaluate a simple, energy-efficient, and delicate proof-of-concept harvesting system for indoor hydroponic lettuce farms in Singapore that targets reduction in labour hours per unit yield by 10% and improvement in energy efficiency by 15% while maintaining high marketable output. <i> (Refer to Appendix A) </i>The system is conceived for Singapore’s high-cost, land-scarce agricultural context, where labour constitutes a disproportionate share of operating expenditure and electricity prices remain elevated.</p></div>
-      <div><p> The scope of this project is intentionally framed to ensure feasibility for a solo engineering build, which motivates the emphasis on simplicityThe system focuses exclusively on the harvesting stage of the hydroponic crop cycle—one of the most labour-intensive phases—as defined by industry requirements clarified to me by Mr Edwin. This requirement for delicate handling of lettuce arises from its biomechanical properties: highly deformable, low stiffness crop whose leaves tear easily under concentrated loads.</p></div>
-      <video-component 
-    tag="rick" 
-    source="https://www.youtube.com/embed/c3Pxlm8o6qo"
-    subtitle="Video 1: Lettuce Yield, 1961 to 2023. Source: Our World In Data, 2023"
-></video-component>
-      <div><p> Lettuce (Lactuca sativa) is one of the most strategically significant leafy vegetables in both controlled-environment agriculture and the world. Global lettuce yields have risen from roughly 10 tonnes/ha in 1961 to over 25 tonnes/ha today (Our World in Data, 2023), reflecting both heightened consumer demand and its culinary versatility across cuisines. As a non-climacteric crop with exceptionally high-water content, freshness is a key quality determinant because conventional preservation methods (freezing, canning, drying) compromise its texture and crispness. </p></div>
-      
-      
-      
-      <div><p> Specifically, the Crystal lettuce offers practical advantages for iterative prototyping. Its short (35-day) growth cycle enables multiple design–test–refine iterations within the project timeline, and its availability through industry partner, ArianeTech, coupled with its delicate structure, provides a stringent benchmark for evaluating harvesting delicate crops.</p></div>
-      
-      <image-component 
-    tag="Crystal Lettuce Infographic" 
-    source="assets/crystal_lettuce.png"
-    subtitle="Figure 2: Crystal Lettuce Infographic. Source: ArianeTech."
-      ></image-component>
-      
-      
-      <div><p> Within this context, the project is scoped to indoor hydroponic production. Hydroponic production reduces water usage dramatically—20 ± 3.8 L/kg compared to 250 ± 25 L/kg for field-grown lettuce—representing ~92% savings (Barbosa et al., 2015). Controlled Environment Agriculture (CEA) also offers precise control over temperature, humidity, lighting, and nutrient delivery, ensuring consistent year-round production independent of climate variability. Hydroponic systems additionally improve sustainability metrics: transport of fruits and vegetables accounts for roughly 36% of global food-miles emissions (Li et al., 2022), so relocating production to dense urban centres substantially reduces logistical emissions. </p></div>
-      <div><p> Mr. Edwin (ArianeTech) further informed the scope by emphasising on an industry-driven requirement: farms prefer a non-integrated, modular solution for harvesting that operates on removable trays, avoiding modifications to vertical rack infrastructure. After completing a MoSCoW analysis (Clegg & Barker, 1994, <i>Refer to Appendix B</i>), the essential design requirements were established.  </p></div>
-      
-      <image-component 
-    tag="image" 
-    source="assets/dr_table.png"
-    subtitle="Table 1: Design Requirements"
-      ></image-component>
 
-      <h3>1.3. Value Proposition</h3>
-      <image-component 
-    tag="image" 
-    source="assets/vp.png"
-    subtitle="Figure 3: Value Proposition"
-      ></image-component>
-      
-      <div><p> Major players such as Spread, FingerVision × PLANTX, and Pure Green Farms achieve high-throughput automation, but their capital-intensive, fully integrated systems suit large-scale farms—not Singapore’s compact indoor setups. Local firms like iFarm emphasise resource-efficient cultivation but lack mechanisation to cut manual handling time. Research prototypes show high precision yet remain too complex, energy-dense, or insufficiently gentle for hydroponic lettuce.</p></div>
-      <div><p> Some systems deliver high precision but at prohibitive cost; others are energy-efficient but depend heavily on manual labour; still others handle crops gently but lack scalability. This project targets the intersection of these trade-offs. Its novelty lies in prioritising simplicity, modular deployment, and crop-sensitive handling—features largely absent from existing solutions. By centring the design on a lightweight, tray-based, infrastructure-agnostic concept, it offers a practical mechanisation pathway for small and mid-scale Singaporean farms without major retrofitting.</p></div>
-      
-      <h2>2. Concept Development</h2>
-
-      <div><p> The development of a harvesting system for indoor hydroponic lettuce farms demands iterative and empirically grounded design process. Unlike conventional mechanical problems, this system operates at the interface between a delicate biological substrate and engineered hardware. For this reason, the project development process has adopted a cyclic framework: </p></div>
-      <image-component 
-    tag="image" 
-    source="assets/cdc.png"
-    subtitle="Figure 4: Concept Development Cycle"
-      ></image-component>
-      
-      <div><p>Each cycle has allowed for immediate validation of theoretical assumptions through ad-hoc testing or prototyping. Such practical observations have provided insightful feedback for the following cycles of research and design refinement. </p></div>
-      <div><p> With design requirements established earlier, selection criteria have evolved to be energy demand, mechanical simplicity, tray-level modularity, food safety, and positional tolerance. </p></div>
-      <div><p> The major cycles focus on two most important components of this system; first, the lettuce harvesting workflow, and second the lettuce and its mechanical properties itself. </p></div>
-
-
-
-      <h3> Cycle 1: Lettuce Harvesting Workflow</h3>
-      <h4> 2.1.1. Research: Characterisation of Existing Harvesting Processes </h4>
-      <div> <p> A structured understanding of existing harvesting workflows was necessary before proposing any mechanism, because the constraints of the task are defined by the process itself. It is the logical first step to decompose the existing agricultural workflows into discrete motion phases. </p></div>
-      
-      <image-component 
-    tag="Tray of Lettuce" 
-    source="assets/tray_of_lettuce.png"
-    subtitle="Figure 5: Tray of Lettuce"
-      ></image-component>
-      
-     <image-component 
-    tag="Sap" 
-    source="assets/sap.png"
-    subtitle="Figure 6 : Sap making fingers sticky during harvesting"
-      ></image-component>
-
-      <h4> 2.1.2. Experiential Interaction: Harvesting at ArianeTech</h4>
-      <div><p> A valuable opportunity emerged in the form of a harvesting session at ArianeTech’s hydroponics facility in Pasir Panjang, where I harvested approximately 50 lettuce heads (<i>Komatsuna</i> and <i>Crystal</i> cultivars) manually. Observations included weight measurements that revealed substantial variability, along with lettuce specific observations that could not be derived from literature.</p></div>
-      <div> <p> Understanding that harvesting is a multi-step process, I decomposed it into four key steps (in order): Approach, Hold, Lift, and Extract.</p></div>
-      
-      <video-component 
-  tag="Video 2: Approach" 
-  source="https://www.youtube.com/embed/NHG_hNU5UMM"
-  subtitle="Video 2: Approach">
-</video-component>
-
-<video-component 
-  tag="Video 3: Hold" 
-  source="https://www.youtube.com/embed/eiTW6n9BBA0"
-  subtitle="Video 3: Hold">
-</video-component>
-
-<video-component 
-  tag="Video 4: Lift" 
-  source="https://www.youtube.com/embed/Hs-ohO3plaw"
-  subtitle="Video 4: Lift">
-</video-component>
-
-<video-component 
-  tag="Video 5: Extract" 
-  source="https://www.youtube.com/embed/zjdkq_yxevc"
-  subtitle="Video 5: Extract">
-</video-component>
-
-<div><p> Through repeated trials, the following observations emerged:</p></div>
-
-
-<div><p> <li> The sap released at the detachment point is adhesive and readily transfers to tool surfaces, highlighting the need for a harvesting mechanism that maintains clean, hygienic contact throughout extraction.</li> <li> The upper foliage forms a canopy that protects the stem but obstructs vertical access. Side-entry approaches consistently allowed the cleanest grasp, whereas top-down attempts caused leaf damage in 4 out of 5 cases due to interlocking leaves and limited visibility of the crown.</li></p></div>
-<div> <p> Interviews with farm technicians added further insight: harvesting one tray (~25 heads) required 15–20 minutes and performing this operation across 7–8 trays per shift leads to lower-back fatigue. This reinforced the importance of reducing manual handling time per unit yield. </p></div>
-
-
-    <h4> 2.1.3. Insights: Workflow Constraints and Failure Modes</h3>
-    <div><p> From these observations, several key design constraints emerged:</p></div>
-    <div><p> <li> <p>High geometric variability demands a system tolerant to size deviations. </p></li> <li> <p>Upper foliage is fragile, while the basal crown and stem are more mechanically robust.</p> </li> <li> <p>Leaf contact should be minimised, as any squeezing or friction generates tearing. </p> </li> <li>Side-entry approach is mechanically simpler compared to top-down.</li> <li> <p>Sap behaviour necessitates highly cleanable and minimally contaminating extraction methods. </p> </li>     </p></div>
-    <h4> 2.1.4. Design Refinement</h3>
-    <div><p> These insights sharpened the project’s initial requirements:</p></div>
-    <div> <p> <li> <p> All interactions are preferred to occur at or below the crown level.</p></li>
-<li> <p>Lifting must avoid compressive or abrasive contact.</p></li> 
-<li> <p>Extraction should isolate the cutting interface from foliage.</p></li> 
-</li></p></div>
-
-<h3>2.2. Cycle 2: Biomechanical Characteristics of Lettuce</h3>
-<div><p> Two key interactions were studied: the mechanical behaviour of lettuce under controlled crushing, and human handling patterns that reveal natural stability cues.</p></div>
-<h4> 2.2.1. Research </h4>
-<div><p> Literature on plant biomechanics identifies lettuce as a highly deformable, low-stiffness system: its leaves act as thin, non-linear elastic membranes with minimal puncture and shear resistance, while the stem—reinforced by vascular bundles—shows markedly higher rigidity. Mechanical behaviour is strongly anisotropic, shaped by vein orientation, hydration gradients, and cellular turgor, leading to region-dependent fracture thresholds.</p></div>
-<div><p>Yet publicly available data on the mechanical properties of the Crystal lettuce cultivar remains limited. With few actionable parameters for hydroponic varieties, theoretical insight alone was inadequate, motivating direct hands-on evaluation of harvested lettuces to fill this gap. In parallel, the Cutkosky Grasp Taxonomy (Cutkosky, 1989) was examined and applied to lettuce handling to understand how humans naturally stabilise fragile biological objects; mapping precision, prismatic, and circular grasps offered a basis for translating human dexterity into mechanical analogues.</p></div>
-
-<h4> 2.2.2. Experiential Interaction</h4>
-<div><p> To validate theoretical expectations, a fragility mapping exercise was conducted using harvested crops. The procedure was as follows:</p></div>
-<div><p> <li> <p>Controlled pinching at the apex, mid-leaf, and crown.</p></li>
-<li> <p></p>Lateral bending tests across leaf lamina.</p></li>
-<li> <p></p>Compression testing of the stem (qualitative).</p></li>
-<li> <p></p>Observing tear propagation under small, applied forces.</p></li>
-</p></div>
-<image-component 
-    tag="Cutkosky Grasp Taxonomy (Template)" 
-    source="assets/cgt_1.png"
-    subtitle="Figure 7: Cutkosky Grasp Taxonomy (Template)"
-      ></image-component>
-      <p> </p>
-<image-component 
-    tag="Cutkosky Grasp Taxonomy (Filled)" 
-    source="assets/cgt_2.png"
-    subtitle="Figure 8: Cutkosky Grasp Taxonomy (Filled)"
-      ></image-component>
-  
-
-
-<div><p>Grasp-interaction trials assessed how common hand configurations behave on lettuce, testing tripod and circular precision grasps across different lifting orientations, grip points, and support angles.</p></div>
-
-<h4> 2.2.3. Insights </h4>
-  <div><p> From the fragility mapping exercise: </p></div>
-  <div><p><li> <p> Upper foliage is fragile, while the basal crown and stem are more mechanically robust. </p></li>  <li><p> Vein orientation dominates bending stiffness (bending perpendicular to veins increases fracture risk sharply).</p></li></p></div>
-
-  <div><p> From the grasping trials: </p></div>
-  <div><li><p>Grasp-like interactions introduce high damage risk.</p></li>
-<li><p></p>Stability improves dramatically with under-support geometries.</p></li>
-<li><p></p>A mechanical “grasp” is not necessary; stability can be attained through forks, trays, or scoops.</p></li>
-</p></li></div>
-
-  <h4> 2.2.4. Design Requirement</h4>
-<div><p> Directing forces through the stem rather than the leaves is essential, and handling should minimise lateral loads by supporting the crop from below. This shifted the design from grasp-based concepts toward forks, trays, and guided support geometries, with the tray itself serving as part of the structural support. This approach improves lifting reliability, reduces damage risk, and remains compatible with retrofit-friendly modules. The holding mechanism must also account for stem slipperiness, using textured contact surfaces or geometry-driven stability.</p></div>
-
-
-<h3> 2.3. Design Matrix</h3>
-<div> <p>The earlier activities were not isolated experiments but deliberate experiential cycles that directly shaped the concept evaluation framework. Their insights served two roles. First, they informed the functional decomposition of the harvesting workflow: the “Function” column in the design matrix stems from the four mechanical steps defined in Section 2.1.2. Second, the empirical findings guided the selection criteria and weightings in the scoring tables. Factors such as gentleness, simplicity, modularity, cleanliness, and energy awareness reflected patterns consistently observed across the cycles, ensuring the framework prioritises what matters under real biological and operational conditions. These cycles thus provide a clear, traceable foundation for the design matrix.</p></div>
-
-<image-component 
-    tag="Design Matrix" 
-    source="assets/design_matrix.png"
-    subtitle="Table 2: Design Matrix"
-      ></image-component>
-
-<div><p> For the approach step, earlier insights established side-entry as the path with the least foliage interference, making it the baseline assumption for all subsequent concepts. Because holding and lifting are mechanically interdependent, they were treated as a single functional unit and evaluated through a combined concept scoring table. Extraction, however, involves a distinct mechanical interaction and therefore warranted its own dedicated scoring table.</p></div>
-
-<h3> 2.4. Concept Scoring (Holding & Lifting)</h3>
-<div><p> The four holding-and-lifting concepts evaluated are:</p></div>
-<div><p> <li><p> A. Fixed Fork Tray Support: A tray is inserted beneath the row while fixed fork tines remain between plants; removing the tray leaves the forks supporting each lettuce from below, allowing the whole row to be lifted together.</p></li>
-<li><p>B. Under-Plate Scissor Lift: A flat plate slides under the row and raises the lettuces using a simple scissor mechanism that pushes upward from below. </p></li>
-<li><p> C. Side-Entry Sliding Forks: Two fork-like arms enter the bed from opposite sides along rails, interlock beneath the root zone, and lift the plants as a single supported unit.</p></li>
-
-<li> <p>D. Soft Robotics Gripper: A compliant silicone gripper wraps around the lettuce using distributed pressure to stabilise it before lifting. </p></li>
-</p></div>
-
-<image-component 
-    tag="Fixed Fork Tray Support" 
-    source="assets/rake.png"
-    subtitle="Figure 9: Fixed Fork Tray Support"
-      ></image-component>
-  
-
-<image-component 
-    tag="Under-Plate Scissor Lift" 
-    source="assets/scooper.png"
-    subtitle="Figure 10: Under-Plate Scissor Lift"
-      ></image-component>
-      
-<image-component 
-    tag="Side-Entry Sliding Forks" 
-    source="assets/grid.png"
-    subtitle="Figure 11: Side-Entry Sliding Forks"
-      ></image-component>
-
-<video-component 
-  tag="Video 6: Soft Robotics Gripper" 
-  source="https://www.youtube.com/embed/CC9PeXI8A1c"
-  subtitle="Video 6: Soft Robotics Gripper">
-</video-component>
-
-<image-component 
-    tag="Holding & Lifting Concept Scoring Matrix" 
-    source="assets/hlcs.png"
-    subtitle="Table 3: Holding & Lifting Concept Scoring Matrix"
-      ></image-component>
-
-
-
-<div> <p> Option A outperforms the alternatives under the selection criteria. It protects the plant by supporting it entirely from below, avoiding hold-induced leaf damage, and it leverages the existing tray geometry without requiring modifications to the vertical-farm workspace. Its static forks and simple lift motion keep the mechanism mechanically minimal, with few moving parts, low failure probability, and essentially zero energy demand for this function.</p></div>
-<div> <p> Option B is unsuitable because its sliding blades require precise stem alignment, create sap-collecting crevices that demand frequent cleaning, and present upward edges that can snag or cut lower leaves, making hygiene and leaf safety difficult to maintain.</p></div>
-<div> <p>Option C, though similar, introduces dual sliding arms that increase mechanical and control complexity. </p></div>
-<div> <p> Option D’s compliant behaviour is appealing, but relying on an external robotic arm, valves, and a compressor makes it the most infrastructure-heavy, energy-demanding, and least retrofit-friendly option. Although it was the original approach, it proved misaligned with the constraints of this application. </p></div>
-
-<h3> 2.5. Concept Scoring (Extracting)</h3>
-<div><p> The four main concepts for extracting being evaluated are:</p></div>
-<div><p> <li><p> A. D. High-Pressure Waterjet Cutter: A concentrated high-pressure water jet slices through the stem without physical contact, producing a clean separation. </p></li>
-<li><p> B.	Circular Shutter Cutter: Petal-like blades close inward in a circular motion around the stem, shearing it cleanly from below.</p></li>
-<li><p>C. Oscillating Rotary Cutter: A thin high-frequency oscillating wire or blade is drawn through the stem, enabling a low-force, precise cut.</p></li>
-<li> <p> D. Vertical Drop Blade: A straight blade descends vertically to sever the stem in a single downward stroke.</p></li>
-</p></div>
-
-
-<video-component 
-  tag="Video 7: High-Pressure Waterjet Cutter" 
-  source="https://www.youtube.com/embed/5YoYGvWSen8"
-  subtitle="Video 7: High-Pressure Waterjet Cutter">
-</video-component>
-
-<video-component 
-  tag="Video 8: Circular Shutter Cutter" 
-  source="https://www.youtube.com/embed/2Bph26-oRxM"
-  subtitle="Video 8: Circular Shutter Cutter">
-</video-component><video-component 
-  tag="Video 9: Oscillatory Rotary Cutter" 
-  source="https://www.youtube.com/embed/JtfW4bOZWdA"
-  subtitle="Video 9: Oscillatory Rotary Cutter">
-</video-component>
-<video-component 
-  tag="Video 10: Vertical Drop Blade" 
-  source="https://www.youtube.com/embed/nEHmrRQ2Jao"
-  subtitle="Video 10: Vertical Drop Blade">
-</video-component>
-
-<image-component 
-    tag="Extracting Concept Scoring Matrix" 
-    source="assets/ecs.png"
-    subtitle="Table 4: Extracting Concept Scoring Matrix"
-      ></image-component>
-
-<div> <p> Option A is compelling because a water-based cutter eliminates sap contamination, a major hygiene risk in lettuce harvesting. The jet cuts and flushes the crown simultaneously, keeping the interface clean without chambers, wipes, or post-cut steps. Lettuce biomechanics show that a low-pressure, short-burst stream is sufficient, giving the waterjet far lower energy demand than steel-cutting systems. Its viability and scalability are further supported by Performatec Australia’s prior demonstrations on similar leafy greens.</p></div>
-<div> <p> Option B relies on dry cutting, allowing sap buildup inside the housing and introducing a cleaning burden that undermines long-term hygiene. </p></div>
-<div> <p> Option C introduces bruising risk and scatters debris around the crown, making it harder to maintain clean cuts and increasing the chance of cross-contamination.</p></div>
-<div> <p> Option D relies on impact-based cutting and this motion compromises cut consistency and risks damage to nearby leaves. Orientation of the tray to the vertical presents itself as a major challenge as well.</p></div>
-
-
-<h3> 2.6. Final Concept </h3>
-<div><p> From the concept scoring tables, the converged concept presented is: </p></div>
-<div> <p>  
-  <li><p> External harvesting station (aligns with industry preference for modularity).</p></li>
-<li><p> Fixed Fork-Tray Support for non-damaging support with coupled Mechanical tray lift for simple vertical displacement. </p></li>
-<li><p> Waterjet cutter for clean detachment. </p></li>
-</p></div>
-
-<div><p> The final system is designed as a compact, external harvesting station built around a simple user-driven workflow. A worker places the Styrofoam tray onto the Fixed Fork-Tray Support and slides it down until the stems nest into the fork geometry, creating stable, non-damaging support without grasping or clamping. After the tray is removed, a short linear waterjet sweeps across the row, delivering a clean, low-pressure cut that detaches every plant in one pass while flushing the interface of sap. This produces a hygienic, repeatable harvesting action that preserves leaf quality, minimises cleaning effort and energy use, and avoids the mechanical overhead of integrated robotic systems.</p></div>
-
-
-
-<image-component 
-    tag="Final Design Prototype" 
-    source="assets/fdp.png"
-    subtitle="Figure 12: Final Design cardboard Prototype "
-      ></image-component>
-
-
-  <h3> 2.7. Novelty of Final Design </h3>
-
-  <div> <p> The novelty of the selected concept lies in its prioritisation of simplicity over integration. Unlike large-scale fully automated farms, this system:</p></div>
-  <div><p> 
-<li> <p> avoids retrofitting vertical racks.  </p></li>
-<li> <p> eliminates grasping entirely.  </p></li>
-<li> <p> relies on geometry for stability rather than complex sensors.  </p></li>
-<li> <p> reduces energy demand.   </p></li>
-<li> <p> embraces tray-modularity (fitting Singapore’s small-scale hydroponic layouts).  </p></li>
-  </p></div>
-
-  <div><p> This infrastructure-agnostic, crop-sensitive approach is absent from competing solutions.</p></div>
-
-
-  <h2>3. Shortcomings </h2>
-
-  <div> <p> Although the proposed solution improves labour productivity, it remains operator-assisted rather than fully autonomous. Positioning and activation still require a worker. This does not diminish its impact—manual handling time is substantially reduced—but it highlights a natural direction for refinement. Integrating low-energy linear guidance would maintain the system’s low-power profile while further decreasing manpower dependence </p></div>
-  <div> <p> The shift from a soft-robotic gripper to a predominantly mechanical solution was driven by the need to minimise energy usage. While effective, this also limits the extent of automated motion. Future iterations will explore passive actuation strategies that preserve energy efficiency while improving operational smoothness.</p></div>
-  <div> <p> The prototype is dimensioned for a single tray geometry and tuned to crystal lettuce morphology, limiting cross-farm and cross-crop compatibility. A parametric redesign—with adjustable fork spacing and adaptable stem-zone geometries—would enable re-dimensioning for other tray standards and extension to a broader set of leafy greens, enhancing commercial applicability. </p></div>
-
-  <h2>4. Project Plan</h2>
-
-  <div> <p>The next development cycle focuses on maturing the waterjet system through design refinement, prototyping, and validation. Early tasks include completing module geometry, defining minimum fork thicknesses, and finalising pressure calculations. A staged pressure-escalation protocol will begin with non-destructive test materials before evaluating lettuce. CAD refinement will integrate the detachable cutting module, address manufacturability constraints, and prepare for fabrication, followed by assembly calibration. </p></div>
-  <div> <p> Mechanical validation will involve static load and stress testing to confirm the structure can support the equivalent of 25 lettuces without unacceptable deformation. Verification tests will evaluate cut quality and leaf integrity to ensure consistent, damage-free performance at controlled pressures.</p></div>
-  <div> <p> Subsequent phases shift toward field validation and optimisation. Pilot tests using ArianeTech trays and operator feedback will highlight workflow, ergonomic, and maintenance issues, informing refinements to materials, surface treatments, biofouling mitigation, and efficiency in yield and time. </p></div>
-  <div> <p> Final documentation will consolidate system architecture, test results, calibration procedures, and deployment guidance. Adjustable tray heights, multi-format tray support, and broader integration features are reserved for post-prototype enhancements, while compatibility with future multi-tenanted facilities remains a long-term option. A structured Gantt plan from December 2025 to April 2026 ensures each milestone is sequential and directly tied to building a validated, field-ready system.</p></div>
-  
-
-<image-component 
-    tag="Gantt Chart" 
-    source="assets/gc.png"
-    subtitle="Figure 13: Gantt Chart"
-      ></image-component>
-
-
-
-
-
-
-  <h2> 5. Bibliography</h2>
+  <h2> 7. Bibliography</h2>
       <ul>
 
         <li>
@@ -839,105 +570,12 @@ Comparison of land, water, and energy requirements of lettuce grown using hydrop
 International Journal of Environmental Research and Public Health, 12(6), 6879–6891.
 https://doi.org/10.3390/ijerph120606879
         </li>
-
-        <li>Begum, R. (2025).
-Singapore revises food-production target to 20% by 2035.
-The Straits Times.
-https://www.straitstimes.com/singapore/environment/singapores-30-by-30-farming-goal-pushed-back-to-2035-with-revised-targets-for-fibre-and-protein
- </li>
-        <li>Channel News Asia. (2024).
-High-tech, low returns: Why urban farms in Singapore continue to struggle despite innovation and government support.
-CNA Digital.
-https://www.channelnewsasia.com/today/big-read/high-tech-low-returns-farming-4684566
- </li>
- <li> Channel News Asia (2025)
-Farmers not surprised by Singapore’s new food sustainability goal, but analysts say '30 by 30' was no failure
-https://www.channelnewsasia.com/singapore/farms-food-sustainability-goal-analysts-say-no-failure-5452981
-</li>
-        <li> Chen, Z., Chen, J., Jung, S., Kim, H., Lo Preti, M., Laschi, C., Ren, Z., Full, R. J., & Yang, G.-Z. (2021).
-Bioinspired and biohybrid soft robots: Principles and emerging technologies.
-Matter, 4(12), 4029–4065.
-https://doi.org/10.1016/j.matt.2025.102045
- </li>
-        <li> Clegg, D., & Barker, R. (1994).
-Case method fast-track: A RAD approach.
-Addison-Wesley.
- </li>
-        <li> Cutkosky, M. R. (1989).
-On grasp choice, grasp models, and the design of hands for manufacturing tasks.
-IEEE Transactions on Robotics and Automation, 5(3), 269–279.
-https://doi.org/10.1109/70.34763
- </li>
-        <li> Energy Market Authority. (2023).
-Singapore energy statistics 2023.
-https://www.ema.gov.sg/singapore-energy-statistics
-  </li>
-        <li> International Labour Organization. (2023).
-Musculoskeletal disorders in agriculture: Global evidence and implications.
-https://www.ilo.org/global/topics/safety-and-health-at-work
- </li>
-        <li>  Li, M., Wiedmann, T., & Hadjikakou, M. (2022).
-The role of food transport in global food-miles emissions.
-Nature Food, 3(6), 445–453.
-https://doi.org/10.1038/s43016-022-00531-w
-</li>
-        <li> Ministry of Manpower. (2021).
-Labour Force in Singapore 2021.
-https://stats.mom.gov.sg/Pages/Labour-Force-In-Singapore-2021.aspx
- </li>
-        <li> Ritchie, H., & Roser, M. (2023).
-Crop yields – Lettuce.
-Our World in Data.
-https://ourworldindata.org/crop-yields
- </li>
-        <li> Singapore Department of Statistics. (2022).
-Land use 2022.
-https://www.singstat.gov.sg/find-data/search-by-theme/economy/land-use-and-population/
-</li>
-        <li> Singapore Food Agency. (2019).
-Singapore’s “30 by 30” vision.
-https://www.sfa.gov.sg/food-farming/30-by-30
- </li>
-        <li>  Singapore Food Agency. (2023).
-Singapore food statistics 2023.
-https://www.sfa.gov.sg/publications/singapore-food-statistics
-</li>
-        <li> Singapore Food Agency. (2024).
-Singapore food statistics 2024.
-https://www.sfa.gov.sg/publications/singapore-food-statistics
-</li>
-        <li> The Straits Times. (2024).
-Local production of vegetables and seafood fell again in 2024: Report.
-https://www.straitstimes.com/singapore/environment/local-production-of-vegetables-and-seafood-fell-again-in-2024-report
- </li>
-        <li> World Bank Group. (2022).
-Agricultural land (% of land area) – Singapore.
-https://data.worldbank.org/indicator/AG.LND.AGRI.ZS?locations=SG
- </li>
       </ul>
 
-  <h3>6.1. Appendix A: Objective % Calculations </h3>
-  <div> <p> Justification for Assuming 10% Labour Reduction & 15% Energy-Efficiency Improvement</p></div>
-  <div> <p> A 10% labour-hour reduction is defensible given that labour accounts for 40–60% of operating costs in indoor leafy-green farms, and basic automation tools in comparable systems consistently achieve 10–30% labour savings. A 10% target therefore represents a conservative, lower-bound improvement appropriate for a proof-of-concept.
-Indoor hydroponic farms typically consume 20–40 kWh/kg (greenhouse-style) to 250–350 kWh/kg (vertical farms). Documented optimisation measures—such as reduced idle cycles, efficient motors, and workflow streamlining—commonly deliver 10–20% energy reductions without major infrastructure changes. A 15% efficiency improvement therefore falls well within established global benchmarks and is realistic for Singapore’s energy-intensive indoor farming conditions.</p></div>
-  <h3> 6.2. Appendix B: MoSCoW Analysis</h3>
-  <image-component 
-    tag="MM" 
-    source="assets/moscowa.png"
-    subtitle="Figure 14: Remaining MoSCoW Analysis"
-      ></image-component>
 
-  <h3>6.3. Appendix C: Morphological Matrix </h3>
+  <h2> 8. Appendices </h2>
 
-  <image-component 
-    tag="MM" 
-    source="assets/mm.png"
-    subtitle="Table 5: Morphological Matrix"
-      ></image-component>
-
-
-    </div>
-  </div>
+  <h3>8.1. Appendix A:</h3>
 
   <!-- This is the code to display the scroll to top button for ergonomic -->
   <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
