@@ -842,6 +842,8 @@
   <h2 id="section-8">8. Appendices</h2>
 
   <h3 id="section-8-1">8.1 Appendix A: Global Food Security Index Evidence of Singapore’s Structural Food-System Vulnerability </h3>
+
+  <div> <p> The data presented in Appendix A highlights that Singapore’s food system vulnerability is structurally driven by limited domestic production capacity and exposure to external risks. Lower scores in dimensions such as disaster risk management and environmental resilience reflect the system’s reduced ability to absorb and recover from disruptions, particularly given its heavy reliance on imported food. Additionally, weaker performance in agricultural availability metrics indicates constrained local production capacity, reinforcing the lack of buffering against supply shocks. Together, these results show that while the system is functional under stable conditions, it remains inherently exposed under disruption. This directly supports the motivation of the present project, which aims to improve local production throughput through automation, thereby strengthening resilience within these constraints. </p></div>
     <image-component 
       tag="image" 
         source="assets/gfsi_1.png"
@@ -853,9 +855,101 @@
         source="assets/gfsi_2.png"
         subtitle="Figure : Singapore’s performance in the Sustainability and Adaptation pillar of the Global Food Security Index."
     ></image-component><div> <p> </p></div>
+    
+  <section id="section-8-2">
 
-  <h3 id="section-8-2">8.2 Appendix B</h3>
-    <div> <p> The data presented in Appendix A highlights that Singapore’s food system vulnerability is structurally driven by limited domestic production capacity and exposure to external risks. Lower scores in dimensions such as disaster risk management and environmental resilience reflect the system’s reduced ability to absorb and recover from disruptions, particularly given its heavy reliance on imported food. Additionally, weaker performance in agricultural availability metrics indicates constrained local production capacity, reinforcing the lack of buffering against supply shocks. Together, these results show that while the system is functional under stable conditions, it remains inherently exposed under disruption. This directly supports the motivation of the present project, which aims to improve local production throughput through automation, thereby strengthening resilience within these constraints. </p></div>
+        <h3>8.2 Appendix B: Target Throughput Justification</h3>
+
+        <p><strong>Estimated Processing Time Using the Waterjet System</strong></p>
+
+        <p>
+          A first-pass estimate of processing time for the proposed waterjet-based harvesting system was made by
+          decomposing the operation into sequential machine actions. For one tray of 25 lettuce heads, the total
+          cycle time may be approximated as:
+        </p>
+
+        <div style="text-align: center; margin: 1rem 0; font-style: italic;">
+          t<sub>cycle</sub> = t<sub>infeed</sub> + t<sub>clamp</sub> + t<sub>lower</sub> + t<sub>cut</sub> + t<sub>return</sub> + t<sub>outfeed</sub>
+        </div>
+
+        <p>Using conservative preliminary estimates:</p>
+
+        <table-component>
+          <table>
+            <thead>
+              <tr>
+                <th>Process Step</th>
+                <th>Estimated Time (s)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tray infeed and positioning</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>Clamping</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Lowering</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>Waterjet cutting</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>Return/reset</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>Tray outfeed/release</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td><strong>Total cycle time</strong></td>
+                <td><strong>45</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </table-component>
+
+        <p>
+          Since each tray contains 25 heads of lettuce, the effective throughput may be estimated as:
+        </p>
+
+        <div style="text-align: center; margin: 1rem 0; font-style: italic;">
+          Throughput = (25 / 45) × 60 = 33.3 heads/min
+        </div>
+
+        <p>
+          Thus, the estimated processing time is approximately 45 s per tray, corresponding to an effective
+          throughput of about 33 heads/min under ideal semi-automated operation.
+        </p>
+
+        <p>
+          To account for alignment delays, nozzle settling, and prototype-level inefficiencies, a more conservative
+          estimate may be taken as 60 s per tray, giving:
+        </p>
+
+        <div style="text-align: center; margin: 1rem 0; font-style: italic;">
+          Throughput<sub>conservative</sub> = (25 / 60) × 60 = 25 heads/min
+        </div>
+
+        <p>
+          Even under this conservative assumption, the projected system throughput remains substantially higher
+          than the current manual baseline of 1.25–1.67 heads/min, indicating strong potential for significant
+          cycle-time reduction through batch-based waterjet harvesting.
+        </p>
+
+        <p>
+          It should be noted that this estimate represents a preliminary system-level calculation intended to assess
+          order-of-magnitude feasibility; actual cycle time would depend on final nozzle path strategy, actuation
+          speed, and integration losses during physical implementation.
+        </p>
+</section>
+
 
   <h3 id="section-8-3">8.3 Appendix C</h3>
     <div> <p> </p></div>
