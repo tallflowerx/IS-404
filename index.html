@@ -180,7 +180,7 @@
 
     <!-- 3.5 -->
     <sl-tree-item expanded>
-      <a href="#section-3-5">3.5 Lettuce Cutting</a>
+      <a href="#section-3-5">3.5 Lettuce-Root Detachment</a>
 
       <sl-tree-item>
         <a href="#section-3-5-1">3.5.1 Concept Selection Matrix</a>
@@ -276,7 +276,20 @@
         <h3> 2.3. Design Estimates </h3>
         <div> <p> The design estimates outlined above translate operational constraints into measurable engineering specifications, ensuring that the proposed system remains both technically feasible and industrially relevant:</p> </div>
 
+        <image-component 
+          tag="image" 
+          source="assets/design_estimates_table_pt1.jpg"
+          subtitle=""
+        ></image-component>
+
+        <image-component 
+          tag="image" 
+          source="assets/design_estimates_table_pt2.jpg"
+          subtitle="Table 1: Design Estimates"
+        ></image-component>
+
         <h3> 2.4. Existing Solutions</h3>
+
         <div> <p> Existing solutions have focused on optimisation of other steps in leafy green production but there is limited work on compact, modular harvesting systems tailored specifically for hydroponic indoor farms.</p> </div>
         
           <h4> 2.4.1. Traditional Waterjet Applications in Agriculture </h4>
@@ -482,7 +495,14 @@
                   <h3> 3.4. Tray Lowering </h3>
 
                 <h4> 3.4.1. Concept Selection</h4>
-                  <div> <p> The refined concept selection matrix indicates that the reverse four-bar mechanism provides the most suitable balance of compactness, tray stability, conveyor compatibility, and implementation feasibility. Although the vertical linear lift offers the most direct vertical motion, it requires a taller and more constrained supporting architecture. The scissor lift remains a viable option and performs reasonably well in terms of vertical motion and tray support but is less favourable due to its bulkier packaging and greater mechanical complexity. The rotational-incline concept scored lowest because its changing tray orientation is not well aligned with the requirement for stable and repeatable presentation to the downstream waterjet cutting subsystem.</p> </div>
+                
+                <image-component 
+                    tag="image" 
+                    source="assets/tray_lowering_concept_selection_table.png"
+                    subtitle="Table X: CAD of Linkage System"
+                  ></image-component>
+
+                  <div> <p> The refined concept selection matrix indicates that the reverse four-bar mechanism provides the most suitable balance of trajectory control, design flexibility, and system integration within the given constraints. While the scissor lift performs comparably in terms of tray stability, repeatability, and conveyor compatibility, its limited flexibility in tailoring motion profiles and bulkier packaging make it less adaptable to the evolving system requirements. The vertical linear lift, although capable of precise vertical motion, necessitates a taller and more restrictive supporting architecture, reducing its feasibility within the current design envelope. The rotational-incline concept scored lowest, as its inherent change in tray orientation is fundamentally incompatible with the requirement for stable and repeatable presentation to the downstream waterjet cutting subsystem.</p> </div>
                 
                   <h4> 3.4.2. Kinematic Validation of the Four Bar Mechanism </h4>
                   <div> <p>  Geometric synthesis was carried out to explore the motion capabilities of the reverse four-bar linkage, with the primary objective of achieving a controlled tray-lowering trajectory compatible with the spatial and functional constraints of the harvesting system. Rather than prescribing a fixed vertical motion, the linkage was selected for its ability to generate a range of trajectories through variation of link lengths, pivot locations, and coupler point placement, enabling the motion to be tailored to system-level requirements.</p> </div>
@@ -514,10 +534,17 @@
                   <div> <p> The prototyping process highlighted the broader need to prioritise design for manufacturability and assembly (DFMA). Clearances became paramount with the number of moving components in the prototype. Features that were geometrically valid in CAD required modification to improve ease of assembly, alignment, and repeatability. This included refining hole tolerances, improving access for fastening, and simplifying part interfaces to reduce assembly complexity.  </p> </div>
           
           
-            <h3>3.5 Lettuce Cutting </h3>
-                
+            <h3>3.5 Lettuce-Root Detachment </h3>
+
                 <h4> 3.5.1. Concept Selection Matrix</h4>
-                  <div> <p>To identify a suitable stem separation method, four concepts were compared against the functional requirements of the system. The evaluation criteria were derived from the project objectives, with emphasis placed on cut quality, preservation of product quality, hydroponic compatibility, suitability for batch processing, maintainability, and feasibility within the project’s scope.  </p> </div>
+
+                  <div> <p> To identify a suitable stem separation method, four concepts were compared against the functional requirements of the system. The evaluation criteria were derived from the project objectives, with emphasis placed on cut quality, preservation of product quality, hydroponic compatibility, suitability for batch processing, maintainability, and feasibility within the project’s scope.  </p> </div>
+                  <image-component 
+                    tag="image" 
+                    source="assets/Lettuce_extraction_concept_selection_table.jpg"
+                    subtitle="Table X: CAD of Full System"
+                  ></image-component>
+
                   <div> <p>Among the concepts considered, waterjet cutting achieved the highest weighted score. This was primarily due to its non-contact cutting action, reduced risk of tissue compression, compatibility with wet hydroponic environments, and strong potential for repeatable batch operation. By contrast, laser cutting was disadvantaged by thermal damage risk, mechanical blades by wear and contact-induced bruising, and rope-based cutting by inconsistent separation and contamination concerns. </p> </div>
                   <div> <p>Waterjet cutting preserves lettuce quality and extends shelf life due to its non-contact, low-damage cutting mechanism. Unlike mechanical blades, which introduce compressive forces and tissue tearing, waterjets minimise cellular disruption at the cut interface. This reduces the release of intracellular fluids that accelerate enzymatic browning and microbial growth. Additionally, the waterjet process can help remove damaged cells and surface contaminants during cutting, resulting in lower initial microbial loads. As a result, waterjet-cut lettuce exhibits reduced discoloration and slower degradation, contributing to improved freshness and extended shelf life compared to conventional cutting methods (Hasish, 2025). </p> </div>
 
@@ -527,7 +554,6 @@
                 <h4> 3.5.3. FedJet Testing </h4>
                 <div> <p>To validate the feasibility of the selected concept, industry consultation was conducted with FedJet, a company specialising in waterjet technologies. Through this engagement, preliminary testing was performed on lettuce stems using a waterjet system, demonstrating that clean and effective separation is achievable under controlled conditions. These findings provide practical confirmation that waterjet-based cutting is a viable approach for harvesting lettuce, supporting its selection for further development in this project. </p> </div>
                 
-
 
             <h3>3.6 Complete CAD </h3>
                 
