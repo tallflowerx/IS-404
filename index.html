@@ -358,7 +358,7 @@
 
             <image-component 
               tag="image" 
-              source="assets/fork_cardboard_prototype.jpg"
+              source="assets/fork_cardboard_prototype.png"
               subtitle="Image 2: Cardboard Prototyping"
             ></image-component>
 
@@ -414,6 +414,14 @@
                   <li>  Boundary conditions: Fixed supports applied at the frame to simulate rigid mounting </li>
                   <li>  Analysis type: Linear static FEA, suitable for small elastic deformations </li>
                 </ul>
+              
+                <image-component 
+                  tag="image" 
+                  source="assets/FEA_Sim_1_Results.jpg"
+                  subtitle="Image X: Finite Element Analysis Results"
+                ></image-component>
+
+
 
               <div> <p> The simulation results (Figure X) indicate that:</p> <div>
                 <ul>
@@ -422,7 +430,22 @@
                   <li>  The supporting frame exhibits negligible deformation, confirming that structural compliance is localised to the fork elements </li>
                 </ul>
               <div> <p> From a theoretical standpoint, this aligns with beam bending principles, where deflection is governed by:</p>
+
+                <image-component 
+                  tag="image" 
+                  source="assets/beam_deflection_formula.png"
+                  subtitle="Image X: Beam Deflection Formula"
+                ></image-component>
+
            <h4> 3.2.4. 3D Printed Prototype </h4>
+
+                <image-component 
+                  tag="image" 
+                  source="assets/3D_printed_prototype.png"
+                  subtitle="Image X: 3D Printed Prototype"
+                ></image-component>
+
+
                 <div> <p> The fork assembly was fabricated as a 3D printed prototype using PLA (20% infill) to evaluate structural behaviour and assembly feasibility under representative loading conditions. Initial assembly revealed a modelling oversight in the fastening design, resulting in inadequate thread engagement and joint integrity. This was addressed through the integration of heat-set inserts, which provided a robust and repeatable threaded interface, improving both structural reliability and ease of assembly without requiring re-fabrication of components.</p> </div>
                 <div> <p> While prior Finite Element Analysis (FEA) predicted negligible deflection of the fork members, physical testing of the printed prototype revealed observable deformation under relatively low loads. This discrepancy arises from modelling assumptions including idealised isotropic material behaviour, simplified boundary conditions, and uniform load distribution, which do not fully capture the anisotropic and layer-dependent properties of additively manufactured PLA. Additionally, the reduced stiffness associated with 20% infill, combined with geometric tolerances and minor assembly misalignments, contributed to increased compliance in the system.</p></div>
                 <div> <p> This comparison highlights that, although the FEA provided a valid theoretical baseline, it was not fully representative of the as-built prototype</p></div>
