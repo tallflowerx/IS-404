@@ -239,17 +239,20 @@
     <sl-tree-item>
       <a href="#section-8-3">8.3 Appendix C: Lettuce-Tray Concept Selection </a>
     </sl-tree-item>
-
     <sl-tree-item>
-      <a href="#section-8-4">8.4 Appendix D: Criterion Justification for Tray Lowering Concept Selection</a>
+      <a href="#section-8-4">8.4 Appendix D: ArianeTech Tray Modelling </a>
     </sl-tree-item>
 
     <sl-tree-item>
-      <a href="#section-8-5">8.5 Appendix E: Criterion Justification for Extraction Concept Selection</a>
+      <a href="#section-8-5">8.5 Appendix E: Concept Selection for Tray Lowering Concept Selection</a>
     </sl-tree-item>
 
     <sl-tree-item>
-      <a href="#section-8-6">8.6 Appendix F: Pressure Calculations for Waterjet</a>
+      <a href="#section-8-6">8.6 Appendix F: Comparative Analysis for Extraction Concept Selection</a>
+    </sl-tree-item>
+
+    <sl-tree-item>
+      <a href="#section-8-7">8.7 Appendix G: Pressure Calculations for Waterjet</a>
     </sl-tree-item>
 
   </sl-tree-item>
@@ -358,29 +361,29 @@
               source="assets/updated_system_decomposition.jpg"
               subtitle="Figure 1: Functional decomposition of the harvesting process into primary subsystems."
             ></image-component>
-            
+            <div> <p></p></div>
             <video-component 
               tag="Video 1: Approach" 
               source="https://www.youtube.com/embed/NHG_hNU5UMM?autoplay=0&mute=1&loop=1&playlist=NHG_hNU5UMM&controls=0"
-              subtitle="Video 1: Approach (Step 1)">
+              subtitle="Video 4: Approach (Step 1)">
             </video-component>
 
             <video-component 
               tag="Video 2: Hold" 
               source="https://www.youtube.com/embed/eiTW6n9BBA0?autoplay=0&mute=1&loop=1&playlist=eiTW6n9BBA0&controls=0"
-              subtitle="Video 2: Hold (Step 2)">
+              subtitle="Video 5: Hold (Step 2)">
             </video-component>
 
             <video-component 
               tag="Video 3: Lift" 
               source="https://www.youtube.com/embed/Hs-ohO3plaw?autoplay=0&mute=1&loop=1&playlist=Hs-ohO3plaw&controls=0"
-              subtitle="Video 3: Lift (Step 3)">
+              subtitle="Video 6: Lift (Step 3)">
             </video-component>
 
             <video-component 
               tag="Video 4: Extract (Step 4)" 
               source="https://www.youtube.com/embed/zjdkq_yxevc?autoplay=0&mute=1&loop=1&playlist=zjdkq_yxevc&controls=0"
-              subtitle="Video 4: Extract">
+              subtitle="Video 7: Extract (Step 4)">
             </video-component>
 
         <h3 id="section-3-2">3.2 Lettuce-Tray Separation</h3>
@@ -429,7 +432,7 @@
                   <image-component 
                     tag="image" 
                     source="assets/Lettuce_Tray_Separation_CAD_2.jpg"
-                    subtitle="Figure 5: Refined CAD model incorporating structural frame and load-bearing fork members."
+                    subtitle="Figure 5: Top View of Refined CAD model incorporating structural frame and load-bearing fork members with actual modelled ArianeTech Tray (Refer to Appendix D)."
                  ></image-component>
               
                   <div> <p> The refined CAD model introduces a full structural frame using extrusion members, with the fork elements now represented as slender beams spanning between supports. This model was developed to better reflect the actual load-bearing configuration of the system.</p> </div>
@@ -460,7 +463,7 @@
                 <video-component 
                   tag="Video 5: Simulation Results" 
                   source="https://www.youtube.com/embed/hpfAwVSADB4?autoplay=0&mute=1&loop=1&playlist=hpfAwVSADB4"
-                  subtitle="Video 5: Simulation Results">
+                  subtitle="Video 8: FEA Simulation showing deflection distribution in fork members under loading.">
                 </video-component>
 
 
@@ -491,16 +494,17 @@
                 <div> <p> The fork assembly was fabricated as a 3D printed prototype using PLA (20% infill) to evaluate structural behaviour and assembly feasibility under representative loading conditions. Initial assembly revealed a modelling oversight in the fastening design, resulting in inadequate thread engagement and joint integrity. This was addressed through the integration of heat-set inserts, which provided a robust and repeatable threaded interface, improving both structural reliability and ease of assembly without requiring re-fabrication of components.</p> </div>
                 <div> <p> While prior Finite Element Analysis (FEA) predicted negligible deflection of the fork members, physical testing of the printed prototype revealed observable deformation under relatively low loads. This discrepancy arises from modelling assumptions including idealised isotropic material behaviour, simplified boundary conditions, and uniform load distribution, which do not fully capture the anisotropic and layer-dependent properties of additively manufactured PLA. Additionally, the reduced stiffness associated with 20% infill, combined with geometric tolerances and minor assembly misalignments, contributed to increased compliance in the system.</p></div>
                 <div> <p> This comparison highlights that, although the FEA provided a valid theoretical baseline, it was not fully representative of the as-built prototype</p></div>
-          <h4 id="section-3-2-4">3.2.4 3D Printed Prototype</h4>
 
          <h3 id="section-3-3">3.3 Tray Clamping</h3>
 
                 <h4 id="section-3-3-1">3.3.1 Concept Selection Matrix</h4>
 
+                    <div><p> The tray clamping subsystem is designed to securely fix the tray in position, ensuring stable alignment and preventing unintended motion during subsequent lowering and cutting operations.</p></div>
+
                     <video-component 
                       tag="Tray Clamping Mechanism" 
                       source="https://www.youtube.com/embed/olHSMaZ83Ho?autoplay=0&mute=1&loop=1&playlist=olHSMaZ83Ho&controls=0"
-                      subtitle="Video 6: Tray Clamping Mechanism">
+                      subtitle="Video 9: Tray Clamping Mechanism">
                     </video-component>
 
                   <div> <p> The tray clamping mechanism employs an over-centre toggle linkage, selected for its ability to deliver a stable and repeatable clamping force that directly supports the project’s objective of improving harvesting throughput while preserving crop quality. By achieving self-locking beyond the dead-centre position, the mechanism maintains secure tray fixation without continuous actuation, enabling energy-efficient and reliable operation during batch processing and tray lowering. Compared to the alternative latch-based hook mechanism considered, the toggle configuration provides superior force consistency and positional rigidity, which is critical for ensuring precise alignment during lettuce extraction. Furthermore, its compact, planar linkage design satisfies the system’s spatial and modularity constraints, allowing seamless integration without obstructing tray intake, thereby aligning with the overall goal of a scalable, plug-and-play harvesting solution.</p> </div>
@@ -535,27 +539,27 @@
                   <video-component 
                     tag="Scissor Lift" 
                     source="https://www.youtube.com/embed/me_S41Ysxvc?autoplay=0&mute=1&loop=1&playlist=me_S41Ysxvc&controls=0"
-                    subtitle="Video 7: Scissor Lift">
+                    subtitle="Video 10: Scissor Lift">
                   </video-component>
 
                   <video-component 
                     tag="4 Bar" 
                     source="https://www.youtube.com/embed/ygDpR66xEWM?autoplay=0&mute=1&loop=1&playlist=ygDpR66xEWM&controls=0"
-                    subtitle="Video 8: 4 Bar">
+                    subtitle="Video 11: 4 Bar">
                   </video-component>
 
                                     <!-- Rotary Incline: Perfect Loop (3:48 → 3:58) -->
                   <!-- Rotary Incline: Perfect Loop (3:48 → 3:58) -->
                   <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
 
-                    <div id="Video 9: rotary-incline-player"></div>
+                    <div id="Video 12: rotary-incline-player"></div>
 
                     <div style="
                       font-size: 0.9rem; 
                       color: #666; 
                       text-align: center;
                     ">
-                      Video 9: Rotary Incline
+                      Video 12: Rotary Incline
                     </div>
 
                   </div>
@@ -598,50 +602,43 @@
                   <image-component 
                       tag="image" 
                       source="assets/tray_lowering_concept_selection_table.png"
-                      subtitle="Table 2: CAD of Linkage System"
+                      subtitle="Table 2: Concept Selection Matrix for Tray Lowering."
                     ></image-component>
 
-                  <div> <p> The refined concept selection matrix indicates that the reverse four-bar mechanism provides the most suitable balance of trajectory control, design flexibility, and system integration within the given constraints. While the scissor lift performs comparably in terms of tray stability, repeatability, and conveyor compatibility, its limited flexibility in tailoring motion profiles and bulkier packaging make it less adaptable to the evolving system requirements. The vertical linear lift, although capable of precise vertical motion, necessitates a taller and more restrictive supporting architecture, reducing its feasibility within the current design envelope. The rotational-incline concept scored lowest, as its inherent change in tray orientation is fundamentally incompatible with the requirement for stable and repeatable presentation to the downstream waterjet cutting subsystem.</p> </div>
+                  <div> <p> The concept selection matrix indicates that the reverse four-bar mechanism provides the most suitable balance of trajectory control, design flexibility, and system integration within the given constraints. While the scissor lift performs comparably in terms of tray stability, repeatability, and conveyor compatibility, its limited flexibility in tailoring motion profiles and bulkier packaging make it less adaptable to the evolving system requirements. The vertical linear lift, although capable of precise vertical motion, necessitates a taller and more restrictive supporting architecture, reducing its feasibility within the current design envelope. The rotational-incline concept scored lowest, as its inherent change in tray orientation is fundamentally incompatible with the requirement for stable and repeatable presentation to the downstream waterjet cutting subsystem.</p> </div>
                 
                   <h4 id="section-3-4-2">3.4.2 Kinematic Validation</h4>
-                  <div> <p> This preliminary sketch was developed to visualise and evaluate feasible motion trajectories for the tray during the kinematic design phase. Multiple paths were explored to understand how the tray could transition from the entry position to the cutting plane while maintaining stability and avoiding interference. </p></div>
-                  <div> <p> The pink trajectory was identified as optimal due to its smooth, continuous path that minimises sudden changes in direction and reduces disturbance to the lettuce. The brown trajectory was also suitable, offering a more compact motion profile while still achieving the required vertical alignment at the cutting plane.</p></div>
+                  <div> <p> This preliminary sketch was developed to evaluate feasible tray trajectories from the entry position to the cutting plane under spatial constraints. Among the paths considered, the pink trajectory was preferred for its smooth, continuous motion with minimal directional change, while the brown trajectory offered a more compact alternative with acceptable vertical alignment.</p></div>
                   
                   <image-component 
                       tag="image" 
                       source="assets/motion_planning.jpeg"
-                      subtitle="Figure : Preliminary tray motion trajectories (pink and brown) evaluated for smoothness and cutting alignment."
+                      subtitle="Figure 11: Preliminary tray motion trajectories (pink and brown) evaluated for smoothness and cutting alignment."
                     ></image-component>
 
-                  <div> <p>  Geometric synthesis was carried out to explore the motion capabilities of the reverse four-bar linkage, with the primary objective of achieving a controlled tray-lowering trajectory compatible with the spatial and functional constraints of the harvesting system. Rather than prescribing a fixed vertical motion, the linkage was selected for its ability to generate a range of trajectories through variation of link lengths, pivot locations, and coupler point placement, enabling the motion to be tailored to system-level requirements.</p> </div>
+                  <div> <p>  Geometric synthesis of the reverse four-bar linkage was then carried out to generate a controlled lowering trajectory within the system envelope. The objective was not strictly vertical motion, but a smooth, constrained path that maintains tray stability and avoids interference within the 750 mm × 690 mm frame. </p> </div>
                   <div> <p> This flexibility was particularly important given the constraints of the design: the tray must enter from a fixed position, remain largely within a confined frame envelope (750 mm × 690 mm), and be lowered smoothly to a position suitable for root detachment, while avoiding excessive lateral drift or abrupt changes in orientation. As such, the objective was not to achieve purely vertical motion, but to synthesise a trajectory that balances smoothness, compactness, and positional control. Three candidate linkage configurations were developed and evaluated through kinematic simulation on MotionGen.io: </p> </div>
                   
-                  <div> <p> Iteration 1 produced a trajectory with significant looping and reversal behaviour, indicating poor alignment with the desired motion. The presence of cusps and non-monotonic displacement suggested that the coupler point, and link proportions were not suitably configured, leading to unstable motion and impractical real-world behaviour. </p> </div>
-                  
-                  <video-component
+              <video-component
                     tag="Linkage Demonstration 1"
                     source="https://www.youtube.com/embed/PaEbjN_u8UU?autoplay=0&mute=1&loop=1&playlist=PaEbjN_u8UU"
-                    subtitle="Video X: Linkage System (Case 1)">
+                    subtitle="Video 13: Linkage System (Case 1)">
                   </video-component>
-                  
-                  <div> <p> Iteration 2 demonstrated a substantial improvement, generating a smoother, predominantly downward trajectory with reduced self-intersection. The motion more closely resembled the intended “gradual-horizontal-then-descending” path, with improved continuity and reduced abrupt changes in curvature. This configuration better satisfied the requirements of controlled tray lowering within the available workspace.</p> </div>
                   
                   <video-component
                     tag="Linkage Demonstration 2"
                     source="https://www.youtube.com/embed/vPfXNtz9FkU?autoplay=0&mute=1&loop=1&playlist=vPfXNtz9FkU"
-                    subtitle="Video X: Linkage System (Case 2)">
+                    subtitle="Video 14: Linkage System (Case 2)">
                   </video-component>
+      
                   
-                  <div> <p> Iteration 3, while physically realised through laser cut miniature prototyping, introduced a steeper and more constrained motion profile. Although it achieved the required vertical displacement, the trajectory exhibited increased curvature and reduced smoothness compared to Iteration 2, indicating a trade-off between compactness and motion quality.</p> </div>
-                  <div> <p> The comparative evaluation of these configurations highlights the sensitivity of the four-bar linkage to geometric parameters particularly coupler point placement and pivot positioning. Small changes in these variables resulted in significant differences in trajectory shape, reinforcing the importance of iterative synthesis and validation. </p> </div>
-
                 <video-component
                     tag="Linkage Demonstration 3"
                     source="https://www.youtube.com/embed/Ba8C8N3BF3w?autoplay=0&mute=1&loop=1&playlist=Ba8C8N3BF3w"
-                    subtitle="Video X: Linkage System (Case 3)">
+                    subtitle="Video 15: Linkage System (Case 3)">
                   </video-component>
                 
-                
+                  <div> <p> Three linkage configurations were evaluated using MotionGen. Iteration 1 produced looping and non-monotonic motion and was rejected. Iteration 2 generated a smooth, predominantly downward trajectory consistent with the desired motion profile. Iteration 3 achieved the required displacement in a more compact form but with increased curvature and reduced smoothness.</p></div>
                   <div> <p> While Iteration 2 provided the most desirable motion characteristics from a kinematic perspective, Iteration 3 was selected for prototyping to validate structural behaviour and manufacturability under a more constrained configuration. This reflects a design approach that considers not only ideal motion performance but also practical implementation, fabrication feasibility, and system integration. </p> </div>
                   <div> <p> Overall, the reverse four-bar linkage was retained as the preferred mechanism due to its ability to accommodate iterative refinement and generate a spectrum of feasible trajectories without requiring fundamental changes to the system architecture. This makes it well-suited to the evolving requirements of the project, particularly as additional subsystems such as clamping and waterjet integration are incorporated.  </p> </div>
                 
@@ -650,10 +647,10 @@
                   <image-component 
                     tag="image" 
                     source="assets/Link_CAD.png"
-                    subtitle="Figure 11: CAD model of reverse four-bar linkage for tray lowering."
+                    subtitle="Figure 12: CAD model of reverse four-bar linkage for tray lowering."
                   ></image-component>
 
-                  <div> <p> Following kinematic validation of the selected linkage, the four-bar mechanism was translated into a detailed CAD model to evaluate its behaviour under realistic spatial and integration constraints. While the kinematic model established the feasibility of the desired motion trajectory, the CAD model enabled assessment of link geometry, joint placement, and physical clearances within the system.</p> </div>
+                  <div> <p> (Refer to Appendix D for Concept Selection) Following kinematic validation of the selected linkage, the four-bar mechanism was translated into a detailed CAD model to evaluate its behaviour under realistic spatial and integration constraints. While the kinematic model established the feasibility of the desired motion trajectory, the CAD model enabled assessment of link geometry, joint placement, and physical clearances within the system.</p> </div>
                   <div> <p> Through this process, several key considerations emerged. Firstly, the CAD model highlighted the importance of link thickness and joint spacing, as idealised kinematic links do not account for physical interference between members during motion. Adjustments were therefore made to ensure sufficient clearance between links across the full range of motion.</p></div>
                   <div> <p> Secondly, the model allowed for evaluation of packaging constraints within the frame, ensuring that the mechanism could operate without interfering with the tray, fork assembly, or surrounding structure. This was particularly critical given the requirement to maintain an unobstructed tray entry path. </p></div>
                 
@@ -662,7 +659,7 @@
                   <video-component
                     tag="Prototyping_Tray_Lowering"
                     source="https://www.youtube.com/embed/kdVMhSMYCwM?autoplay=0&mute=1&loop=1&playlist=kdVMhSMYCwM"
-                    subtitle="Video 13: Tray Lowering Prototype">
+                    subtitle="Video 16: Tray Lowering Prototype">
                   </video-component>
 
 
@@ -683,23 +680,23 @@
                   <image-component 
                     tag="image" 
                     source="assets/Lettuce_extraction_concept_selection_table.png"
-                    subtitle="Table 3: CAD of Full System"
+                    subtitle="Table 3: Concept Selection Matrix of Lettuce-Root Detachment"
                   ></image-component>
 
                   <div> <p>Among the concepts considered, waterjet cutting achieved the highest weighted score. This was primarily due to its non-contact cutting action, reduced risk of tissue compression, compatibility with wet hydroponic environments, and strong potential for repeatable batch operation. By contrast, laser cutting was disadvantaged by thermal damage risk, mechanical blades by wear and contact-induced bruising, and rope-based cutting by inconsistent separation and contamination concerns. </p> </div>
                   <image-component 
                     tag="image" 
                     source="assets/lettuce_quality.jpg"
-                    subtitle="Figure 12: Figure X: Comparison of lettuce discoloration over time for blade cutting and waterjet cutting, showing reduced browning and improved quality retention with waterjet processing (adapted from Cantwell et al., 2006; Béguin et al., 2004)"
+                    subtitle="Figure 13: Comparison of lettuce discoloration over time for blade cutting and waterjet cutting, showing reduced browning and improved quality retention with waterjet processing (adapted from Cantwell et al., 2006; Béguin et al., 2004)"
                   ></image-component>
-                  <div> <p>Waterjet cutting preserves lettuce quality and extends shelf life due to its non-contact, low-damage cutting mechanism. Unlike mechanical blades, which introduce compressive forces and tissue tearing, waterjets minimise cellular disruption at the cut interface. This reduces the release of intracellular fluids that accelerate enzymatic browning and microbial growth. Additionally, the waterjet process can help remove damaged cells and surface contaminants during cutting, resulting in lower initial microbial loads. As a result, waterjet-cut lettuce exhibits reduced discoloration and slower degradation, contributing to improved freshness and extended shelf life compared to conventional cutting methods (Hashish), 2025). </p> </div>
+                  <div> <p>Waterjet cutting preserves lettuce quality and extends shelf life due to its non-contact, low-damage cutting mechanism. Unlike mechanical blades, which introduce compressive forces and tissue tearing, waterjets minimise cellular disruption at the cut interface. This reduces the release of intracellular fluids that accelerate enzymatic browning and microbial growth. Additionally, the waterjet process can help remove damaged cells and surface contaminants during cutting, resulting in lower initial microbial loads. As a result, waterjet-cut lettuce exhibits reduced discoloration and slower degradation, contributing to improved freshness and extended shelf life compared to conventional cutting methods (Hashish), 2025). (Refer to Appendix E for comparative analysis) </p> </div>
                   <div> <p>This consideration is further reinforced by stakeholder feedback, which highlighted that while the concept is promising, there is a risk of inadvertently damaging adjacent crops during operation. This underscores the need for precise targeting and carefully controlled cutting parameters, particularly within the constraints of a densely packed tray configuration.</p> </div>
 
 
                   <image-component 
                     tag="image" 
                     source="assets/waterjet_validation.jpg"
-                    subtitle="Figure 3: Stakeholder feedback from ArianeTech highlighting the need to minimise unintended crop damage during harvesting (via direct communication with Edwin Ong)."
+                    subtitle="Figure 14: Stakeholder feedback from ArianeTech highlighting the need to minimise unintended crop damage during harvesting (via direct communication with Edwin Ong)."
                   ></image-component>
                 <div> <p> This risk is mitigated through the use of a localized, high-precision waterjet, where the jet diameter and pressure are tuned to act only at the stem interface. </p></div>
                 
@@ -712,7 +709,7 @@
                 <image-component 
                     tag="image" 
                     source="assets/lettuce_cut_points.jpg"
-                    subtitle="Figure 12: Representative hydroponic lettuce showing candidate cutting regions (A–C) evaluated in FedJet testing."
+                    subtitle="Figure 15: Representative hydroponic lettuce showing candidate cutting regions (A–C) evaluated in FedJet testing."
                   ></image-component>
 
                   <div><p> The dashed lines (A–C) indicate the different cutting heights tested by FedJet to evaluate optimal stem separation points for hydroponic lettuce.</p></div>
@@ -720,19 +717,19 @@
                 <video-component 
                   tag="Mechanism Demonstration 1" 
                   source="https://www.youtube.com/embed/coi-yHBAAnE?autoplay=0&mute=1&loop=1&playlist=coi-yHBAAnE&controls=0"
-                  subtitle="Video 14: Lettuce Cutting with Waterjet (Point A)">
+                  subtitle="Video 17: Lettuce Cutting with Waterjet (Point A)">
                 </video-component>
 
                 <video-component 
                   tag="Mechanism Demonstration 2" 
                   source="https://www.youtube.com/embed/M3aUaPrzuks?autoplay=0&mute=1&loop=1&playlist=M3aUaPrzuks&controls=0"
-                  subtitle="Video 15: Lettuce Cutting with Waterjet (Point B)">
+                  subtitle="Video 18: Lettuce Cutting with Waterjet (Point B)">
                 </video-component>
 
                 <video-component 
                   tag="Mechanism Demonstration 3" 
                   source="https://www.youtube.com/embed/GZDSybvxFms?autoplay0&mute=1&loop=1&playlist=GZDSybvxFms&controls=0"
-                  subtitle="Video 16: Lettuce Cutting with Waterjet (Point C)"></video-component>
+                  subtitle="Video 19: Lettuce Cutting with Waterjet (Point C)"></video-component>
                 </video-component>
 
                 <div> <p> While preliminary validation confirms that waterjet-based cutting is technically feasible for hydroponic lettuce, full-scale experimental testing was not conducted within the scope of this project due to financial constraints. Commercial waterjet systems capable of operating within the required pressure range represent a significant capital investment, with quoted system costs on the order of USD 9,700 (EXW) based on direct correspondence with FedJet.</p></div>
@@ -740,7 +737,7 @@
                 <image-component 
                     tag="image" 
                     source="assets/FedJet_quotation.png"
-                    subtitle="Figure 13: Quotation for waterjet system from FedJet (Jiangsu Fedjetting Tech Co., Ltd.) provided via direct communication"
+                    subtitle="Figure 16: Quotation for waterjet system from FedJet (Jiangsu Fedjetting Tech Co., Ltd.) provided via direct communication"
                   ></image-component>
 
                 <h4 id="section-3-5-4">3.5.4 Design Recommendations</h4>
@@ -751,13 +748,13 @@
               <image-component 
                     tag="image" 
                     source="assets/complete_cad.jpg"
-                    subtitle="Figure 14: Integrated CAD model of the mechanical harvesting system."
+                    subtitle="Figure 17: Integrated CAD model of the mechanical harvesting system."
                   ></image-component>
 
               <image-component 
                     tag="image" 
                     source="assets/gpt_system.jpg"
-                    subtitle="Figure 15: Conceptual visualisation of the fully integrated harvesting system."
+                    subtitle="Figure 18: Conceptual visualisation of the fully integrated harvesting system."
                   ></image-component>
 
 
@@ -866,13 +863,13 @@
     <image-component 
       tag="image" 
         source="assets/gfsi_1.png"
-        subtitle="Figure : Singapore’s performance in the Availability pillar of the Global Food Security Index."
+        subtitle="Figure 19: Singapore’s performance in the Availability pillar of the Global Food Security Index."
     ></image-component><div> <p> </p></div>
 
     <image-component
       tag="image" 
         source="assets/gfsi_2.png"
-        subtitle="Figure : Singapore’s performance in the Sustainability and Adaptation pillar of the Global Food Security Index."
+        subtitle="Figure 20 : Singapore’s performance in the Sustainability and Adaptation pillar of the Global Food Security Index."
     ></image-component><div> <p> </p></div>
     
   <section id="section-8-2">
@@ -975,7 +972,7 @@
     <image-component
       tag="image" 
         source="assets/fork_selection.png"
-        subtitle="Figure : Singapore’s performance in the Sustainability and Adaptation pillar of the Global Food Security Index."
+        subtitle="Figure 21: Lettuce-Tray Separation Concept Selection"
     ></image-component><div> <p> </p></div>
 
     <div> <p> Option A outperforms the alternatives under the selection criteria. It protects the plant by supporting it entirely from below, avoiding hold-induced leaf damage, and it leverages the existing tray geometry without requiring modifications to the vertical-farm workspace. Its static forks and simple lift motion keep the mechanism mechanically minimal, with few moving parts, low failure probability, and essentially zero energy demand for this function. </p></div>
@@ -983,7 +980,19 @@
     <div> <p> Option C, though similar, introduces dual sliding arms that increase mechanical and control complexity. </p></div>
     <div> <p> Option D’s compliant behaviour is appealing, but relying on an external robotic arm, valves, and a compressor makes it the most infrastructure-heavy, energy-demanding, and least retrofit-friendly option. Although it was the original approach, it proved misaligned with the constraints of this application.</p></div>
 
-  <h3 id="section-8-4">8.4 Appendix D: Criterion Justification for Tray Lowering Concept Selection</h3>
+
+<h3 id="section-8-4">8.4 Appendix D: ArianeTech Tray Modelling </h3>
+
+    <div> <p> To ensure dimensional accuracy, the tray geometry was physically measured at the NUS Centre for Regenerative Agriculture, where representative hydroponic trays used in indoor farming systems were accessed. </p></div>
+    <image-component
+      tag="image" 
+        source="assets/tray_cad.jpg"
+        subtitle="Figure 22: ArianeTech Tray CAD on OnShape"
+    ></image-component>
+    <div> <p> </p></div>
+
+
+  <h3 id="section-8-5">8.5 Appendix E: Concept Selection for Tray Lowering Concept Selection</h3>
     <div> <p> The selection criteria for the tray lowering mechanism were defined based on their direct relevance to system performance, integration, and feasibility within the project scope. Tray stability, particularly maintaining a horizontal orientation during operation, is critical to ensure consistent interaction between the waterjet and the lettuce roots. Any unintended tilt could result in uneven cutting and increase the risk of crop damage. Compatibility with a conveyor-fed input is also a key requirement, as the mechanism must integrate seamlessly with a front-fed tray system without obstructing entry, making this a strict architectural constraint.</p></div>
     <div> <p> Control over the motion trajectory is equally important, as the lowering action must be smooth and predictable. This ensures that the lettuce placement is not disturbed, a consistent cutting height is maintained, and dynamic loads on the system are minimised. In addition, suitability for batch processing is essential, since the system is expected to operate repeatedly with minimal recalibration. High repeatability directly impacts throughput and overall system efficiency. </p></div>
     <div> <p> Design flexibility was also considered, given the evolving nature of constraints such as waterjet integration, frame dimensions, and potential variations in tray design. The mechanism should therefore allow for adjustments in link lengths, motion paths, and facilitate rapid iteration during CAD modelling and prototyping. Complexity, in terms of design difficulty, captures the challenges associated with kinematic synthesis, analysis, optimisation, and control requirements. Finally, buildability evaluates the practical feasibility of manufacturing the mechanism, including ease of fabrication using methods such as laser cutting, 3D printing, and off-the-shelf components, as well as sensitivity to assembly tolerances and alignment requirements.</p></div>
@@ -991,14 +1000,14 @@
     <div> <p> The 4-bar linkage, which was ultimately selected, offers the best overall balance of performance and adaptability. While slight orientation deviations may occur depending on geometry, it excels in compatibility with the front-fed system and provides fully tunable motion through link length optimisation. This allows precise control over the trajectory while maintaining high repeatability. Its key advantage lies in its design flexibility, enabling adaptation to constraints such as waterjet integration and frame limitations. Although it introduces moderate complexity in terms of kinematic synthesis and requires tighter alignment during fabrication, it remains feasible to build. Overall, the 4-bar linkage stands out because it achieves trajectory tunability without compromising repeatability, making it particularly well-suited to the system’s functional requirements.</p></div>
     <div> <p> In contrast, the rotary or incline mechanism was deemed unsuitable due to its fundamental mismatch with system needs. Its tendency to introduce tray tilt makes it incompatible with the requirement for stable, horizontal cutting. Additionally, it offers poor control over vertical motion, lower repeatability, and potential interference with tray entry depending on its configuration. While relatively simple to construct, these limitations outweigh its benefits, leading to its elimination from consideration.</p></div>
 
-    <h3 id="section-8-5">8.5 Appendix E: Criterion Justification for Extraction Concept</h3>
+    <h3 id="section-8-6">8.6 Appendix F: Comparative Analysis for Extraction Concept</h3>
     <div><p> Laser cutting offers a non-contact approach and precise energy delivery; however, it introduces thermal effects that are unsuitable for fresh produce. The high moisture content of lettuce leads to localised heating, causing tissue degradation, dehydration, and potential browning at the cut interface. Additionally, laser systems require optical alignment, enclosure, and safety considerations, reducing feasibility within a compact, wet farming environment.</p></div>
     <div><p> Mechanical blades are simple, compact, and widely used in agricultural applications. However, as a contact-based method, they introduce compressive forces prior to cutting, which can result in bruising and inconsistent separation. Blade wear and dulling over repeated cycles further reduce cut quality and require frequent maintenance. While feasible and easy to implement, performance variability and potential impact on product quality limit its suitability. Lettuce bleeding is also noted from experiential harvesting exercise. Sap gets secreted which affects blade longevity and questions hygiene standards. </p></div>
     
     <image-component
       tag="image" 
         source="assets/sap.png"
-        subtitle="Figure : Sap secretion observed during harvesting exercise."
+        subtitle="Figure 23: Sap secretion observed during harvesting exercise."
     ></image-component><div> <p> </p></div>
     
     
@@ -1006,7 +1015,7 @@
     <div><p> Waterjet cutting provides a non-contact cutting mechanism that minimises mechanical stress on the crop. This reduces tissue compression and enables cleaner separation compared to blade-based methods. Its compatibility with wet, hydroponic environments further supports integration within indoor vertical farming systems. Additionally, the absence of blade wear improves consistency and reduces maintenance requirements. While the system introduces complexity in terms of pressurisation and fluid management, it offers the best balance between cut quality, repeatability, and system compatibility.</p></div>
     <div><p>  Rope based cutting offers a mechanically simple approach; however, it relies on frictional contact and tension, which can result in tearing rather than clean cutting. The method also presents a risk of material degradation and particulate contamination (microplastics), particularly if polymer filaments are used. Furthermore, maintaining consistent tension and alignment across multiple cuts is challenging, reducing reliability in batch processing scenarios.</p></div>
 
-  <h3 id="section-8-6">8.6 Appendix F: Pressure Calculations for Waterjet</h3>
+  <h3 id="section-8-7">8.7 Appendix G: Pressure Calculations for Waterjet</h3>
 
 <p>
 A first-pass analytical estimate was carried out to determine the order of magnitude of water pressure required for the proposed waterjet cutting system. The objective of this calculation is not to define a final operating pressure, but to establish a theoretical baseline for assessing the feasibility of using a small nozzle to sever lettuce stems under controlled conditions.
