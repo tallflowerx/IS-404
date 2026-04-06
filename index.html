@@ -495,7 +495,6 @@
 
                 <div> <p> The fork assembly was fabricated as a 3D printed prototype using PLA (20% infill) to evaluate structural behaviour and assembly feasibility under representative loading conditions. Initial assembly revealed a modelling oversight in the fastening design, resulting in inadequate thread engagement and joint integrity. This was addressed through the integration of heat-set inserts, which provided a robust and repeatable threaded interface, improving both structural reliability and ease of assembly without requiring re-fabrication of components.</p> </div>
                 <div> <p> While prior Finite Element Analysis (FEA) predicted negligible deflection of the fork members, physical testing of the printed prototype revealed observable deformation under relatively low loads. This discrepancy arises from modelling assumptions including idealised isotropic material behaviour, simplified boundary conditions, and uniform load distribution, which do not fully capture the anisotropic and layer-dependent properties of additively manufactured PLA. Additionally, the reduced stiffness associated with 20% infill, combined with geometric tolerances and minor assembly misalignments, contributed to increased compliance in the system.</p></div>
-                <div> <p> This comparison highlights that, although the FEA provided a valid theoretical baseline, it was not fully representative of the as-built prototype</p></div>
 
          <h3 id="section-3-3">3.3 Tray Clamping</h3>
 
@@ -506,7 +505,7 @@
                     <video-component 
                       tag="Tray Clamping Mechanism" 
                       source="https://www.youtube.com/embed/olHSMaZ83Ho?autoplay=0&mute=1&loop=1&playlist=olHSMaZ83Ho&controls=0"
-                      subtitle="Video 9: Tray Clamping Mechanism">
+                      subtitle="Video 9: Over-centre toggle clamping mechanism demonstrating self-locking behaviour and stable tray fixation.">
                     </video-component>
 
                   <div> <p> The tray clamping mechanism employs an over-centre toggle linkage, selected for its ability to deliver a stable and repeatable clamping force that directly supports the project’s objective of improving harvesting throughput while preserving crop quality. By achieving self-locking beyond the dead-centre position, the mechanism maintains secure tray fixation without continuous actuation, enabling energy-efficient and reliable operation during batch processing and tray lowering. Compared to the alternative latch-based hook mechanism considered, the toggle configuration provides superior force consistency and positional rigidity, which is critical for ensuring precise alignment during lettuce extraction. Furthermore, its compact, planar linkage design satisfies the system’s spatial and modularity constraints, allowing seamless integration without obstructing tray intake, thereby aligning with the overall goal of a scalable, plug-and-play harvesting solution.</p> </div>
@@ -531,7 +530,7 @@
                   <div> <p> Additionally, it was observed that the single-point attachment between the clamping mechanism and the four-bar linkage resulted in localised stress concentration and reduced structural stability. The load path through a single fastener introduced undesirable rotational compliance, which could compromise alignment during the lowering process. This highlighted the need for improved load distribution through multi-point fastening or rigid joint interfaces in subsequent design iterations. For future implementations, more permanent joining methods such as welding or reinforced mounting plates are recommended to enhance structural integrity. </p> </div>
                 
                   <h4> 3.3.4. Clamping Force Calculations</h4>
-                  <div> <p> As identified through physical prototyping, the clamping mechanism required an internal preload to maintain consistent engagement and prevent unintended disengagement. The over-centre toggle clamp was designed to provide a total clamping force of approximately 180–200 N, ensuring stable tray fixation during lowering and extraction. This corresponds to an internal preload requirement of 15–30 N to maintain the locking condition. (Refer to Appendix XYZ) </p> </div>
+                  <div> <p> As identified through physical prototyping, the clamping mechanism required an internal preload to maintain consistent engagement and prevent unintended disengagement. The over-centre toggle clamp was designed to provide a total clamping force of approximately 180–200 N, ensuring stable tray fixation during lowering and extraction. This corresponds to an internal preload requirement of 15–30 N to maintain the locking condition. (Refer to Appendix E) </p> </div>
                   
 
                   <h3 id="section-3-4">3.4 Tray Lowering</h3>
@@ -541,13 +540,13 @@
                   <video-component 
                     tag="Scissor Lift" 
                     source="https://www.youtube.com/embed/me_S41Ysxvc?autoplay=0&mute=1&loop=1&playlist=me_S41Ysxvc&controls=0"
-                    subtitle="Video 10: Scissor Lift">
+                    subtitle="Video 10: Scissor lift mechanism demonstrating vertical motion with high stability but limited trajectory flexibility.">
                   </video-component>
 
                   <video-component 
                     tag="4 Bar" 
                     source="https://www.youtube.com/embed/ygDpR66xEWM?autoplay=0&mute=1&loop=1&playlist=ygDpR66xEWM&controls=0"
-                    subtitle="Video 11: 4 Bar">
+                    subtitle="Video 11: Four-bar linkage illustrating adaptable motion profiles for controlled tray lowering.">
                   </video-component>
 
                                       <!-- Rotary Incline: Perfect Loop (3:48 -> 3:58) -->
@@ -559,7 +558,7 @@
                         color: #666; 
                         text-align: center;
                       ">
-                        Video 12: Rotary Incline
+                        Video 12: Rotary incline mechanism showing coupled rotational–translational motion
                       </div>
                     </div>
 
@@ -607,7 +606,7 @@
                       subtitle="Table 2: Concept Selection Matrix for Tray Lowering."
                     ></image-component>
 
-                  <div> <p> The concept selection matrix indicates that the reverse four-bar mechanism provides the most suitable balance of trajectory control, design flexibility, and system integration within the given constraints. While the scissor lift performs comparably in terms of tray stability, repeatability, and conveyor compatibility, its limited flexibility in tailoring motion profiles and bulkier packaging make it less adaptable to the evolving system requirements. The vertical linear lift, although capable of precise vertical motion, necessitates a taller and more restrictive supporting architecture, reducing its feasibility within the current design envelope. The rotational-incline concept scored lowest, as its inherent change in tray orientation is fundamentally incompatible with the requirement for stable and repeatable presentation to the downstream waterjet cutting subsystem.</p> </div>
+                  <div> <p> The concept selection matrix shows that the reverse four-bar mechanism offers the best balance of trajectory control, flexibility, and integration. The scissor lift provides comparable stability but is limited by reduced motion flexibility and bulkier packaging. The vertical linear lift enables precise motion but requires a taller, more restrictive structure, reducing feasibility. The rotary/incline concept ranked lowest, as its changing tray orientation is incompatible with stable presentation to the waterjet subsystem.</p> </div>
                 
                   <h4 id="section-3-4-2">3.4.2 Kinematic Validation</h4>
                   <div> <p> This preliminary sketch was developed to evaluate feasible tray trajectories from the entry position to the cutting plane under spatial constraints. Among the paths considered, the pink trajectory was preferred for its smooth, continuous motion with minimal directional change, while the brown trajectory offered a more compact alternative with acceptable vertical alignment.</p></div>
