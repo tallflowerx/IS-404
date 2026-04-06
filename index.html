@@ -229,20 +229,29 @@
     <a href="#section-8">8. Appendices</a>
 
     <sl-tree-item>
-      <a href="#section-8-1">8.1 Appendix A</a>
+      <a href="#section-8-1">8.1 Appendix A: Global Food Security Index Evidence of Singapore's Structural Food-System Vulnerabilty</a>
     </sl-tree-item>
 
     <sl-tree-item>
-      <a href="#section-8-2">8.2 Appendix B</a>
+      <a href="#section-8-2">8.2 Appendix B: Target Throughput Justification</a>
     </sl-tree-item>
 
     <sl-tree-item>
-      <a href="#section-8-3">8.3 Appendix C</a>
+      <a href="#section-8-3">8.3 Appendix C: Lettuce-Tray Concept Selection </a>
     </sl-tree-item>
 
     <sl-tree-item>
-      <a href="#section-8-4">8.4 Appendix D</a>
+      <a href="#section-8-4">8.4 Appendix D: Criterion Justification for Tray Lowering Concept Selection</a>
     </sl-tree-item>
+
+    <sl-tree-item>
+      <a href="#section-8-5">8.5 Appendix E: Criterion Justification for Extraction Concept Selection</a>
+    </sl-tree-item>
+
+    <sl-tree-item>
+      <a href="#section-8-6">8.6 Appendix F: Pressure Calculations for Waterjet</a>
+    </sl-tree-item>
+
   </sl-tree-item>
 
 </sl-tree>
@@ -386,7 +395,7 @@
           <div> <p> Building on the conceptual direction established in Semester 1, this iteration retains the fork-based approach while refining it for tighter integration with the clamping and four-bar lowering system, ensuring that earlier design intuition is translated into a more robust, system-level solution. Option A (Fixed Fork Support) was selected as it best satisfies the updated system requirements of passive tray intake, stable support during clamping, and unobstructed vertical extraction.</p>
             
             <h4 id="section-3-2-1">3.2.1 Concept Selection</h4>
-            <div> <p> The selection of the fork geometry was established during Semester 1 through iterative cardboard prototyping and preliminary evaluation. (Refer to Appendix B for complete concept selection.) </p></div>
+            <div> <p> The selection of the fork geometry was established during Semester 1 through iterative cardboard prototyping and preliminary evaluation. (Refer to Appendix C for complete concept selection.) </p></div>
             <div><p>The fork geometry supports the tray entirely from below, eliminating any need to grip or compress the plant canopy and thereby minimising the risk of leaf damage. Unlike alternatives, it aligns directly with the tray’s existing slot geometry, allowing seamless integration without requiring modifications to the upstream vertical farming system or obstructing the tray entry face—an important constraint for this design. Mechanically, the concept is deliberately minimal. </p></div>
           
             <h4 id="section-3-2-2">3.2.2 Prototyping</h4>
@@ -605,7 +614,7 @@
                     ></image-component>
 
                   <div> <p>  Geometric synthesis was carried out to explore the motion capabilities of the reverse four-bar linkage, with the primary objective of achieving a controlled tray-lowering trajectory compatible with the spatial and functional constraints of the harvesting system. Rather than prescribing a fixed vertical motion, the linkage was selected for its ability to generate a range of trajectories through variation of link lengths, pivot locations, and coupler point placement, enabling the motion to be tailored to system-level requirements.</p> </div>
-                  <div> <p> This flexibility was particularly important given the constraints of the design: the tray must enter from a fixed position, remain largely within a confined frame envelope (750 mm × 690 mm), and be lowered smoothly to a position suitable for root detachment, while avoiding excessive lateral drift or abrupt changes in orientation. As such, the objective was not to achieve purely vertical motion, but to synthesise a trajectory that balances smoothness, compactness, and positional control. Three candidate linkage configurations were developed and evaluated through kinematic simulation on MotioGen.io: </p> </div>
+                  <div> <p> This flexibility was particularly important given the constraints of the design: the tray must enter from a fixed position, remain largely within a confined frame envelope (750 mm × 690 mm), and be lowered smoothly to a position suitable for root detachment, while avoiding excessive lateral drift or abrupt changes in orientation. As such, the objective was not to achieve purely vertical motion, but to synthesise a trajectory that balances smoothness, compactness, and positional control. Three candidate linkage configurations were developed and evaluated through kinematic simulation on MotionGen.io: </p> </div>
                   
                   <div> <p> Iteration 1 produced a trajectory with significant looping and reversal behaviour, indicating poor alignment with the desired motion. The presence of cusps and non-monotonic displacement suggested that the coupler point, and link proportions were not suitably configured, leading to unstable motion and impractical real-world behaviour. </p> </div>
                   
@@ -624,7 +633,7 @@
                   </video-component>
                   
                   <div> <p> Iteration 3, while physically realised through laser cut miniature prototyping, introduced a steeper and more constrained motion profile. Although it achieved the required vertical displacement, the trajectory exhibited increased curvature and reduced smoothness compared to Iteration 2, indicating a trade-off between compactness and motion quality.</p> </div>
-                  <div> <p> The comparative evaluation of these configurations highlights the sensitivity of the four-bar linkage to geometric parameters, particularly coupler point placement and pivot positioning. Small changes in these variables resulted in significant differences in trajectory shape, reinforcing the importance of iterative synthesis and validation. </p> </div>
+                  <div> <p> The comparative evaluation of these configurations highlights the sensitivity of the four-bar linkage to geometric parameters particularly coupler point placement and pivot positioning. Small changes in these variables resulted in significant differences in trajectory shape, reinforcing the importance of iterative synthesis and validation. </p> </div>
 
                 <video-component
                     tag="Linkage Demonstration 3"
@@ -695,7 +704,7 @@
                 <div> <p> This risk is mitigated through the use of a localized, high-precision waterjet, where the jet diameter and pressure are tuned to act only at the stem interface. </p></div>
                 
                 
-                <div> <p>A first-pass theoretical sizing calculation was performed to identify a low-pressure waterjet regime capable of separating hydroponically grown lettuce stems. The jet was modelled using Bernoulli-based nozzle flow and momentum transfer relations, and the resulting jet force was converted into an equivalent stress acting on the stem cross-section. By requiring the jet-induced stress to exceed the estimated stem failure stress with a modest safety factor, the minimum pressure requirement was expressed as a function of nozzle diameter, stem diameter, and discharge coefficient. For a representative stem diameter of 10 mm, a nozzle diameter of 0.5 mm, a discharge coefficient of 0.9, and an assumed tissue failure stress of 0.20 MPa, the required pressure was estimated to be approximately 74 MPa. (Refer to appendix D for calculations) </p> </div>
+                <div> <p>A first-pass theoretical sizing calculation was performed to identify a low-pressure waterjet regime capable of separating hydroponically grown lettuce stems. The jet was modelled using Bernoulli-based nozzle flow and momentum transfer relations, and the resulting jet force was converted into an equivalent stress acting on the stem cross-section. By requiring the jet-induced stress to exceed the estimated stem failure stress with a modest safety factor, the minimum pressure requirement was expressed as a function of nozzle diameter, stem diameter, and discharge coefficient. For a representative stem diameter of 10 mm, a nozzle diameter of 0.5 mm, a discharge coefficient of 0.9, and an assumed tissue failure stress of 0.20 MPa, the required pressure was estimated to be approximately 74 MPa. (Refer to Appendix F for calculations) </p> </div>
                 <div> <p>This places the system within a low-pressure regime relative to conventional industrial waterjet applications, while remaining theoretically sufficient for soft biological material. The calculation is intended as an initial sizing estimate and would require refinement through material testing and controlled validation. </p> </div>
                 <h4 id="section-3-5-3">3.5.3 FedJet Testing</h4>
                 <div> <p>To validate the feasibility of the selected concept, industry consultation was conducted with FedJet, a company specialising in waterjet technologies. Through this engagement, preliminary testing was performed on lettuce stems using a waterjet system, demonstrating that clean and effective separation is achievable under controlled conditions. These findings provide practical confirmation that waterjet-based cutting is a viable approach for harvesting lettuce, supporting its selection for further development in this project. </p> </div>
@@ -982,7 +991,7 @@
     <div> <p> The 4-bar linkage, which was ultimately selected, offers the best overall balance of performance and adaptability. While slight orientation deviations may occur depending on geometry, it excels in compatibility with the front-fed system and provides fully tunable motion through link length optimisation. This allows precise control over the trajectory while maintaining high repeatability. Its key advantage lies in its design flexibility, enabling adaptation to constraints such as waterjet integration and frame limitations. Although it introduces moderate complexity in terms of kinematic synthesis and requires tighter alignment during fabrication, it remains feasible to build. Overall, the 4-bar linkage stands out because it achieves trajectory tunability without compromising repeatability, making it particularly well-suited to the system’s functional requirements.</p></div>
     <div> <p> In contrast, the rotary or incline mechanism was deemed unsuitable due to its fundamental mismatch with system needs. Its tendency to introduce tray tilt makes it incompatible with the requirement for stable, horizontal cutting. Additionally, it offers poor control over vertical motion, lower repeatability, and potential interference with tray entry depending on its configuration. While relatively simple to construct, these limitations outweigh its benefits, leading to its elimination from consideration.</p></div>
 
-    <h3 id="section-8-4">8.5 Appendix E: Criterion Justification for Extraction Concept</h3>
+    <h3 id="section-8-5">8.5 Appendix E: Criterion Justification for Extraction Concept</h3>
     <div><p> Laser cutting offers a non-contact approach and precise energy delivery; however, it introduces thermal effects that are unsuitable for fresh produce. The high moisture content of lettuce leads to localised heating, causing tissue degradation, dehydration, and potential browning at the cut interface. Additionally, laser systems require optical alignment, enclosure, and safety considerations, reducing feasibility within a compact, wet farming environment.</p></div>
     <div><p> Mechanical blades are simple, compact, and widely used in agricultural applications. However, as a contact-based method, they introduce compressive forces prior to cutting, which can result in bruising and inconsistent separation. Blade wear and dulling over repeated cycles further reduce cut quality and require frequent maintenance. While feasible and easy to implement, performance variability and potential impact on product quality limit its suitability. Lettuce bleeding is also noted from experiential harvesting exercise. Sap gets secreted which affects blade longevity and questions hygiene standards. </p></div>
     
@@ -997,7 +1006,7 @@
     <div><p> Waterjet cutting provides a non-contact cutting mechanism that minimises mechanical stress on the crop. This reduces tissue compression and enables cleaner separation compared to blade-based methods. Its compatibility with wet, hydroponic environments further supports integration within indoor vertical farming systems. Additionally, the absence of blade wear improves consistency and reduces maintenance requirements. While the system introduces complexity in terms of pressurisation and fluid management, it offers the best balance between cut quality, repeatability, and system compatibility.</p></div>
     <div><p>  Rope based cutting offers a mechanically simple approach; however, it relies on frictional contact and tension, which can result in tearing rather than clean cutting. The method also presents a risk of material degradation and particulate contamination (microplastics), particularly if polymer filaments are used. Furthermore, maintaining consistent tension and alignment across multiple cuts is challenging, reducing reliability in batch processing scenarios.</p></div>
 
-  <h3 id="section-8-4">8.6 Appendix F: Pressure Calculations for Waterjet</h3>
+  <h3 id="section-8-6">8.6 Appendix F: Pressure Calculations for Waterjet</h3>
 
 <p>
 A first-pass analytical estimate was carried out to determine the order of magnitude of water pressure required for the proposed waterjet cutting system. The objective of this calculation is not to define a final operating pressure, but to establish a theoretical baseline for assessing the feasibility of using a small nozzle to sever lettuce stems under controlled conditions.
