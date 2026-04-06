@@ -169,11 +169,11 @@
       </sl-tree-item>
 
       <sl-tree-item>
-        <a href="#section-3-4-5">3.4.5 Motor Requirements</a>
+        <a href="#section-3-4-5">3.4.5 Design Recommendations</a>
       </sl-tree-item>
 
       <sl-tree-item>
-        <a href="#section-3-4-6">3.4.6 Motor Testing</a>
+        <a href="#section-3-4-6">3.4.6 Motor Requirements</a>
       </sl-tree-item>
     </sl-tree-item>
 
@@ -548,56 +548,56 @@
                     subtitle="Video 11: 4 Bar">
                   </video-component>
 
-                                    <!-- Rotary Incline: Perfect Loop (3:48 → 3:58) -->
-                  <!-- Rotary Incline: Perfect Loop (3:48 → 3:58) -->
-                  <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                      <!-- Rotary Incline: Perfect Loop (3:48 -> 3:58) -->
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                      <div id="rotary-incline-player"></div>
 
-                    <div id="Video 12: rotary-incline-player"></div>
-
-                    <div style="
-                      font-size: 0.9rem; 
-                      color: #666; 
-                      text-align: center;
-                    ">
-                      Video 12: Rotary Incline
+                      <div style="
+                        font-size: 0.9rem; 
+                        color: #666; 
+                        text-align: center;
+                      ">
+                        Video 12: Rotary Incline
+                      </div>
                     </div>
 
-                  </div>
+                    <script src="https://www.youtube.com/iframe_api"></script>
 
-                  <script src="https://www.youtube.com/iframe_api"></script>
+                    <script>
+                      let rotaryPlayer;
+                      let rotaryLoopInterval;
 
-                  <script>
-                    let player;
-                    let loopInterval;
-
-                    function onYouTubeIframeAPIReady() {
-                      player = new YT.Player('rotary-incline-player', {
-                        videoId: '7GXJ7B2YF0s',
-                        playerVars: {
-                          autoplay: 0,
-                          mute: 1,
-                          controls: 0,
-                          modestbranding: 1,
-                          rel: 0
-                        },
-                        events: {
-                          onReady: function (event) {
-                            event.target.seekTo(228, true);
-                            event.target.playVideo();
+                      function onYouTubeIframeAPIReady() {
+                        rotaryPlayer = new YT.Player('rotary-incline-player', {
+                          videoId: '7GXJ7B2YF0s',
+                          width: '100%',
+                          height: '315',
+                          playerVars: {
+                            autoplay: 1,
+                            mute: 1,
+                            controls: 1,
+                            modestbranding: 1,
+                            rel: 0,
+                            start: 228
                           },
-                          onStateChange: function (event) {
-                            if (event.data === YT.PlayerState.PLAYING && !loopInterval) {
-                              loopInterval = setInterval(() => {
-                                if (player.getCurrentTime() >= 238) {
-                                  player.seekTo(228, true);
-                                }
-                              }, 100);
+                          events: {
+                            onReady: function (event) {
+                              event.target.seekTo(228, true);
+                              event.target.playVideo();
+                            },
+                            onStateChange: function (event) {
+                              if (event.data === YT.PlayerState.PLAYING && !rotaryLoopInterval) {
+                                rotaryLoopInterval = setInterval(() => {
+                                  if (rotaryPlayer.getCurrentTime() >= 238) {
+                                    rotaryPlayer.seekTo(228, true);
+                                  }
+                                }, 100);
+                              }
                             }
                           }
-                        }
-                      });
-                    }
-                  </script>
+                        });
+                      }
+                    </script>
                               
                   <image-component 
                       tag="image" 
@@ -669,7 +669,24 @@
                   <div> <p> Additionally, the prototype provided insight into motion smoothness and potential binding, particularly near extreme positions of the linkage. This informed subsequent refinement of link proportions and pivot locations to avoid configurations close to singularity. The exercise also demonstrated the practicality of the mechanism from an assembly perspective, allowing evaluation of joint accessibility, fastener placement, and overall constructability, which are not fully captured in simulation. </p> </div>
                   <div> <p> The prototyping process highlighted the broader need to prioritise design for manufacturability and assembly (DFMA). Clearances became paramount with the number of moving components in the prototype. Features that were geometrically valid in CAD required modification to improve ease of assembly, alignment, and repeatability. This included refining hole tolerances, improving access for fastening, and simplifying part interfaces to reduce assembly complexity.  </p> </div>
           
-                <h4 id="section-3-4-5">3.4.5 Motor Requirements</h4>
+                <h4 id="section-3-4-5">3.4.5 Design Recommendations</h4>
+
+                  <div><p> On account of visible deflection of beams, alternate designs were considered and are represented as sketches: </p></div>
+
+                  <image-component 
+                    tag="image" 
+                    source="assets/suggestion_1.jpg"
+                    subtitle="Figure 13: Conceptual design of top-mounted vertical extrusion and cable system for fork deflection mitigation under spatial constraints."
+                  ></image-component>
+
+                  <image-component 
+                    tag="image" 
+                    source="assets/suggestion_1.jpg"
+                    subtitle="Figure 14: Conceptual design of inverted V-frame cable support to enhance structural stiffness while preserving unobstructed tray loading."
+                  ></image-component>
+
+                  <div> <p> Only the top region of the system permits the addition of structural support for beam deflection prevention; hence, two overhead reinforcement strategies were explored. The first utilises vertical extrusion members with tensioned cables to reduce fork deflection without obstructing tray entry, while the second employs an inverted V-frame to concentrate support above the fork array, improving stiffness while maintaining a clear loading path. In both approaches, cables should be thin, low-stretch, and water-resistant to ensure effective reinforcement without introducing interference or compromising system cleanliness.</p></div>
+
                 <h4 id="section-3-4-6">3.4.6 Motor Testing</h4>
 
             <h3 id="section-3-5">3.5 Lettuce-Root Detachment</h3>
@@ -687,7 +704,7 @@
                   <image-component 
                     tag="image" 
                     source="assets/lettuce_quality.jpg"
-                    subtitle="Figure 13: Comparison of lettuce discoloration over time for blade cutting and waterjet cutting, showing reduced browning and improved quality retention with waterjet processing (adapted from Cantwell et al., 2006; Béguin et al., 2004)"
+                    subtitle="Figure 15: Comparison of lettuce discoloration over time for blade cutting and waterjet cutting, showing reduced browning and improved quality retention with waterjet processing (adapted from Cantwell et al., 2006; Béguin et al., 2004)"
                   ></image-component>
                   <div> <p>Waterjet cutting preserves lettuce quality and extends shelf life due to its non-contact, low-damage cutting mechanism. Unlike mechanical blades, which introduce compressive forces and tissue tearing, waterjets minimise cellular disruption at the cut interface. This reduces the release of intracellular fluids that accelerate enzymatic browning and microbial growth. Additionally, the waterjet process can help remove damaged cells and surface contaminants during cutting, resulting in lower initial microbial loads. As a result, waterjet-cut lettuce exhibits reduced discoloration and slower degradation, contributing to improved freshness and extended shelf life compared to conventional cutting methods (Hashish), 2025). (Refer to Appendix E for comparative analysis) </p> </div>
                   <div> <p>This consideration is further reinforced by stakeholder feedback, which highlighted that while the concept is promising, there is a risk of inadvertently damaging adjacent crops during operation. This underscores the need for precise targeting and carefully controlled cutting parameters, particularly within the constraints of a densely packed tray configuration.</p> </div>
@@ -696,7 +713,7 @@
                   <image-component 
                     tag="image" 
                     source="assets/waterjet_validation.jpg"
-                    subtitle="Figure 14: Stakeholder feedback from ArianeTech highlighting the need to minimise unintended crop damage during harvesting (via direct communication with Edwin Ong)."
+                    subtitle="Figure 16: Stakeholder feedback from ArianeTech highlighting the need to minimise unintended crop damage during harvesting (via direct communication with Edwin Ong)."
                   ></image-component>
                 <div> <p> This risk is mitigated through the use of a localized, high-precision waterjet, where the jet diameter and pressure are tuned to act only at the stem interface. </p></div>
                 
@@ -709,7 +726,7 @@
                 <image-component 
                     tag="image" 
                     source="assets/lettuce_cut_points.jpg"
-                    subtitle="Figure 15: Representative hydroponic lettuce showing candidate cutting regions (A–C) evaluated in FedJet testing."
+                    subtitle="Figure 17: Representative hydroponic lettuce showing candidate cutting regions (A–C) evaluated in FedJet testing."
                   ></image-component>
 
                   <div><p> The dashed lines (A–C) indicate the different cutting heights tested by FedJet to evaluate optimal stem separation points for hydroponic lettuce.</p></div>
@@ -737,7 +754,7 @@
                 <image-component 
                     tag="image" 
                     source="assets/FedJet_quotation.png"
-                    subtitle="Figure 16: Quotation for waterjet system from FedJet (Jiangsu Fedjetting Tech Co., Ltd.) provided via direct communication"
+                    subtitle="Figure 18: Quotation for waterjet system from FedJet (Jiangsu Fedjetting Tech Co., Ltd.) provided via direct communication"
                   ></image-component>
 
                 <h4 id="section-3-5-4">3.5.4 Design Recommendations</h4>
@@ -748,13 +765,13 @@
               <image-component 
                     tag="image" 
                     source="assets/complete_cad.jpg"
-                    subtitle="Figure 17: Integrated CAD model of the mechanical harvesting system."
+                    subtitle="Figure 19: Integrated CAD model of the mechanical harvesting system."
                   ></image-component>
 
               <image-component 
                     tag="image" 
                     source="assets/gpt_system.jpg"
-                    subtitle="Figure 18: Conceptual visualisation of the fully integrated harvesting system."
+                    subtitle="Figure 20: Conceptual visualisation of the fully integrated harvesting system."
                   ></image-component>
 
 
@@ -863,13 +880,13 @@
     <image-component 
       tag="image" 
         source="assets/gfsi_1.png"
-        subtitle="Figure 19: Singapore’s performance in the Availability pillar of the Global Food Security Index."
+        subtitle="Figure 21: Singapore’s performance in the Availability pillar of the Global Food Security Index."
     ></image-component><div> <p> </p></div>
 
     <image-component
       tag="image" 
         source="assets/gfsi_2.png"
-        subtitle="Figure 20 : Singapore’s performance in the Sustainability and Adaptation pillar of the Global Food Security Index."
+        subtitle="Figure 22 : Singapore’s performance in the Sustainability and Adaptation pillar of the Global Food Security Index."
     ></image-component><div> <p> </p></div>
     
   <section id="section-8-2">
@@ -972,7 +989,7 @@
     <image-component
       tag="image" 
         source="assets/fork_selection.png"
-        subtitle="Figure 21: Lettuce-Tray Separation Concept Selection"
+        subtitle="Figure 23: Lettuce-Tray Separation Concept Selection"
     ></image-component><div> <p> </p></div>
 
     <div> <p> Option A outperforms the alternatives under the selection criteria. It protects the plant by supporting it entirely from below, avoiding hold-induced leaf damage, and it leverages the existing tray geometry without requiring modifications to the vertical-farm workspace. Its static forks and simple lift motion keep the mechanism mechanically minimal, with few moving parts, low failure probability, and essentially zero energy demand for this function. </p></div>
@@ -987,7 +1004,7 @@
     <image-component
       tag="image" 
         source="assets/tray_cad.jpg"
-        subtitle="Figure 22: ArianeTech Tray CAD on OnShape"
+        subtitle="Figure 24: ArianeTech Tray CAD on OnShape"
     ></image-component>
     <div> <p> </p></div>
 
@@ -1007,7 +1024,7 @@
     <image-component
       tag="image" 
         source="assets/sap.png"
-        subtitle="Figure 23: Sap secretion observed during harvesting exercise."
+        subtitle="Figure 25: Sap secretion observed during harvesting exercise."
     ></image-component><div> <p> </p></div>
     
     
