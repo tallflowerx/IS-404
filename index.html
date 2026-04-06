@@ -338,8 +338,16 @@
             
 
         <h3> 3.2. Lettuce-Tray Separation </h3>
+
+            <image-component 
+              tag="image" 
+              source="assets/fork_extrusion_bar.jpg"
+              subtitle="Image 2: Lettuce-Tray Separation Fork"
+            ></image-component>
+
+
           <div> <p> Building on the conceptual direction established in Semester 1, this iteration retains the fork-based approach while refining it for tighter integration with the clamping and four-bar lowering system, ensuring that earlier design intuition is translated into a more robust, system-level solution. Option A (Fixed Fork Support) was selected as it best satisfies the updated system requirements of passive tray intake, stable support during clamping, and unobstructed vertical extraction.</p>
-          
+            
             <h4> 3.2.1. Concept Selection </h4>
             <div> <p> The selection of the fork geometry was established during Semester 1 through iterative cardboard prototyping and preliminary evaluation. (Refer to Appendix B for complete concept selection.) </p></div>
             <div><p>The fork geometry supports the tray entirely from below, eliminating any need to grip or compress the plant canopy and thereby minimising the risk of leaf damage. Unlike alternatives, it aligns directly with the tray’s existing slot geometry, allowing seamless integration without requiring modifications to the upstream vertical farming system or obstructing the tray entry face—an important constraint for this design. Mechanically, the concept is deliberately minimal. </p></div>
@@ -347,6 +355,13 @@
             <h4> 3.2.2. Prototyping </h4>
             
             <h5> 3.2.2.1. Cardboard</h5>
+
+            <image-component 
+              tag="image" 
+              source="assets/fork_cardboard_prototype.jpg"
+              subtitle="Image 2: Cardboard Prototyping"
+            ></image-component>
+
               <ol>
                 <li>Insertion feasibility check: Confirmed that the tray can physically engage with fork features without requiring excessive precision or force. </li>
                 <li>Clearance validation: Helped identify minimum spacing needed between forks.</li>
@@ -356,9 +371,23 @@
 
             <h5> 3.2.2.2 CAD </h5>
               <div> <p> The initial CAD model represents the early-stage implementation of the fork-based tray handling concept within a simplified enclosure. The design consists of a top-mounted fork array aligned with the tray slots, enabling passive engagement as the tray is inserted from the front. The forks are cantilevered from the supporting structure, allowing unobstructed entry while maintaining support beneath the tray.</p>
-              <div> <p> This model was primarily used to validate spatial arrangement and interaction between the tray and fork elements, ensuring that the tray could be guided into position without interference. It also helped establish key design parameters such as fork spacing, insertion depth, and overall system footprint.</p>
-              <div> <p> The refined CAD model introduces a full structural frame using extrusion members, with the fork elements now represented as slender beams spanning between supports. This model was developed to better reflect the actual load-bearing configuration of the system.</p>
-              <div> <p> At this stage, beam deflection emerged as a key concern, as the forks operate as cantilevered or partially supported members subjected to the weight of the loaded tray. The distributed loading across multiple forks highlighted the potential for uneven deformation, which could affect alignment and stability during operation. This model enabled clearer visualisation of load paths, support conditions, and boundary constraints, forming the basis for subsequent structural analysis using Finite Element Analysis (FEA).</p>
+              
+                <image-component 
+                  tag="image" 
+                  source="assets/Lettuce_Tray_Separation_CAD_1.jpg"
+                  subtitle="Image 3: CAD_V1"
+                ></image-component>
+              
+                <div> <p> This model was primarily used to validate spatial arrangement and interaction between the tray and fork elements, ensuring that the tray could be guided into position without interference. It also helped establish key design parameters such as fork spacing, insertion depth, and overall system footprint.</p>
+                  
+                  <image-component 
+                    tag="image" 
+                    source="assets/Lettuce_Tray_Separation_CAD_2.jpg"
+                    subtitle="Image 4: CAD_V2"
+                 ></image-component>
+              
+                  <div> <p> The refined CAD model introduces a full structural frame using extrusion members, with the fork elements now represented as slender beams spanning between supports. This model was developed to better reflect the actual load-bearing configuration of the system.</p>
+              `   <div> <p> At this stage, beam deflection emerged as a key concern, as the forks operate as cantilevered or partially supported members subjected to the weight of the loaded tray. The distributed loading across multiple forks highlighted the potential for uneven deformation, which could affect alignment and stability during operation. This model enabled clearer visualisation of load paths, support conditions, and boundary constraints, forming the basis for subsequent structural analysis using Finite Element Analysis (FEA).</p>
           
                 <h4> 3.2.3. Structural Testing (Finite Element Analysis)</h4>
              
