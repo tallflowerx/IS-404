@@ -467,7 +467,7 @@
                 <image-component 
                   tag="image" 
                   source="assets/beam_deflection_formula.png"
-                  subtitle="Figure 7: Beam Deflection Formula"
+                  subtitle="Figure 7: Beam deflection relationship governing fork deformation behaviour."
                 ></image-component>
 
            <h4 id="section-3-2-4">3.2.4 3D Printed Prototype</h4>
@@ -475,7 +475,7 @@
                 <image-component 
                   tag="image" 
                   source="assets/3D_printed_prototype.png"
-                  subtitle="Figure 8: 3D Printed Prototype"
+                  subtitle="Figure 8: 3D printed prototype of fork assembly used for physical validation."
                 ></image-component>
 
 
@@ -500,7 +500,7 @@
                 <image-component 
                   tag="image" 
                   source="assets/tray_clamping_CAD.jpg"
-                  subtitle="Figure 9: Tray Clamping CAD"
+                  subtitle="Figure 9: CAD model of over-centre toggle tray clamping mechanism."
                 ></image-component>
 
                 <h4 id="section-3-3-3">3.3.3 3D Printed Prototype</h4>
@@ -508,7 +508,7 @@
                 <image-component 
                   tag="image" 
                   source="assets/tray_clamping_prototype.jpg"
-                  subtitle="Figure 10: Tray Clamping"
+                  subtitle="Figure 10: Physical prototype of tray clamping mechanism."
                 ></image-component>
 
                   <div> <p> A hybrid prototype of the tray clamping and lowering interface was fabricated to evaluate mechanical behaviour, assembly feasibility, and load transfer characteristics under representative operating conditions. Structural components were produced using laser-cut acrylic sheets, while linkage elements utilised commercial off-the-shelf (COTS) rods for joints and pivots. Select components requiring geometric complexity were 3D printed in PLA.</p> </div>
@@ -518,8 +518,6 @@
                   <h4> 3.3.4. Clamping Force Calculations</h4>
                   <div> <p> As identified through physical prototyping, the clamping mechanism required an internal preload to maintain consistent engagement and prevent unintended disengagement, necessitating a quantitative estimation of the preload force required for reliable operation. </p> </div>
                   <div> <p> The clamping mechanism is a passive over-centre toggle and does not rely on a dedicated actuator. The required holding capacity was therefore estimated from friction rather than actuator thrust. The loaded tray mass was taken as 3.85 kg, corresponding to a static weight of 37.8 N. To account for startup effects, guide friction, and root drag during downward extraction, the pull load was conservatively taken as 1.5–2.0 times the tray weight, i.e. 56.7–75.5 N. Assuming a friction coefficient of 0.4–0.5 between the tray and clamp pads, the required total normal clamping force is approximately 113–189 N. A design value of 180–200 N total clamping force was therefore adopted. Since the clamp operates as an over-centre toggle, the internal linkage force needed to maintain lock is much smaller than the normal clamping force. For a lock angle of approximately 5–10° from dead centre, an internal preload of about 15–30 N is sufficient to generate the required clamping force.</p> </div>
-         
-                    <h4 id="section-3-3-5">3.3.5 Revised CAD</h4>
 
                   <h3 id="section-3-4">3.4 Tray Lowering</h3>
 
@@ -600,32 +598,32 @@
                   <div> <p>  Geometric synthesis was carried out to explore the motion capabilities of the reverse four-bar linkage, with the primary objective of achieving a controlled tray-lowering trajectory compatible with the spatial and functional constraints of the harvesting system. Rather than prescribing a fixed vertical motion, the linkage was selected for its ability to generate a range of trajectories through variation of link lengths, pivot locations, and coupler point placement, enabling the motion to be tailored to system-level requirements.</p> </div>
                   <div> <p> This flexibility was particularly important given the constraints of the design: the tray must enter from a fixed position, remain largely within a confined frame envelope (750 mm × 690 mm), and be lowered smoothly to a position suitable for root detachment, while avoiding excessive lateral drift or abrupt changes in orientation. As such, the objective was not to achieve purely vertical motion, but to synthesise a trajectory that balances smoothness, compactness, and positional control. Three candidate linkage configurations were developed and evaluated through kinematic simulation on MotioGen.io: </p> </div>
                   
-                  <video-component 
-                  tag="Video 5: Simulation Results" 
-                  source="https://youtu.be/hpfAwVSADB4"
-                  subtitle="Video 10: Simulation Results">
-                </video-component>
-                  
                   <div> <p> Iteration 1 produced a trajectory with significant looping and reversal behaviour, indicating poor alignment with the desired motion. The presence of cusps and non-monotonic displacement suggested that the coupler point, and link proportions were not suitably configured, leading to unstable motion and impractical real-world behaviour. </p> </div>
                   
-                  <video-component 
-                  tag="Video 5: Simulation Results" 
-                  source="https://youtube.com/shorts/Zi6gBWrtttw?feature=share"
-                  subtitle="Video 11: Simulation Results">
-                </video-component>
+                  <video-component
+                    tag="Linkage Demonstration 1"
+                    source="https://www.youtube.com/embed/PaEbjN_u8UU?autoplay=1&mute=1&loop=1&playlist=PaEbjN_u8UU"
+                    subtitle="Video X: Linkage System (Case 1)">
+                  </video-component>
                   
                   <div> <p> Iteration 2 demonstrated a substantial improvement, generating a smoother, predominantly downward trajectory with reduced self-intersection. The motion more closely resembled the intended “gradual-horizontal-then-descending” path, with improved continuity and reduced abrupt changes in curvature. This configuration better satisfied the requirements of controlled tray lowering within the available workspace.</p> </div>
                   
-                  <video-component 
-                  tag="Video 5: Simulation Results" 
-                  source="https://youtu.be/hpfAwVSADB4"
-                  subtitle="Video 12: Simulation Results">
-                </video-component>
-
-                <img src=".gif" alt="Description of the GIF">
+                  <video-component
+                    tag="Linkage Demonstration 2"
+                    source="https://www.youtube.com/embed/vPfXNtz9FkU?autoplay=1&mute=1&loop=1&playlist=vPfXNtz9FkU"
+                    subtitle="Video X: Linkage System (Case 2)">
+                  </video-component>
                   
                   <div> <p> Iteration 3, while physically realised through laser cut miniature prototyping, introduced a steeper and more constrained motion profile. Although it achieved the required vertical displacement, the trajectory exhibited increased curvature and reduced smoothness compared to Iteration 2, indicating a trade-off between compactness and motion quality.</p> </div>
                   <div> <p> The comparative evaluation of these configurations highlights the sensitivity of the four-bar linkage to geometric parameters, particularly coupler point placement and pivot positioning. Small changes in these variables resulted in significant differences in trajectory shape, reinforcing the importance of iterative synthesis and validation. </p> </div>
+
+                <video-component
+                    tag="Linkage Demonstration 3"
+                    source="https://www.youtube.com/embed/Ba8C8N3BF3w?autoplay=1&mute=1&loop=1&playlist=Ba8C8N3BF3w"
+                    subtitle="Video X: Linkage System (Case 3)">
+                  </video-component>
+                
+                
                   <div> <p> While Iteration 2 provided the most desirable motion characteristics from a kinematic perspective, Iteration 3 was selected for prototyping to validate structural behaviour and manufacturability under a more constrained configuration. This reflects a design approach that considers not only ideal motion performance but also practical implementation, fabrication feasibility, and system integration. </p> </div>
                   <div> <p> Overall, the reverse four-bar linkage was retained as the preferred mechanism due to its ability to accommodate iterative refinement and generate a spectrum of feasible trajectories without requiring fundamental changes to the system architecture. This makes it well-suited to the evolving requirements of the project, particularly as additional subsystems such as clamping and waterjet integration are incorporated.  </p> </div>
                 
@@ -634,7 +632,7 @@
                   <image-component 
                     tag="image" 
                     source="assets/Link_CAD.png"
-                    subtitle="Figure 11: CAD of Linkage System"
+                    subtitle="Figure 11: CAD model of reverse four-bar linkage for tray lowering."
                   ></image-component>
 
                   <div> <p> Following kinematic validation of the selected linkage, the four-bar mechanism was translated into a detailed CAD model to evaluate its behaviour under realistic spatial and integration constraints. While the kinematic model established the feasibility of the desired motion trajectory, the CAD model enabled assessment of link geometry, joint placement, and physical clearances within the system.</p> </div>
@@ -734,13 +732,13 @@
               <image-component 
                     tag="image" 
                     source="assets/complete_cad.jpg"
-                    subtitle="Figure 14: CAD of Full System"
+                    subtitle="Figure 14: Integrated CAD model of the mechanical harvesting system."
                   ></image-component>
 
               <image-component 
                     tag="image" 
                     source="assets/gpt_system.jpg"
-                    subtitle="Figure 15: Visualisation of Full System"
+                    subtitle="Figure 15: Conceptual visualisation of the fully integrated harvesting system."
                   ></image-component>
 
 
